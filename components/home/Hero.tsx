@@ -462,10 +462,12 @@ export default function Hero() {
           justify-content: center;
           flex-shrink: 0;
         }
-
-        .hero-photo-frame:hover .hero-slide-active {
+          
+        .hero-photo-frame:hover .hero-slide-active,
+        .hero-photo-frame:active .hero-slide-active {
           filter: grayscale(0);
         }
+
         .hero-slide-active {
           filter: grayscale(100%);
           transition: filter 0.3s ease, opacity 0.5s ease;
