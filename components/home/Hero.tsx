@@ -484,14 +484,25 @@ export default function Hero() {
               className="hero-photo-frame"
               style={{ position: "relative", zIndex: 1 }}
             >
-              <Image
-                key={current}
-                src={slide.photo.src}
-                alt={slide.photo.alt}
-                loading="eager"
-                fill
-                className="grayscale hover:grayscale-0 transition duration-300"
-              />
+              {slides.map((s, i) => (
+                <Image
+                  key={s.photo.src}
+                  src={s.photo.src}
+                  alt={s.photo.alt}
+                  fill
+                  priority={i === 0}
+                  className="grayscale hover:grayscale-0 transition duration-300"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    opacity: i === current ? 1 : 0,
+                    transition: "opacity 0.5s ease",
+                    willChange: "opacity",
+                  }}
+                />
+              ))}
 
               {/* Caption strip */}
               <div className="hero-photo-caption">
