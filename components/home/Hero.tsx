@@ -463,6 +463,14 @@ export default function Hero() {
           flex-shrink: 0;
         }
 
+        .hero-photo-frame:hover .hero-slide-active {
+          filter: grayscale(0);
+        }
+        .hero-slide-active {
+          filter: grayscale(100%);
+          transition: filter 0.3s ease, opacity 0.5s ease;
+        }
+
         /* MOBILE: slide dots rendered inside the text panel */
         .hero-mobile-dots {
           display: none;
@@ -603,14 +611,13 @@ export default function Hero() {
                   alt={s.photo.alt}
                   fill
                   priority={i === 0}
-                  className="grayscale hover:grayscale-0 transition duration-300"
+                  className={i === current ? "hero-slide-active" : ""}
                   style={{
                     position: "absolute",
                     inset: 0,
                     objectFit: "cover",
                     objectPosition: "center top",
                     opacity: i === current ? 1 : 0,
-                    transition: "opacity 0.5s ease",
                     willChange: "opacity",
                   }}
                 />
