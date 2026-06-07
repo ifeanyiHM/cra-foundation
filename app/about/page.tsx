@@ -26,11 +26,10 @@ export default function AboutPage() {
         <div className="container-max">
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)",
               gap: "5rem",
               alignItems: "center",
             }}
+            className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
           >
             <div>
               <p className="section-label">Our Story</p>
@@ -121,7 +120,9 @@ export default function AboutPage() {
                       color:
                         bg === "var(--neutral-50)"
                           ? "var(--neutral-500)"
-                          : `${color}99`,
+                          : bg === "var(--neutral-950)"
+                            ? "rgba(255,255,255,0.5)"
+                            : `${color}99`,
                       marginTop: "0.4rem",
                       fontWeight: 500,
                     }}
