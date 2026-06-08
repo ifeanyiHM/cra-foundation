@@ -142,11 +142,16 @@ export default function ProgramsPage() {
                 key={prog.id}
                 id={prog.id}
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)",
                   gap: "4rem",
                   alignItems: "center",
                 }}
+                className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+                // style={{
+                //   display: "grid",
+                //   gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)",
+                //   gap: "4rem",
+                //   alignItems: "center",
+                // }}
               >
                 <div style={{ order: isEven ? 0 : 1 }}>
                   <div
@@ -190,6 +195,27 @@ export default function ProgramsPage() {
                     </span>
                   </div>
                   <h2 style={{ marginBottom: "1rem" }}>{prog.title}</h2>
+                  <div
+                    style={{
+                      height: "10rem",
+                      position: "relative",
+                      overflow: "hidden",
+                      // borderRadius: "var(--radius-2xl)",
+                      border: `1px solid ${accent.border}`,
+                      marginBottom: "1.5rem",
+                    }}
+                    className="md:hidden"
+                  >
+                    <Image
+                      src={`/images/programs/${prog.title}.jpg`}
+                      alt={prog.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
                   <p
                     style={{
                       fontSize: "0.9375rem",
@@ -254,7 +280,10 @@ export default function ProgramsPage() {
                     />
                   </Link>
                 </div>
-                <div style={{ order: isEven ? 1 : 0 }}>
+                <div
+                  className="hidden md:block"
+                  style={{ order: isEven ? 1 : 0 }}
+                >
                   <div
                     style={{
                       height: "20rem",

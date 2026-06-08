@@ -413,9 +413,9 @@ export default function AboutPage() {
                   }}
                 >
                   <Image
-                    src={`/board/${m.name}.webp`}
+                    src={`/images/board/${m.name}.webp`}
                     alt={m.name}
-                    className="!mx-auto object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    className="mx-auto! object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     width={208}
                     height={221}
                   />

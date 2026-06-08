@@ -394,10 +394,9 @@ export const news: NewsArticle[] = [
     category: "Events",
     author: "CRA Foundation Team",
     images: [
-      "/images/news/independence.png",
+      "/images/news/independence3.jpg",
       "/images/news/independence1.jpg",
       "/images/news/independence2.jpg",
-      "/images/news/independence3.jpg",
       "/images/news/independence4.jpg",
       "/images/news/independence5.jpg",
     ],

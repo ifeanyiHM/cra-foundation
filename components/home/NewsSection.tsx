@@ -206,7 +206,7 @@ export default function NewsSection() {
                     style={{
                       fontSize: "0.9375rem",
                       lineHeight: 1.4,
-                      marginBottom: "0.4rem",
+                      paddingBottom: "0.3rem",
                       letterSpacing: "-0.015em",
                     }}
                     className="line-clamp-2"

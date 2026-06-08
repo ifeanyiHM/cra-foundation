@@ -353,65 +353,76 @@ export default function Header() {
             >
               {navigation.map((item) => (
                 <div key={item.label}>
-                  <button
-                    onClick={() =>
-                      setMobileOpen(
-                        mobileOpen === item.label ? null : item.label,
-                      )
-                    }
-                    style={{
-                      width: "100%",
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      textAlign: "left",
-                      padding: 0,
-                    }}
-                  >
-                    <div
+                  {item.children ? (
+                    <>
+                      <button
+                        onClick={() =>
+                          setMobileOpen(
+                            mobileOpen === item.label ? null : item.label,
+                          )
+                        }
+                        style={{
+                          width: "100%",
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          textAlign: "left",
+                          padding: 0,
+                        }}
+                      >
+                        <div
+                          className="mobile-nav-link"
+                          style={{ pointerEvents: "none" }}
+                        >
+                          {item.label}
+                          <RiArrowDownSLine
+                            style={{
+                              width: "1rem",
+                              height: "1rem",
+                              opacity: 0.4,
+                              transition: "transform .2s",
+                              transform:
+                                mobileOpen === item.label
+                                  ? "rotate(-180deg)"
+                                  : "rotate(0)",
+                            }}
+                          />
+                        </div>
+                      </button>
+
+                      {mobileOpen === item.label && (
+                        <div
+                          style={{
+                            marginLeft: ".75rem",
+                            borderLeft: "2px solid var(--border-subtle)",
+                            paddingLeft: ".75rem",
+                            marginBottom: ".25rem",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: ".125rem",
+                          }}
+                        >
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className="mobile-sub-link"
+                              onClick={close}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      href={item.href}
                       className="mobile-nav-link"
-                      style={{ pointerEvents: "none" }}
+                      onClick={close}
                     >
                       {item.label}
-                      {item.children && (
-                        <RiArrowDownSLine
-                          style={{
-                            width: "1rem",
-                            height: "1rem",
-                            opacity: 0.4,
-                            transition: "transform .2s",
-                            transform:
-                              mobileOpen === item.label
-                                ? "rotate(-180deg)"
-                                : "rotate(0)",
-                          }}
-                        />
-                      )}
-                    </div>
-                  </button>
-                  {item.children && mobileOpen === item.label && (
-                    <div
-                      style={{
-                        marginLeft: ".75rem",
-                        borderLeft: "2px solid var(--border-subtle)",
-                        paddingLeft: ".75rem",
-                        marginBottom: ".25rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: ".125rem",
-                      }}
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="mobile-sub-link"
-                          onClick={close}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
+                    </Link>
                   )}
                 </div>
               ))}

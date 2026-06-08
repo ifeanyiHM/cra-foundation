@@ -291,7 +291,7 @@ export default function Footer() {
             © {year} Children&apos;s Right Advocate Foundation. All rights
             reserved.
           </p>
-          <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+          <div className="flex flex-col md:flex-row md:items-center md:gap-6">
             <Link href="/privacy" className="footer-legal-link">
               Privacy Policy
             </Link>

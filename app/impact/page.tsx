@@ -128,12 +128,13 @@ export default function ImpactPage() {
             <div
               style={{
                 position: "absolute",
-                left: "5.25rem",
+                // left: "5.25rem",
                 top: 0,
                 bottom: 0,
                 width: "1px",
                 background: "var(--border-subtle)",
               }}
+              className="left-8.5 md:left-21"
             />
             {timeline.map((e, i) => (
               <div
@@ -147,11 +148,12 @@ export default function ImpactPage() {
               >
                 <div
                   style={{
-                    width: "4.5rem",
+                    // width: "4.5rem",
                     flexShrink: 0,
                     textAlign: "right",
                     paddingTop: "0.2rem",
                   }}
+                  className="w-2 md:w-18"
                 >
                   <span
                     style={{
