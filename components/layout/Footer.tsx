@@ -223,6 +223,7 @@ export default function Footer() {
               ))}
             </div>
             <div
+              className="md:hidden xl:block"
               style={{
                 background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.07)",
@@ -271,6 +272,56 @@ export default function Footer() {
                 Children&apos;s Right Advocate Foundation
               </p>
             </div>
+          </div>
+          <div
+            className="hidden md:block xl:hidden"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.07)",
+              borderRadius: "var(--radius-lg)",
+              padding: "1rem",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.25)",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Bank Donation
+            </p>
+            <p
+              style={{
+                fontSize: "0.845rem",
+                fontWeight: 600,
+                color: "rgba(255,255,255,0.7)",
+              }}
+            >
+              Zenith Bank
+            </p>
+            <p
+              style={{
+                fontSize: "1rem",
+                fontWeight: 800,
+                color: "var(--brand-600)",
+                letterSpacing: "0.05em",
+              }}
+            >
+              1012771274
+            </p>
+            <p
+              style={{
+                fontSize: "0.74rem",
+                color: "rgba(255,255,255,0.25)",
+                marginTop: "0.2rem",
+              }}
+            >
+              Children&apos;s Right Advocate Foundation
+            </p>
           </div>
         </div>
       </div>

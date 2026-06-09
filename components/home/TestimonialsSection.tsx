@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
                 fontWeight: 700,
                 letterSpacing: "0.09em",
                 textTransform: "uppercase",
-                color: "#0041ff",
+                color: "var(--brand-600)",
                 marginBottom: "0.75rem",
               }}
             >

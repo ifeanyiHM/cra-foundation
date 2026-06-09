@@ -29,7 +29,7 @@ export default function AboutPage() {
               gap: "5rem",
               alignItems: "center",
             }}
-            className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
+            className="grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
           >
             <div>
               <p className="section-label">Our Story</p>
@@ -408,7 +408,6 @@ export default function AboutPage() {
                     borderRadius: "18px",
                     overflow: "hidden",
                     marginBottom: "1rem",
-                    // background: "var(--neutral-100)",
                     position: "relative",
                   }}
                 >
@@ -453,7 +452,7 @@ export default function AboutPage() {
                       fontSize: "0.82rem",
                       color: "var(--neutral-500)",
                       lineHeight: 1.6,
-                      margin: "0 0 1rem 1rem",
+                      margin: "0 0.5rem 1rem 1rem",
                     }}
                   >
                     {m.bio}
@@ -478,7 +477,7 @@ export default function AboutPage() {
               fontWeight: 700,
               letterSpacing: "0.09em",
               textTransform: "uppercase",
-              color: "#0041ff",
+              color: "var(--brand-600)",
               marginBottom: "0.75rem",
             }}
           >

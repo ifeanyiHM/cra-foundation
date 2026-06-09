@@ -5,19 +5,11 @@
 
 /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
 :root {
-  /* ─── PRIMARY BRAND (CRA LOGO BLUE) ───────────────────────── */
-  --brand-50: #eef3ff;
-  --brand-100: #dbe7ff;
-  --brand-600: #0041ff;
-  --brand-700: #0037d9;
-  --brand-800: #002db3;
-
-  /* ─── SECONDARY BRAND (LEGACY RED) ────────────────────────── */
-  --brand-secondary-50: #fef2f2;
-  --brand-secondary-100: #fee2e2;
-  --brand-secondary-600: #dc2626;
-  --brand-secondary-700: #b91c1c;
-  --brand-secondary-800: #991b1b;
+  --brand-50: #fef2f2;
+  --brand-100: #fee2e2;
+  --brand-600: #dc2626;
+  --brand-700: #b91c1c;
+  --brand-800: #991b1b;
 
   --neutral-950: #0b0e13;
   --neutral-900: #111827;
@@ -217,8 +209,8 @@ p {
   background: var(--brand-700);
   border-color: var(--brand-700);
   box-shadow:
-    0 4px 14px rgba(0, 65, 255, 0.28),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+    0 4px 14px rgb(220 38 38 / 0.3),
+    0 1px 3px rgb(0 0 0 / 0.1);
   transform: translateY(-1px);
 }
 .btn-primary:active {
@@ -376,13 +368,13 @@ p {
 }
 @keyframes pulseRing {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 65, 255, 0.4);
+    box-shadow: 0 0 0 0 rgb(220 38 38 / 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(0, 65, 255, 0);
+    box-shadow: 0 0 0 10px rgb(220 38 38 / 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(0, 65, 255, 0);
+    box-shadow: 0 0 0 0 rgb(220 38 38 / 0);
   }
 }
 @keyframes spin {

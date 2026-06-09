@@ -40,15 +40,15 @@ export default function PageHeader({
               <span
                 style={{
                   display: "inline-block",
-                  background: "rgba(0,65,255,0.12)",
-                  color: "var(--brand-600)",
+                  background: "rgba(220,38,38,0.12)",
+                  color: "#F87171",
                   fontSize: "0.74rem",
                   fontWeight: 700,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
                   padding: "0.3rem 0.75rem",
                   borderRadius: "999px",
-                  border: "1px solid rgba(0,65,255,0.2)",
+                  border: "1px solid rgba(220,38,38,0.2)",
                 }}
               >
                 {badge}

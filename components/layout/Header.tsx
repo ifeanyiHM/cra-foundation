@@ -52,6 +52,12 @@ export default function Header() {
     background: var(--neutral-100);
   }
 
+    @media (max-width: 1024px) {
+      .nav-link {
+        padding: .45rem .3rem;
+    }
+  }
+
   .dropdown-item {
     display: block;
     padding: .5rem .75rem;
@@ -112,6 +118,10 @@ export default function Header() {
   .topbar-link:hover {
     color: #fff;
   }
+
+
+
+
 `}</style>
 
       <header

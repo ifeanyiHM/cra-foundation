@@ -80,7 +80,6 @@ export default function HowToHelp() {
 
 .hth-card {
   position: relative;
-  border-radius: var(--radius-xl);
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
@@ -96,12 +95,10 @@ export default function HowToHelp() {
   height: 100%;
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  filter: brightness(0.52) saturate(0.75);
 }
 
 .hth-card:hover .hth-card-img {
   transform: scale(1.06);
-  filter: brightness(0.38) saturate(0.65);
 }
 
 /* Blue hover overlay instead of red */
@@ -109,11 +106,7 @@ export default function HowToHelp() {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,65,255,0.16) 0%,
-    transparent 50%
-  );
+  background: linear-gradient( to top, rgba(220,38,38,0.18) 0%, transparent 50%);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -133,6 +126,22 @@ export default function HowToHelp() {
   padding: 1.625rem;
 }
 
+/* Frosted pill sits only behind the text, not the whole image */
+.hth-card-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    transparent 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* Tag updated to blue system */
 .hth-card-tag {
   display: inline-block;
@@ -141,11 +150,11 @@ export default function HowToHelp() {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--brand-100);
-  border: 1px solid rgba(0,65,255,0.35);
+  border: 1px solid rgba(220,38,38,0.45);
   border-radius: var(--radius-full);
   padding: 0.2rem 0.625rem;
   margin-bottom: 0.625rem;
-  background: rgba(0,65,255,0.12);
+  background: rgba(220,38,38,0.15);
   width: fit-content;
   backdrop-filter: blur(6px);
 }
@@ -229,11 +238,7 @@ export default function HowToHelp() {
   width: 600px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(
-    ellipse,
-    rgba(0,65,255,0.14) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse, rgba(220,38,38,0.12) 0%, transparent 70%);
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
@@ -260,7 +265,7 @@ export default function HowToHelp() {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-2xl);
-  border: 1px solid rgba(0,65,255,0.22);
+  border: 1px solid rgba(220,38,38,0.2);
   pointer-events: none;
   z-index: 1;
 }
@@ -326,14 +331,14 @@ export default function HowToHelp() {
   border-radius: var(--radius-full);
   white-space: nowrap;
   flex-shrink: 0;
-  box-shadow: 0 4px 20px rgba(0,65,255,0.28);
+  box-shadow: 0 4px 20px rgba(220,38,38,0.35);
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .hth-banner-cta:hover {
   background: var(--brand-700);
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(0,65,255,0.38);
+  box-shadow: 0 6px 24px rgba(220,38,38,0.45);
 }
 
 .hth-banner-cta svg {
@@ -347,8 +352,8 @@ export default function HowToHelp() {
   .hth-card:nth-child(2) { grid-column: span 7; }
   .hth-card:nth-child(3) { grid-column: span 5; }
   .hth-card:nth-child(4) { grid-column: span 5; }
-  .hth-card:nth-child(5) { grid-column: span 7; }
-  .hth-card:nth-child(6) { grid-column: span 12; }
+  .hth-card:nth-child(5) { grid-column: span 5; }
+  .hth-card:nth-child(6) { grid-column: span 7; }
 }
 
 @media (max-width: 640px) {

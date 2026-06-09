@@ -145,13 +145,7 @@ export default function ProgramsPage() {
                   gap: "4rem",
                   alignItems: "center",
                 }}
-                className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
-                // style={{
-                //   display: "grid",
-                //   gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)",
-                //   gap: "4rem",
-                //   alignItems: "center",
-                // }}
+                className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
               >
                 <div style={{ order: isEven ? 0 : 1 }}>
                   <div
