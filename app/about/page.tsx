@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import { boardMembers, awards, lgas } from "@/data";
-import { RiMedalLine, RiMapPin2Line, RiShieldCheckLine } from "react-icons/ri";
+import {
+  RiMedalLine,
+  RiMapPin2Line,
+  RiShieldCheckLine,
+  RiArrowRightLine,
+} from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
+import { slugify } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "About Us" };
 
@@ -392,73 +398,55 @@ export default function AboutPage() {
               gap: "1.25rem",
             }}
           >
-            {boardMembers.map((m) => (
-              <div
+            {boardMembers.map((m, i) => (
+              <Link
                 key={m.id}
-                className="group card card-hover p-6 rounded-2xl overflow-hidden"
-                style={{
-                  position: "relative",
-                }}
+                href={`/board/${slugify(m.name)}`}
+                className="block"
               >
-                {/* Profile Image */}
                 <div
+                  // key={m.id}
+                  className="group card card-hover p-6 rounded-2xl overflow-hidden"
                   style={{
-                    width: "100%",
-                    height: "220px",
-                    borderRadius: "18px",
-                    overflow: "hidden",
-                    marginBottom: "1rem",
                     position: "relative",
                   }}
                 >
-                  <Image
-                    src={`/images/board/${m.name}.webp`}
-                    alt={m.name}
-                    className="mx-auto! object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                    width={208}
-                    height={221}
-                  />
-                </div>
-
-                {/* Name */}
-                <h4
-                  style={{
-                    fontSize: "0.98rem",
-                    marginBottom: "0.25rem",
-                    fontWeight: 700,
-                    textAlign: "center",
-                  }}
-                >
-                  {m.name}
-                </h4>
-
-                {/* Role */}
-                <p
-                  style={{
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    color: "var(--brand-600)",
-                    marginBottom: "0.6rem",
-                    textAlign: "center",
-                  }}
-                >
-                  {m.role}
-                </p>
-
-                {/* Bio */}
-                {m.bio && (
-                  <p
+                  {/* Profile Image */}
+                  <div
                     style={{
-                      fontSize: "0.82rem",
-                      color: "var(--neutral-500)",
-                      lineHeight: 1.6,
-                      margin: "0 0.5rem 1rem 1rem",
+                      width: "100%",
+                      height: "220px",
+                      borderRadius: "18px",
+                      overflow: "hidden",
+                      marginBottom: "1rem",
+                      position: "relative",
                     }}
                   >
-                    {m.bio}
-                  </p>
-                )}
-              </div>
+                    <Image
+                      src={`/images/board/${m.name}.webp`}
+                      alt={m.name}
+                      className="mx-auto! object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      width={208}
+                      height={221}
+                    />
+                  </div>
+
+                  {/* Body */}
+                  <div className="bc-body">
+                    <p className="bc-role">{m.role}</p>
+                    <p className="bc-name">{m.name}</p>
+                    <div className="bc-footer">
+                      <span className="bc-btn">
+                        View profile
+                        <RiArrowRightLine
+                          style={{ width: "0.8rem", height: "0.8rem" }}
+                        />
+                      </span>
+                      <span className="bc-num">0{i + 1}</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -610,6 +598,49 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .bc-body { padding: 0.875rem 1rem 1rem; }
+.bc-role {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--brand-600);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.bc-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.3;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.015em;
+}
+.bc-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bc-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--neutral-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color .15s ease;
+}
+.bc:hover .bc-btn { color: var(--brand-600); }
+.bc-num {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--neutral-300);
+  letter-spacing: 0.05em;
+}
+      `}</style>
     </>
   );
 }

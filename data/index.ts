@@ -168,69 +168,153 @@ export const boardMembers: TeamMember[] = [
     id: 1,
     name: "Dr. Femi Onanuga",
     role: "Chairman, Board of Trustees",
-    bio: "Distinguished leader committed to child welfare and education advocacy.",
+    bio: `Dr. Onanuga is a medical doctor and public health specialist with over 30 years of experience in the Lagos State government as a civil and public servant.
+
+          He spent the bulk of his career in the Lagos State civil service as a consultant and administrator, rising to the position of Permanent Secretary before retiring in 2014. In 2015, he served as a Special Adviser in Primary Healthcare under the then Governor of Lagos State, Mr. Akinwunmi Ambode, where he used his experience to improve healthcare delivery across the state.
+
+          Some of his accomplishments include:
+          - Establishment of Randle Maternity Hospital in Surulere, Lagos
+          - Establishment of Ifako-Ijaiye General Hospital, Lagos
+          - Establishment of 27 health posts in Lagos State between 1993 and 2003
+          - Comprehensive rehabilitation of 68 Primary Health Centres`,
   },
+
   {
     id: 2,
     name: "Mrs. Olayide Shonubi",
     role: "Founder & Executive Director",
-    bio: "Visionary founder who established the foundation in 2010 with a mission to nurture underprivileged children.",
+    bio: `She was born in Ijebu Ode, Ogun State, on February 12, 1954.
+
+          As a child, she often played the role of a teacher in her make-believe school, where she taught morals through stories. Her mother, an educationist, noticed her passion for children and encouraged her to pursue teaching.
+
+          She began her teaching career in a public primary school in Osogbo (now Osun State) immediately after completing her West African School Certificate. There, she encountered many underprivileged and orphaned children who lacked basic school needs.
+
+          Deeply moved, she shared her experiences with her late mother, who supported her efforts to help these children. From then on, she remained committed to supporting children in need.
+
+          She trained at United Missionary College, Ibadan, and later studied at the University of Ife (now Obafemi Awolowo University), where she earned both undergraduate and postgraduate degrees in Guidance and Counselling.
+
+          After graduation, she taught in various states and federal schools. She retired from the Federal Ministry of Education as an Assistant Director in the Inspectorate Division at the age of sixty.
+
+          Driven by her passion for helping vulnerable children, she established a non-profit organisation to support their development and authored three books on teaching moral values through stories.
+
+          These stories are read every Friday, and the children also act them out. She intends to use proceeds from her books to support more children in need.
+
+          She is married to Mr. Abiodun Shonubi and is blessed with children and grandchildren.`,
   },
+
   {
     id: 3,
     name: "Mr. Abiodun Shonubi",
     role: "Board Trustee",
-    bio: "Dedicated trustee supporting the foundation's governance and strategic direction.",
+    bio: `ABIODUN SHONUBI (FNIMN, MIST, MNSE, MBA, B.Sc, Cert. Computer Programming)
+
+          Managing Director/CEO of Loomash Investment Ltd.
+
+          He is a former academic, marketing practitioner, development and training expert, and later an astute businessman. He has nearly 50 years of diverse experience across academia, multinational corporations, and national organisations. He also spent 19 years with an international capacity development NGO initiated by the Rockefeller Foundation.`,
   },
-  {
-    id: 4,
-    name: "Engineer Adebayo Olapade",
-    role: "Board Trustee",
-    bio: "Engineering professional bringing technical expertise and community leadership.",
-  },
-  {
-    id: 5,
-    name: "Ms Toyosi Kolawole",
-    role: "Board Trustee",
-    bio: "Youth advocate passionate about education and community development.",
-  },
-  {
-    id: 6,
-    name: "Engr. Ladi Saani",
-    role: "Board Trustee",
-    bio: "Engineering expert committed to sustainable development and youth empowerment.",
-  },
+
   {
     id: 7,
     name: "Mrs Olusola Ilori",
     role: "Board Trustee",
-    bio: "Community leader with deep commitment to child rights and welfare.",
+    bio: `Olusola Ilori is a Fellow of the Chartered Institute of Bankers and a seasoned finance professional with over 28 years of experience in banking.
+
+          She held leadership roles at First Bank of Nigeria, including Branch Manager, Senior Credit Risk Analyst, and Head of the Remedial Business Unit. After retiring from banking, she transitioned into real estate and stockbroking and currently serves as Finance Director at Ketroids Integrated Limited.
+
+          She is also an author of "Financial Backups in Retirement" and is happily married with children.`,
   },
-  {
-    id: 8,
-    name: "Mr Olajuwon Olaleye",
-    role: "Board Trustee",
-    bio: "Business professional supporting organizational growth and sustainability.",
-  },
-  {
-    id: 9,
-    name: "Mrs Omowunmi Leye-Afolayan",
-    role: "Board Trustee",
-    bio: "Dedicated to child advocacy and social development initiatives.",
-  },
+
   {
     id: 10,
     name: "Engr. Oluwaseun Shonubi",
     role: "Board Trustee",
-    bio: "Technology and engineering professional driving innovative solutions for education.",
+    bio: `Oluwaseun Shonubi is an electrical power systems engineer and energy infrastructure leader with experience in utilities, renewable energy, and large-scale electrification projects.
+
+          He has contributed to the deployment of critical power systems, including grid infrastructure, renewable energy assets, and EV charging networks across multiple regions.
+
+          Inspired by a lifelong exposure to service through his family, he is passionate about using engineering and energy access as tools for social and economic development. His work focuses on bridging the gap between technical innovation and community impact, especially in underserved regions.
+
+          He is committed to empowering the next generation and expanding access to education and reliable energy infrastructure through charitable initiatives.`,
   },
+
   {
     id: 11,
     name: "Mr Moyosore Shonubi",
     role: "Board Trustee",
-    bio: "Committed to furthering the foundation's mission across communities.",
+    bio: `Moyosore Shonubi holds a Bachelor’s degree in Business Administration and has extensive experience in financial services.
+
+          He is motivated by a desire to use his professional background to create meaningful social impact for vulnerable children across the country.`,
   },
 ];
+
+// export const boardMembers: TeamMember[] = [
+//   {
+//     id: 1,
+//     name: "Dr. Femi Onanuga",
+//     role: "Chairman, Board of Trustees",
+//     bio: "Distinguished leader committed to child welfare and education advocacy.",
+//   },
+//   {
+//     id: 2,
+//     name: "Mrs. Olayide Shonubi",
+//     role: "Founder & Executive Director",
+//     bio: "Visionary founder who established the foundation in 2010 with a mission to nurture underprivileged children.",
+//   },
+//   {
+//     id: 3,
+//     name: "Mr. Abiodun Shonubi",
+//     role: "Board Trustee",
+//     bio: "Dedicated trustee supporting the foundation's governance and strategic direction.",
+//   },
+//   // {
+//   //   id: 4,
+//   //   name: "Engineer Adebayo Olapade",
+//   //   role: "Board Trustee",
+//   //   bio: "Engineering professional bringing technical expertise and community leadership.",
+//   // },
+//   // {
+//   //   id: 5,
+//   //   name: "Ms Toyosi Kolawole",
+//   //   role: "Board Trustee",
+//   //   bio: "Youth advocate passionate about education and community development.",
+//   // },
+//   // {
+//   //   id: 6,
+//   //   name: "Engr. Ladi Saani",
+//   //   role: "Board Trustee",
+//   //   bio: "Engineering expert committed to sustainable development and youth empowerment.",
+//   // },
+//   {
+//     id: 7,
+//     name: "Mrs Olusola Ilori",
+//     role: "Board Trustee",
+//     bio: "Community leader with deep commitment to child rights and welfare.",
+//   },
+//   // {
+//   //   id: 8,
+//   //   name: "Mr Olajuwon Olaleye",
+//   //   role: "Board Trustee",
+//   //   bio: "Business professional supporting organizational growth and sustainability.",
+//   // },
+//   // {
+//   //   id: 9,
+//   //   name: "Mrs Omowunmi Leye-Afolayan",
+//   //   role: "Board Trustee",
+//   //   bio: "Dedicated to child advocacy and social development initiatives.",
+//   // },
+//   {
+//     id: 10,
+//     name: "Engr. Oluwaseun Shonubi",
+//     role: "Board Trustee",
+//     bio: "Technology and engineering professional driving innovative solutions for education.",
+//   },
+//   {
+//     id: 11,
+//     name: "Mr Moyosore Shonubi",
+//     role: "Board Trustee",
+//     bio: "Committed to furthering the foundation's mission across communities.",
+//   },
+// ];
 
 export const awards: Award[] = [
   {
@@ -320,10 +404,13 @@ export const impactStats: ImpactStat[] = [
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Amara O.",
-    role: "Scholarship Beneficiary (Now University Student)",
-    quote:
-      "CRA Foundation changed my life. Without their scholarship and the after-school lessons, I never would have passed my WAEC exams. Today I am studying Computer Science at university, and I owe it all to them.",
+    name: "Abraham James",
+    role: "Scholarship Beneficiary",
+    quote: `Nine years ago, the founder of CRA Foundation visited my former school, Shamshudeen Nursery and Primary School in Surulere, Lagos, to donate school uniforms, bags, sandals, and writing materials. We were told it was her second visit to the school. The headteacher was asked to identify children who needed special help. My two siblings, two cousins who lived with us, and I were among those selected. We were placed on a free midday meal program. Because of our difficult living conditions, she took special interest in us. We lived, and still live, in an unfinished house. When the foundation later opened its center for children, the five of us were among the first children to join. We received clothes, toiletries, and educational support. Teachers were also provided to help us in English, Mathematics, Science, and Accounting.
+
+            Two sessions ago, Mrs. Shonubi secured a full scholarship for three children at the center, including me. The scholarship covers our school fees, learning materials, medical care, home needs, and money for midday meals. For me, the midday meal often serves as my breakfast because I usually leave home for school without food. Mrs. Shonubi also opened savings accounts for the three of us at First Bank Nigeria. I currently have over one hundred thousand naira in my savings account. She calls it an "ICE Account" (In Case of Emergency).
+
+            I am very grateful to CRA Foundation and the generous couple supporting me. I appreciate all they have done for my future. As we say at the center: "I shall remain a child of integrity, honest and responsible, so help me God."`,
   },
   {
     id: "2",
@@ -338,13 +425,6 @@ export const testimonials: Testimonial[] = [
     role: "Monthly Donor & Volunteer",
     quote:
       "I started donating monthly after seeing the children at the learning center. The transformation is real — these children glow with confidence. It is the best investment I have ever made.",
-  },
-  {
-    id: "4",
-    name: "Chidi N.",
-    role: "Program Alumnus, Now Mentor",
-    quote:
-      "The counseling sessions at CRA helped me discover my love for mathematics. I now come back as a volunteer tutor. These children deserve every opportunity.",
   },
 ];
 

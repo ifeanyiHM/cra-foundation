@@ -142,6 +142,7 @@ export default function TestimonialsSection() {
                 marginBottom: "2rem",
                 fontStyle: "italic",
               }}
+              className="whitespace-pre-line"
             >
               &quot;{t.quote}&quot;
             </p>

@@ -37,8 +37,11 @@ const socialLinks = [
     Icon: RiFacebookCircleLine,
     href: "https://web.facebook.com/nurtureadream?rdid=PyoQ16CCNhujAVtX&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1EKD1fnrUs%2F%3F_rdc%3D1%26_rdr#",
   },
+  {
+    Icon: RiInstagramLine,
+    href: "https://www.instagram.com/childrensright?igsh=bHJhaDB2NWlnaTR3",
+  },
   { Icon: RiTwitterXLine, href: "https://x.com" },
-  { Icon: RiInstagramLine, href: "https://instagram.com" },
   { Icon: RiYoutubeLine, href: "https://youtube.com" },
 ];
 
