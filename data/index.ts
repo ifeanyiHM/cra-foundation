@@ -31,6 +31,7 @@ export const navigation: NavItem[] = [
       { label: "Health & Wellness", href: "/programs#health" },
       { label: "Scholarships", href: "/programs#scholarships" },
       { label: "Excursions", href: "/programs#excursions" },
+      { label: "Children Giving to Children", href: "/cgc" },
     ],
   },
   { label: "Impact", href: "/impact" },

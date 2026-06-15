@@ -8,9 +8,13 @@ import {
   RiPhoneLine,
   RiMailLine,
   RiArrowDownSLine,
-  RiMapPinLine,
   RiHandHeartFill,
+  RiFacebookFill,
+  RiInstagramLine,
+  RiTwitterXFill,
+  RiWhatsappLine,
 } from "react-icons/ri";
+
 import Image from "next/image";
 
 export default function Header() {
@@ -160,23 +164,58 @@ export default function Header() {
                 <RiPhoneLine style={{ width: ".8rem", height: ".8rem" }} />{" "}
                 08063811840
               </a>
-              <a href="mailto:nurtureadream@yahoo.com" className="topbar-link">
+              <a
+                href="mailto:nurtureadream@yahoo.com"
+                className="topbar-link hidden! md:flex!"
+              >
                 <RiMailLine style={{ width: ".8rem", height: ".8rem" }} />{" "}
                 nurtureadream@yahoo.com
               </a>
             </div>
+
             <div
-              className="hidden md:flex"
               style={{
-                // display: "flex",
                 alignItems: "center",
-                gap: ".35rem",
-                color: "rgba(255,255,255,.3)",
-                fontSize: ".75rem",
+                gap: "0.875rem",
               }}
+              className="flex"
             >
-              <RiMapPinLine style={{ width: ".8rem", height: ".8rem" }} /> 40B
-              Ayilara Street, Surulere, Lagos
+              <a
+                href="https://web.facebook.com/nurtureadream?rdid=PyoQ16CCNhujAVtX&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1EKD1fnrUs%2F%3F_rdc%3D1%26_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="topbar-link"
+                aria-label="Facebook"
+              >
+                <RiFacebookFill style={{ width: ".8rem", height: ".8rem" }} />
+              </a>
+              <a
+                href="https://www.instagram.com/childrensright?igsh=bHJhaDB2NWlnaTR3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="topbar-link"
+                aria-label="Instagram"
+              >
+                <RiInstagramLine style={{ width: ".8rem", height: ".8rem" }} />
+              </a>
+              <a
+                href="https://x.com/your-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="topbar-link"
+                aria-label="X (Twitter)"
+              >
+                <RiTwitterXFill style={{ width: ".8rem", height: ".8rem" }} />
+              </a>
+              <a
+                href="https://wa.me/2348063811840"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="topbar-link"
+                aria-label="WhatsApp"
+              >
+                <RiWhatsappLine style={{ width: ".8rem", height: ".8rem" }} />
+              </a>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import NewsSection from "@/components/home/NewsSection";
 import AwardsStrip from "@/components/home/AwardsStrip";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
+import ChildrenGivingSection from "@/components/home/ChildrenGivingSection";
 
 export default function HomePage() {
   return (
@@ -92,6 +93,7 @@ export default function HomePage() {
       </div>
 
       <SponsorshipSection />
+      <ChildrenGivingSection />
       <TestimonialsSection />
       <HowToHelp />
       <NewsSection />
