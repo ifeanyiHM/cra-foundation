@@ -7,6 +7,7 @@ import {
   RiCloseLine,
   RiArrowLeftSLine,
   RiArrowRightSLine,
+  RiPlayFill,
 } from "react-icons/ri";
 import { gallery } from "@/data";
 
@@ -82,6 +83,8 @@ export default function GalleryPage() {
       }
     : null;
 
+  const isVideo = (src: string) => /\.(mp4|webm|ogg|mov)$/i.test(src);
+
   return (
     <>
       <PageHeader
@@ -137,6 +140,7 @@ export default function GalleryPage() {
                 bg: "var(--neutral-100)",
                 color: "var(--neutral-600)",
               };
+
               return (
                 <div
                   key={item.id}
@@ -148,17 +152,54 @@ export default function GalleryPage() {
                   onKeyDown={(e) => e.key === "Enter" && openModal(idx)}
                 >
                   <div className="gallery-card-img">
-                    <Image
-                      src={item.img}
-                      alt={item.caption}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      style={{
-                        objectFit: "cover",
-                        transition: "transform 0.55s ease",
-                      }}
-                      className="gallery-thumb"
-                    />
+                    {isVideo(item.src) ? (
+                      <>
+                        <video
+                          src={item.src}
+                          muted
+                          autoPlay
+                          playsInline
+                          loop
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            transition: "transform 0.55s ease",
+                          }}
+                          className="gallery-thumb"
+                          onMouseEnter={(e) =>
+                            (e.currentTarget as HTMLVideoElement).play()
+                          }
+                          onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLVideoElement).pause();
+                            (e.currentTarget as HTMLVideoElement).currentTime =
+                              0;
+                          }}
+                        />
+                        {/* Play badge */}
+                        <div className="gallery-video-badge">
+                          <RiPlayFill
+                            style={{ width: "0.7rem", height: "0.7rem" }}
+                          />
+                          Video
+                        </div>
+                      </>
+                    ) : (
+                      <Image
+                        src={item.src}
+                        alt={item.caption}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        style={{
+                          objectFit: "cover",
+                          transition: "transform 0.55s ease",
+                        }}
+                        className="gallery-thumb"
+                      />
+                    )}
+
                     {/* Category badge */}
                     <span
                       className="gallery-badge"
@@ -166,26 +207,38 @@ export default function GalleryPage() {
                     >
                       {item.cat}
                     </span>
-                    {/* Hover overlay */}
+
+                    {/* Hover overlay — zoom icon for image, play icon for video */}
                     <div className="gallery-card-overlay">
-                      <svg
-                        width="28"
-                        height="28"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        style={{ color: "#fff" }}
-                      >
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                        <line x1="11" y1="8" x2="11" y2="14" />
-                        <line x1="8" y1="11" x2="14" y2="11" />
-                      </svg>
+                      {isVideo(item.src) ? (
+                        <RiPlayFill
+                          style={{
+                            width: "2rem",
+                            height: "2rem",
+                            color: "#fff",
+                          }}
+                        />
+                      ) : (
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          style={{ color: "#fff" }}
+                        >
+                          <circle cx="11" cy="11" r="8" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                          <line x1="11" y1="8" x2="11" y2="14" />
+                          <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                      )}
                     </div>
                   </div>
+
                   <div style={{ padding: "0.875rem 1rem" }}>
                     <p
                       style={{
@@ -279,14 +332,33 @@ export default function GalleryPage() {
 
             {/* Image */}
             <div className="modal-img-wrap">
-              <Image
-                src={currentItem.img.replace("w=800", "w=1400")}
-                alt={currentItem.caption}
-                fill
-                sizes="(max-width: 768px) 100vw, 80vw"
-                style={{ objectFit: "contain" }}
-                priority
-              />
+              {isVideo(currentItem.src) ? (
+                <video
+                  key={currentItem.src}
+                  src={currentItem.src}
+                  // controls
+                  muted
+                  autoPlay
+                  playsInline
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    background: "#000",
+                  }}
+                />
+              ) : (
+                <Image
+                  src={currentItem.src.replace("w=800", "w=1400")}
+                  alt={currentItem.caption}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  style={{ objectFit: "contain" }}
+                  priority
+                />
+              )}
             </div>
 
             {/* Footer */}

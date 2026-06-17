@@ -133,5 +133,5 @@ export interface GalleryItem {
   id: string;
   cat: string;
   caption: string;
-  img: string;
+  src: string;
 }
