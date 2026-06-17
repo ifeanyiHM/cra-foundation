@@ -192,7 +192,7 @@ export default function ChildrenGivingPage() {
         badge="A Peer-Led Initiative"
         title="Children Giving"
         highlight="to Children"
-        description="A movement where the children we support become givers themselves — sharing books, toys, meals, and friendship with other children in need. Because compassion is best learned by practising it."
+        description="A movement that invites privileged children to become active givers — sharing books, toys, clothes, and friendship with underprivileged children in need. Because compassion, generosity, and gratitude are values best shaped early, and best learned by practising them."
       >
         <div style={{ display: "flex", flexWrap: "wrap", gap: ".75rem" }}>
           <Link href="/donate" className="btn btn-primary btn-lg">
@@ -277,7 +277,7 @@ export default function ChildrenGivingPage() {
             <div>
               <p className="section-label">Our Story</p>
               <h2 style={{ marginBottom: "1.25rem" }}>
-                From Receiving to Giving
+                When Privilege Meets Purpose
               </h2>
               <div
                 style={{
@@ -287,9 +287,9 @@ export default function ChildrenGivingPage() {
                 }}
               >
                 {[
-                  'Every child enrolled in our programs has, at some point, received help — a meal, a book, a uniform, a kind word. "Children Giving to Children" was born from a simple observation: the children who had been helped the most were often the ones most eager to help others.',
-                  "Rather than treat our beneficiaries only as recipients, this initiative invites them to become active participants in the foundation's mission — donating outgrown items, mentoring younger children, and organising shared celebrations.",
-                  "The results have been remarkable. Children report feeling proud, confident, and connected to their community in new ways. Many say it is the first time they have felt like they had something worth giving.",
+                  '"Children Giving to Children" was born from a simple belief: that children who have been given much carry a unique responsibility — and joy — in giving to others. This initiative invites children from privileged homes to look beyond their own comfort and extend a hand to peers who have far less.',
+                  "Whether donating outgrown clothes, school supplies, or toys they no longer use, these children are learning one of life's most important lessons early — that generosity is not about having extra, it is about choosing to share what you have.",
+                  "The impact goes both ways. Privileged children grow in empathy, gratitude, and social awareness. And for the children who receive, knowing the gift came from a fellow child — not an institution — carries a warmth that is hard to put into words.",
                 ].map((p, i) => (
                   <p
                     key={i}

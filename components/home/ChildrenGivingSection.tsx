@@ -201,10 +201,11 @@ export default function ChildrenGivingSection() {
                   marginBottom: 0,
                 }}
               >
-                A movement where the children we support become givers
-                themselves — sharing books, toys, meals, and friendship with
-                other children in need. Because compassion is best learned by
-                practising it.
+                A movement that invites privileged children to become active
+                givers — sharing books, toys, clothes, and friendship with
+                underprivileged children in need. Because compassion,
+                generosity, and gratitude are values best shaped early, and best
+                learned by practising them.
               </p>
 
               {/* Pills */}
