@@ -681,7 +681,7 @@ export const gallery: GalleryItem[] = [
   {
     id: "4",
     cat: "Skills",
-    caption: "Creative arts training session",
+    caption: "Handcraft skill session",
     src: "/images/gallery/skills1.jpg",
   },
   {
@@ -717,7 +717,7 @@ export const gallery: GalleryItem[] = [
   {
     id: "10",
     cat: "Skills",
-    caption: "Digital literacy training",
+    caption: "Vocational skill training",
     src: "/images/gallery/skills2.jpg",
   },
   {
@@ -819,7 +819,7 @@ export const gallery: GalleryItem[] = [
   {
     id: "27",
     cat: "Skills",
-    caption: "Leadership and teamwork training",
+    caption: "Handcraft skill developement",
     src: "/images/gallery/skills4.jpg",
   },
   {
