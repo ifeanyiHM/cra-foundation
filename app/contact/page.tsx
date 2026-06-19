@@ -73,8 +73,8 @@ export default function ContactPage() {
                   {
                     icon: RiMailLine,
                     label: "Email",
-                    value: "nurtureadream@yahoo.com",
-                    href: "mailto:nurtureadream@yahoo.com",
+                    value: "admin@crafoundation.com.ng",
+                    href: "mailto:admin@crafoundation.com.ng",
                   },
                   {
                     icon: RiExternalLinkLine,

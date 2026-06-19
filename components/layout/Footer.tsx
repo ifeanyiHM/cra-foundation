@@ -198,8 +198,8 @@ export default function Footer() {
                 },
                 {
                   Icon: RiMailLine,
-                  text: "nurtureadream@yahoo.com",
-                  href: "mailto:nurtureadream@yahoo.com",
+                  text: "admin@crafoundation.com.ng",
+                  href: "mailto:admin@crafoundation.com.ng",
                 },
               ].map(({ Icon, text, href }) => (
                 <a

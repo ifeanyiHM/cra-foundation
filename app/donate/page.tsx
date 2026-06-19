@@ -219,7 +219,7 @@ export default function DonatePage() {
                   }}
                 >
                   After transfer, email your name and reference to
-                  nurtureadream@yahoo.com
+                  admin@crafoundation.com.ng
                 </p>
               </div>
 
