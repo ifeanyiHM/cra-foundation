@@ -181,6 +181,7 @@ export default function NewsPage() {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
               gap: "1rem",
+              alignItems: "stretch",
             }}
           >
             {rest.map((article) => (
@@ -210,7 +211,10 @@ export default function NewsPage() {
                 </div>
 
                 {/* Card body */}
-                <div style={{ padding: "1.25rem 1.5rem 1.5rem" }}>
+                <div
+                  className="flex flex-col h-60"
+                  style={{ padding: "1.25rem 1.5rem 1.5rem" }}
+                >
                   <div
                     style={{
                       display: "flex",
@@ -250,11 +254,13 @@ export default function NewsPage() {
                       fontSize: "0.845rem",
                       color: "var(--neutral-500)",
                       lineHeight: 1.65,
+                      marginTop: "auto",
                     }}
                     className="line-clamp-3"
                   >
                     {article.excerpt}
                   </p>
+
                   <span
                     style={{
                       display: "inline-flex",

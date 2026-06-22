@@ -77,7 +77,8 @@ export interface SponsorChild {
   name: string;
   age: number;
   school: string;
-  story: string;
+  class: string;
+  // story: string;
   image?: string;
   sponsored: boolean;
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import { boardMembers, awards, lgas } from "@/data";
 import {
-  RiMedalLine,
   RiMapPin2Line,
   RiShieldCheckLine,
   RiArrowRightLine,
@@ -10,6 +9,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { slugify } from "@/lib/utils";
+import AwardsSection from "@/components/programs/AwardSection";
 
 export const metadata: Metadata = { title: "About Us" };
 
@@ -282,7 +282,11 @@ export default function AboutPage() {
               "Facilitate volunteering by encouraging people to supply needs, adopt, or mentor children.",
               "Organize fun days and celebrate festivals with underprivileged children.",
             ].map((obj, i) => (
-              <div key={i} className="card" style={{ padding: "1.375rem" }}>
+              <div
+                key={i}
+                className="card flex flex-col"
+                style={{ padding: "1.375rem" }}
+              >
                 <div
                   style={{
                     width: "1.625rem",
@@ -306,6 +310,7 @@ export default function AboutPage() {
                     fontSize: "0.875rem",
                     lineHeight: 1.7,
                     color: "var(--neutral-600)",
+                    marginTop: "auto",
                   }}
                 >
                   {obj}
@@ -337,7 +342,7 @@ export default function AboutPage() {
             {lgas.map((lga) => (
               <div
                 key={lga.name}
-                className="card"
+                className="card flex flex-col"
                 style={{ padding: "1.5rem" }}
               >
                 <RiMapPin2Line
@@ -356,6 +361,7 @@ export default function AboutPage() {
                     fontSize: "0.845rem",
                     color: "var(--neutral-400)",
                     lineHeight: 1.6,
+                    marginTop: "auto",
                   }}
                 >
                   {lga.description}
@@ -453,101 +459,7 @@ export default function AboutPage() {
       </section>
 
       {/* Awards */}
-      <section
-        id="awards"
-        style={{ background: "var(--neutral-950)", padding: "4rem 0" }}
-      >
-        <div className="container-max">
-          <p
-            style={{
-              display: "inline-flex",
-              fontSize: "0.74rem",
-              fontWeight: 700,
-              letterSpacing: "0.09em",
-              textTransform: "uppercase",
-              color: "var(--brand-600)",
-              marginBottom: "0.75rem",
-            }}
-          >
-            Recognition
-          </p>
-          <h2 style={{ color: "#fff", marginBottom: "2rem" }}>
-            Awards & Laurels
-          </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))",
-              gap: "0.875rem",
-            }}
-          >
-            {awards.map((a, i) => (
-              <div
-                key={i}
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "1rem",
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  borderRadius: "var(--radius-xl)",
-                  padding: "1.375rem",
-                }}
-              >
-                <div
-                  style={{
-                    width: "2.25rem",
-                    height: "2.25rem",
-                    borderRadius: "var(--radius-md)",
-                    background: "rgba(217,119,6,0.12)",
-                    border: "1px solid rgba(217,119,6,0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <RiMedalLine
-                    style={{ width: "1rem", height: "1rem", color: "#FCD34D" }}
-                  />
-                </div>
-                <div>
-                  <span
-                    style={{
-                      fontSize: "0.72rem",
-                      fontWeight: 700,
-                      color: "#FCD34D",
-                      display: "block",
-                      marginBottom: "0.25rem",
-                    }}
-                  >
-                    {a.year}
-                  </span>
-                  <p
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "0.875rem",
-                      color: "rgba(255,255,255,0.8)",
-                      lineHeight: 1.4,
-                      marginBottom: "0.2rem",
-                    }}
-                  >
-                    {a.title}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: "0.8rem",
-                      color: "rgba(255,255,255,0.35)",
-                    }}
-                  >
-                    {a.issuer}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AwardsSection awards={awards} title="Awards & Laurels" />
 
       {/* CTA */}
       <div

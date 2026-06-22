@@ -325,7 +325,11 @@ export default function ProgramsPage() {
             }}
           >
             {activities.map(({ letter, title, desc }) => (
-              <div key={letter} className="card" style={{ padding: "1.5rem" }}>
+              <div
+                key={letter}
+                className="card flex flex-col"
+                style={{ padding: "1.5rem" }}
+              >
                 <div
                   style={{
                     width: "1.75rem",
@@ -344,7 +348,13 @@ export default function ProgramsPage() {
                 >
                   {letter}
                 </div>
-                <h4 style={{ fontSize: "0.9375rem", marginBottom: "0.4rem" }}>
+                <h4
+                  style={{
+                    fontSize: "0.9375rem",
+                    marginTop: "auto",
+                    marginBottom: "0.4rem",
+                  }}
+                >
                   {title}
                 </h4>
                 <p
@@ -352,6 +362,7 @@ export default function ProgramsPage() {
                     fontSize: "0.845rem",
                     color: "var(--neutral-400)",
                     lineHeight: 1.65,
+                    marginTop: "auto",
                   }}
                 >
                   {desc}

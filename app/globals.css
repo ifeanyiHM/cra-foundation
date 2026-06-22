@@ -330,7 +330,7 @@ p {
 }
 .card-hover:hover {
   box-shadow: var(--shadow-xl);
-  transform: translateY(-3px);
+  /* transform: translateY(-1px); */
   border-color: var(--neutral-200);
 }
 

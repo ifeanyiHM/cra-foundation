@@ -3,6 +3,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import { sponsorChildren } from "@/data";
 import SponsorForm from "@/components/forms/SponsorForm";
 import { RiHeartLine, RiCheckLine } from "react-icons/ri";
+import Image from "next/image";
 
 export const metadata: Metadata = { title: "Sponsor a Child" };
 
@@ -127,146 +128,185 @@ export default function SponsorPage() {
               marginBottom: "3.5rem",
             }}
           >
-            {sponsorChildren.map((child) => (
-              <div
-                key={child.id}
-                className="card"
-                style={{
-                  overflow: "hidden",
-                  opacity: child.sponsored ? 0.6 : 1,
-                }}
-              >
-                {/* Avatar */}
+            {sponsorChildren.map((child) => {
+              const imageSrc = `/images/sac/${child.name}.jpeg`;
+
+              return (
                 <div
+                  key={child.id}
+                  className="card flex flex-col"
                   style={{
-                    height: "10rem",
-                    background: "var(--neutral-950)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    position: "relative",
+                    overflow: "hidden",
+                    opacity: child.sponsored ? 0.6 : 1,
                   }}
                 >
+                  {/* Avatar */}
                   <div
                     style={{
-                      width: "4rem",
-                      height: "4rem",
-                      borderRadius: "50%",
-                      background: "rgba(255,255,255,0.06)",
-                      border: "2px solid rgba(255,255,255,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "1.375rem",
-                      fontWeight: 800,
-                      color: "rgba(255,255,255,0.5)",
-                      letterSpacing: "-0.02em",
+                      height: "16rem",
+                      background: "var(--neutral-950)",
+                      position: "relative",
+                      overflow: "hidden",
                     }}
                   >
-                    {child.name.charAt(0)}
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "0.75rem",
-                      right: "0.75rem",
-                    }}
-                  >
-                    <span
-                      style={{
-                        padding: "0.2rem 0.6rem",
-                        borderRadius: "999px",
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        background: child.sponsored
-                          ? "var(--accent-green-50)"
-                          : "var(--brand-50)",
-                        color: child.sponsored
-                          ? "var(--accent-green-600)"
-                          : "var(--brand-600)",
-                      }}
-                    >
-                      {child.sponsored ? "Sponsored" : "Available"}
-                    </span>
-                  </div>
-                </div>
-                <div style={{ padding: "1.25rem" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      marginBottom: "0.375rem",
-                    }}
-                  >
-                    <h4 style={{ fontSize: "0.9375rem" }}>{child.name}</h4>
-                    <span
-                      style={{
-                        fontSize: "0.78rem",
-                        color: "var(--neutral-400)",
-                        fontWeight: 500,
-                      }}
-                    >
-                      Age {child.age}
-                    </span>
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "0.78rem",
-                      color: "var(--brand-600)",
-                      fontWeight: 500,
-                      marginBottom: "0.625rem",
-                    }}
-                  >
-                    {child.school}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: "0.845rem",
-                      color: "var(--neutral-500)",
-                      lineHeight: 1.65,
-                      marginBottom: "1.25rem",
-                    }}
-                    className="line-clamp-3"
-                  >
-                    {child.story}
-                  </p>
-                  {!child.sponsored ? (
-                    <a
-                      href="#sponsor-form"
-                      className="btn btn-primary btn-sm"
-                      style={{ width: "100%", justifyContent: "center" }}
-                    >
-                      <RiHeartLine
-                        style={{ width: "0.875rem", height: "0.875rem" }}
+                    {imageSrc ? (
+                      <Image
+                        src={imageSrc}
+                        alt={child.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "top",
+                        }}
                       />
-                      Sponsor {child.name.split(" ")[0]}
-                    </a>
-                  ) : (
+                    ) : (
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "4rem",
+                            height: "4rem",
+                            borderRadius: "50%",
+                            background: "rgba(255,255,255,0.06)",
+                            border: "2px solid rgba(255,255,255,0.1)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: "1.375rem",
+                            fontWeight: 800,
+                            color: "rgba(255,255,255,0.5)",
+                            letterSpacing: "-0.02em",
+                          }}
+                        >
+                          {child.name.charAt(0)}
+                        </div>
+                      </div>
+                    )}
+
                     <div
                       style={{
-                        padding: "0.625rem",
-                        background: "var(--accent-green-50)",
-                        borderRadius: "var(--radius-md)",
-                        textAlign: "center",
-                        fontSize: "0.845rem",
-                        fontWeight: 600,
-                        color: "var(--accent-green-600)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "0.375rem",
+                        position: "absolute",
+                        top: "0.75rem",
+                        right: "0.75rem",
+                        zIndex: 1,
                       }}
                     >
-                      <RiCheckLine
-                        style={{ width: "0.875rem", height: "0.875rem" }}
-                      />{" "}
-                      Sponsored
+                      <span
+                        style={{
+                          padding: "0.2rem 0.6rem",
+                          borderRadius: "999px",
+                          fontSize: "0.72rem",
+                          fontWeight: 700,
+                          background: child.sponsored
+                            ? "var(--accent-green-50)"
+                            : "var(--brand-50)",
+                          color: child.sponsored
+                            ? "var(--accent-green-600)"
+                            : "var(--brand-600)",
+                        }}
+                      >
+                        {child.sponsored ? "Sponsored" : "Available"}
+                      </span>
                     </div>
-                  )}
+                  </div>
+
+                  {/* Body */}
+                  <div
+                    style={{
+                      padding: "1.25rem",
+                      flex: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        marginBottom: "0.375rem",
+                      }}
+                    >
+                      <h4 style={{ fontSize: "0.9375rem" }}>{child.name}</h4>
+
+                      <span
+                        style={{
+                          fontSize: "0.78rem",
+                          color: "var(--neutral-400)",
+                          fontWeight: 500,
+                        }}
+                      >
+                        Age {child.age}
+                      </span>
+                    </div>
+
+                    <p
+                      style={{
+                        fontSize: "0.78rem",
+                        color: "var(--brand-600)",
+                        fontWeight: 500,
+                        marginBottom: "0.625rem",
+                      }}
+                    >
+                      {child.school}
+                    </p>
+
+                    {!child.sponsored ? (
+                      <a
+                        href="#sponsor-form"
+                        className="btn btn-primary btn-sm"
+                        style={{
+                          width: "100%",
+                          justifyContent: "center",
+                          marginTop: "auto",
+                        }}
+                      >
+                        <RiHeartLine
+                          style={{
+                            width: "0.875rem",
+                            height: "0.875rem",
+                          }}
+                        />
+                        Sponsor {child.name.split(" ")[0]}
+                      </a>
+                    ) : (
+                      <div
+                        style={{
+                          padding: "0.625rem",
+                          background: "var(--accent-green-50)",
+                          borderRadius: "var(--radius-md)",
+                          textAlign: "center",
+                          fontSize: "0.845rem",
+                          fontWeight: 600,
+                          color: "var(--accent-green-600)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          gap: "0.375rem",
+                          marginTop: "auto",
+                        }}
+                      >
+                        <RiCheckLine
+                          style={{
+                            width: "0.875rem",
+                            height: "0.875rem",
+                          }}
+                        />
+                        Sponsored
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Sponsorship form */}

@@ -582,57 +582,53 @@ export const donationTiers: DonationTier[] = [
 export const sponsorChildren: SponsorChild[] = [
   {
     id: "1",
-    name: "Taiwo A.",
-    age: 9,
-    school: "Community Primary School, Surulere",
-    story:
-      "Taiwo lost her father and her mother sells groundnuts to survive. She is bright and loves mathematics.",
+    name: "Adewale Kehinde",
+    age: 14,
+    school: "Akinta Junior Grammar School Surulere Lagos",
+    class: "JS 2",
+    // story:
+    //   "Taiwo lost her father and her mother sells groundnuts to survive. She is bright and loves mathematics.",
     sponsored: false,
   },
   {
     id: "2",
-    name: "Emmanuel K.",
-    age: 11,
-    school: "Lagos Island Primary School",
-    story:
-      "Emmanuel lives with his grandmother and dreams of becoming a doctor. He needs support to continue his education.",
+    name: "Adewale Taiwo",
+    age: 14,
+    school: "Akinta Junior Grammar School Surulere Lagos",
+    class: "JS 2",
+    // story:
+    //   "Emmanuel lives with his grandmother and dreams of becoming a doctor. He needs support to continue his education.",
     sponsored: false,
   },
   {
     id: "3",
-    name: "Blessing O.",
-    age: 8,
-    school: "Surulere Model School",
-    story:
-      "Blessing is one of seven children and the family struggles to afford school fees. She is passionate about reading.",
-    sponsored: true,
+    name: "Salako Afeez",
+    age: 13,
+    school: "Akinta Junior Grammar School Surulere Lagos",
+    class: "JS 2",
+    // story:
+    //   "Blessing is one of seven children and the family struggles to afford school fees. She is passionate about reading.",
+    sponsored: false,
   },
   {
     id: "4",
-    name: "Chukwuemeka N.",
+    name: "Adeniji Nimota",
     age: 12,
-    school: "Mainland Junior High School",
-    story:
-      "Chukwuemeka was found on the streets before CRA Foundation intervened. He now tops his class in science.",
+    school: "New Era Girl Junior Secondary School Surulere Lagos",
+    class: "JS 2",
+    // story:
+    //   "Chukwuemeka was found on the streets before CRA Foundation intervened. He now tops his class in science.",
     sponsored: false,
   },
   {
     id: "5",
-    name: "Fatima A.",
-    age: 10,
-    school: "Ojota Community School",
-    story:
-      "Fatima is a refugee child who arrived in Lagos with nothing. She has shown remarkable resilience and academic potential.",
+    name: "AdeKunle Oriyomi",
+    age: 17,
+    school: "Zuratul Isamilyyah",
+    class: "SS 2",
+    // story:
+    //   "Chukwuemeka was found on the streets before CRA Foundation intervened. He now tops his class in science.",
     sponsored: false,
-  },
-  {
-    id: "6",
-    name: "Damilola S.",
-    age: 7,
-    school: "Badagry Primary School",
-    story:
-      "Damilola is an orphan raised by neighbors. She loves art and has a beautiful voice. She just needs a chance.",
-    sponsored: true,
   },
 ];
 
