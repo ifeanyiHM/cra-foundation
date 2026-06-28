@@ -622,7 +622,7 @@ export const sponsorChildren: SponsorChild[] = [
   },
   {
     id: "5",
-    name: "AdeKunle Oriyomi",
+    name: "Adekunle Oriyomi",
     age: 17,
     school: "Zuratul Isamilyyah",
     class: "SS 2",
