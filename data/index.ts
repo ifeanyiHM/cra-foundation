@@ -248,75 +248,6 @@ export const boardMembers: TeamMember[] = [
   },
 ];
 
-// export const boardMembers: TeamMember[] = [
-//   {
-//     id: 1,
-//     name: "Dr. Femi Onanuga",
-//     role: "Chairman, Board of Trustees",
-//     bio: "Distinguished leader committed to child welfare and education advocacy.",
-//   },
-//   {
-//     id: 2,
-//     name: "Mrs. Olayide Shonubi",
-//     role: "Founder & Executive Director",
-//     bio: "Visionary founder who established the foundation in 2010 with a mission to nurture underprivileged children.",
-//   },
-//   {
-//     id: 3,
-//     name: "Mr. Abiodun Shonubi",
-//     role: "Board Trustee",
-//     bio: "Dedicated trustee supporting the foundation's governance and strategic direction.",
-//   },
-//   // {
-//   //   id: 4,
-//   //   name: "Engineer Adebayo Olapade",
-//   //   role: "Board Trustee",
-//   //   bio: "Engineering professional bringing technical expertise and community leadership.",
-//   // },
-//   // {
-//   //   id: 5,
-//   //   name: "Ms Toyosi Kolawole",
-//   //   role: "Board Trustee",
-//   //   bio: "Youth advocate passionate about education and community development.",
-//   // },
-//   // {
-//   //   id: 6,
-//   //   name: "Engr. Ladi Saani",
-//   //   role: "Board Trustee",
-//   //   bio: "Engineering expert committed to sustainable development and youth empowerment.",
-//   // },
-//   {
-//     id: 7,
-//     name: "Mrs Olusola Ilori",
-//     role: "Board Trustee",
-//     bio: "Community leader with deep commitment to child rights and welfare.",
-//   },
-//   // {
-//   //   id: 8,
-//   //   name: "Mr Olajuwon Olaleye",
-//   //   role: "Board Trustee",
-//   //   bio: "Business professional supporting organizational growth and sustainability.",
-//   // },
-//   // {
-//   //   id: 9,
-//   //   name: "Mrs Omowunmi Leye-Afolayan",
-//   //   role: "Board Trustee",
-//   //   bio: "Dedicated to child advocacy and social development initiatives.",
-//   // },
-//   {
-//     id: 10,
-//     name: "Engr. Oluwaseun Shonubi",
-//     role: "Board Trustee",
-//     bio: "Technology and engineering professional driving innovative solutions for education.",
-//   },
-//   {
-//     id: 11,
-//     name: "Mr Moyosore Shonubi",
-//     role: "Board Trustee",
-//     bio: "Committed to furthering the foundation's mission across communities.",
-//   },
-// ];
-
 export const awards: Award[] = [
   {
     year: "2013",
@@ -584,30 +515,24 @@ export const sponsorChildren: SponsorChild[] = [
     id: "1",
     name: "Adewale Kehinde",
     age: 14,
-    school: "Akinta Junior Grammar School Surulere Lagos",
+    school: "Akintan Junior Grammar School Surulere Lagos",
     class: "JS 2",
-    // story:
-    //   "Taiwo lost her father and her mother sells groundnuts to survive. She is bright and loves mathematics.",
     sponsored: false,
   },
   {
     id: "2",
     name: "Adewale Taiwo",
     age: 14,
-    school: "Akinta Junior Grammar School Surulere Lagos",
+    school: "Akintan Junior Grammar School Surulere Lagos",
     class: "JS 2",
-    // story:
-    //   "Emmanuel lives with his grandmother and dreams of becoming a doctor. He needs support to continue his education.",
     sponsored: false,
   },
   {
     id: "3",
     name: "Salako Afeez",
     age: 13,
-    school: "Akinta Junior Grammar School Surulere Lagos",
+    school: "Akintan Junior Grammar School Surulere Lagos",
     class: "JS 2",
-    // story:
-    //   "Blessing is one of seven children and the family struggles to afford school fees. She is passionate about reading.",
     sponsored: false,
   },
   {
@@ -616,18 +541,14 @@ export const sponsorChildren: SponsorChild[] = [
     age: 12,
     school: "New Era Girl Junior Secondary School Surulere Lagos",
     class: "JS 2",
-    // story:
-    //   "Chukwuemeka was found on the streets before CRA Foundation intervened. He now tops his class in science.",
     sponsored: false,
   },
   {
     id: "5",
     name: "Adekunle Oriyomi",
     age: 17,
-    school: "Zuratul Isamilyyah",
+    school: "Zumratul Islamiyah",
     class: "SS 2",
-    // story:
-    //   "Chukwuemeka was found on the streets before CRA Foundation intervened. He now tops his class in science.",
     sponsored: false,
   },
 ];

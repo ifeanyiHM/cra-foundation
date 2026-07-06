@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
-import DonationForm from "@/components/forms/DonationForm";
+// import DonationForm from "@/components/forms/DonationForm";
 import { donationTiers } from "@/data";
 import {
   RiShieldCheckLine,
   RiRefreshLine,
   RiBankCardLine,
 } from "react-icons/ri";
+import DonationForm from "@/components/forms/DonationForm";
 
 export const metadata: Metadata = { title: "Donate" };
 
@@ -93,6 +94,7 @@ export default function DonatePage() {
                 Secure, flexible donation options for every level of support.
               </p>
               <DonationForm tiers={donationTiers} />
+              {/* <DonationForm /> */}
             </div>
 
             {/* Sidebar */}
