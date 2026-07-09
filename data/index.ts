@@ -110,15 +110,21 @@ export const programs: Program[] = [
     id: "scholarships",
     title: "Scholarships & Sponsorship",
     description:
-      "Funding access to quality education for underprivileged children through targeted sponsorships and scholarship programs.",
+      "CRA Foundation provides three sponsorship packages that allow individuals, families, and organizations to support a child's education and overall well-being based on their chosen level of sponsorship.",
+    // "Funding access to quality education for underprivileged children through targeted sponsorships and scholarship programs.",
     icon: "🎓",
     color: "#7B3FE4",
     details: [
-      "Full scholarship packages",
-      "Partial sponsorships",
-      "School fees covered",
-      "Progress monitoring",
+      "Category 1 – School supplies & vocational materials — ₦100,000",
+      "Category 2 – School supplies, vocational materials & school midday meals/breakfast — ₦206,500",
+      "Category 3 – School supplies, vocational materials, midday meals & lunch/dinner — ₦497,500",
     ],
+    // details: [
+    //   "Full scholarship packages",
+    //   "Partial sponsorships",
+    //   "School fees covered",
+    //   "Progress monitoring",
+    // ],
   },
   {
     id: "learning-center",

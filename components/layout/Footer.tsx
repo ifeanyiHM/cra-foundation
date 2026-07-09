@@ -363,12 +363,12 @@ export default function Footer() {
             >
               Developed by
               <a
-                href="https://ifeanyiiheme.vercel.app/"
+                href="https://ihemestudio.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-legal-link"
               >
-                Ifeanyi Iheme
+                Iheme Studio
               </a>
             </span>
           </div>
