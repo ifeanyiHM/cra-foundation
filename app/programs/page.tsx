@@ -115,6 +115,9 @@ const activities = [
 ];
 
 export default function ProgramsPage() {
+  const getProgramImageName = (title: string) =>
+    title.replace(/&/g, "and").replace(/\s+/g, " ").trim();
+
   return (
     <>
       <PageHeader
@@ -201,7 +204,7 @@ export default function ProgramsPage() {
                     className="md:hidden"
                   >
                     <Image
-                      src={`/images/programs/${prog.title}.jpg`}
+                      src={`/images/programs/${getProgramImageName(prog.title)}.jpg`}
                       alt={prog.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -288,7 +291,7 @@ export default function ProgramsPage() {
                     }}
                   >
                     <Image
-                      src={`/images/programs/${prog.title}.jpg`}
+                      src={`/images/programs/${getProgramImageName(prog.title)}.jpg`}
                       alt={prog.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"

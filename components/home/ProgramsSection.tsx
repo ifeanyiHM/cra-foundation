@@ -154,7 +154,7 @@ export default function ProgramsSection() {
                       listStyle: "none",
                       display: "flex",
                       flexDirection: "column",
-                      gap: "0.35rem",
+                      gap: "0.9rem",
                       marginTop: "auto",
                     }}
                   >
@@ -167,6 +167,7 @@ export default function ProgramsSection() {
                           gap: "0.5rem",
                           fontSize: "0.8rem",
                           color: "var(--neutral-500)",
+                          lineHeight: 1,
                         }}
                       >
                         <span

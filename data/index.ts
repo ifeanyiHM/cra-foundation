@@ -110,15 +110,20 @@ export const programs: Program[] = [
     id: "scholarships",
     title: "Scholarships & Sponsorship",
     description:
-      "CRA Foundation provides three sponsorship packages that allow individuals, families, and organizations to support a child's education and overall well-being based on their chosen level of sponsorship.",
+      "Three sponsorship packages that allow donors to support a child's education and overall well-being.",
     // "Funding access to quality education for underprivileged children through targeted sponsorships and scholarship programs.",
     icon: "🎓",
     color: "#7B3FE4",
     details: [
-      "Category 1 – School supplies & vocational materials — ₦100,000",
-      "Category 2 – School supplies, vocational materials & school midday meals/breakfast — ₦206,500",
-      "Category 3 – School supplies, vocational materials, midday meals & lunch/dinner — ₦497,500",
+      "School supplies & vocational materials — ₦100,000",
+      "Supplies, vocational materials & school meals — ₦206,500",
+      "Supplies, vocational materials & daily meals — ₦497,500",
     ],
+    // details: [
+    //   "School supplies & vocational materials — ₦100,000",
+    //   "School supplies, vocational materials & school midday meals/breakfast — ₦206,500",
+    //   "School supplies, vocational materials, midday meals & lunch/dinner — ₦497,500",
+    // ],
     // details: [
     //   "Full scholarship packages",
     //   "Partial sponsorships",
