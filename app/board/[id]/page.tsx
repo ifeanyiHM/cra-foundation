@@ -274,6 +274,42 @@ export default async function BoardMemberPage({
           border-bottom: 1px solid var(--border-subtle);
         }
 
+        /* Show approximately 5 members, then scroll */
+        .bmp-related-list {
+          max-height: 24rem;
+          overflow-y: auto;
+
+          /* Hide scrollbar by default */
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        .bmp-related-list::-webkit-scrollbar {
+          width: 0;
+        }
+
+        /* Show scrollbar when the sidebar is hovered */
+        .bmp-sidebar:hover .bmp-related-list {
+          scrollbar-width: thin;
+        }
+
+        .bmp-sidebar:hover .bmp-related-list::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        .bmp-sidebar:hover .bmp-related-list::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        .bmp-sidebar:hover .bmp-related-list::-webkit-scrollbar-thumb {
+          background: var(--border-subtle);
+          border-radius: 999px;
+        }
+
+        .bmp-sidebar:hover .bmp-related-list::-webkit-scrollbar-thumb:hover {
+          background: var(--neutral-300);
+        }
+
         .bmp-related-card {
           display: flex;
           align-items: center;
@@ -447,24 +483,17 @@ export default async function BoardMemberPage({
             <p className="bmp-bio-full">{member.bio}</p>
 
             <div className="bmp-quote">
-              <p>
-                &quot;Leadership is service, and every act of service is an
-                investment in the future of a child.&quot;
-              </p>
+              <p>&quot;{member.quote}&quot;</p>
               <cite>— {member.name}</cite>
             </div>
           </main>
 
           {/* Sidebar */}
+
           <aside className="bmp-sidebar">
             <div className="bmp-sidebar-title">Other Board Members</div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: ".25rem",
-              }}
-            >
+
+            <div className="bmp-related-list">
               {related.map((m) => (
                 <Link
                   key={m.id}
@@ -483,6 +512,7 @@ export default async function BoardMemberPage({
                       }}
                     />
                   </div>
+
                   <div style={{ minWidth: 0 }}>
                     <p className="bmp-related-name">{m.name}</p>
                     <p className="bmp-related-role">{m.role}</p>

@@ -79,8 +79,8 @@ export default function ContactPage() {
                   {
                     icon: RiExternalLinkLine,
                     label: "Website",
-                    value: "www.crafoundation.org",
-                    href: "http://www.crafoundation.org",
+                    value: "www.crafoundation.com.ng",
+                    href: "http://www.crafoundation.com.ng",
                     external: true,
                   },
                 ].map(({ icon: Icon, label, value, href, external }) => (

@@ -20,6 +20,7 @@ export interface TeamMember {
   role: string;
   image?: string;
   bio?: string;
+  quote?: string;
 }
 
 export interface NewsArticle {

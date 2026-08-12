@@ -175,11 +175,97 @@ export const programs: Program[] = [
   },
 ];
 
+// export const boardMembers: TeamMember[] = [
+//   {
+//     id: 1,
+//     name: "Dr. Femi Onanuga",
+//     role: "Chairman, Board of Trustees",
+//     bio: `Dr. Onanuga is a medical doctor and public health specialist with over 30 years of experience in the Lagos State government as a civil and public servant.
+
+//           He spent the bulk of his career in the Lagos State civil service as a consultant and administrator, rising to the position of Permanent Secretary before retiring in 2014. In 2015, he served as a Special Adviser in Primary Healthcare under the then Governor of Lagos State, Mr. Akinwunmi Ambode, where he used his experience to improve healthcare delivery across the state.
+
+//           Some of his accomplishments include:
+//           - Establishment of Randle Maternity Hospital in Surulere, Lagos
+//           - Establishment of Ifako-Ijaiye General Hospital, Lagos
+//           - Establishment of 27 health posts in Lagos State between 1993 and 2003
+//           - Comprehensive rehabilitation of 68 Primary Health Centres`,
+//   },
+
+//   {
+//     id: 2,
+//     name: "Mrs. Olayide Shonubi",
+//     role: "Founder & Executive Director",
+//     bio: `She was born in Ijebu Ode, Ogun State, on February 12, 1954.
+
+//           As a child, she often played the role of a teacher in her make-believe school, where she taught morals through stories. Her mother, an educationist, noticed her passion for children and encouraged her to pursue teaching.
+
+//           She began her teaching career in a public primary school in Osogbo (now Osun State) immediately after completing her West African School Certificate. There, she encountered many underprivileged and orphaned children who lacked basic school needs.
+
+//           Deeply moved, she shared her experiences with her late mother, who supported her efforts to help these children. From then on, she remained committed to supporting children in need.
+
+//           She trained at United Missionary College, Ibadan, and later studied at the University of Ife (now Obafemi Awolowo University), where she earned both undergraduate and postgraduate degrees in Guidance and Counselling.
+
+//           After graduation, she taught in various states and federal schools. She retired from the Federal Ministry of Education as an Assistant Director in the Inspectorate Division at the age of sixty.
+
+//           Driven by her passion for helping vulnerable children, she established a non-profit organisation to support their development and authored three books on teaching moral values through stories.
+
+//           These stories are read every Friday, and the children also act them out. She intends to use proceeds from her books to support more children in need.
+
+//           She is married to Mr. Abiodun Shonubi and is blessed with children and grandchildren.`,
+//   },
+
+//   {
+//     id: 3,
+//     name: "Mr. Abiodun Shonubi",
+//     role: "Board Trustee",
+//     bio: `ABIODUN SHONUBI (FNIMN, MIST, MNSE, MBA, B.Sc, Cert. Computer Programming)
+
+//           Managing Director/CEO of Loomash Investment Ltd.
+
+//           He is a former academic, marketing practitioner, development and training expert, and later an astute businessman. He has nearly 50 years of diverse experience across academia, multinational corporations, and national organisations. He also spent 19 years with an international capacity development NGO initiated by the Rockefeller Foundation.`,
+//   },
+
+//   {
+//     id: 7,
+//     name: "Mrs Olusola Ilori",
+//     role: "Board Trustee",
+//     bio: `Olusola Ilori is a Fellow of the Chartered Institute of Bankers and a seasoned finance professional with over 28 years of experience in banking.
+
+//           She held leadership roles at First Bank of Nigeria, including Branch Manager, Senior Credit Risk Analyst, and Head of the Remedial Business Unit. After retiring from banking, she transitioned into real estate and stockbroking and currently serves as Finance Director at Ketroids Integrated Limited.
+
+//           She is also an author of "Financial Backups in Retirement" and is happily married with children.`,
+//   },
+
+//   {
+//     id: 10,
+//     name: "Engr. Oluwaseun Shonubi",
+//     role: "Board Trustee",
+//     bio: `Oluwaseun Shonubi is an electrical power systems engineer and energy infrastructure leader with experience in utilities, renewable energy, and large-scale electrification projects.
+
+//           He has contributed to the deployment of critical power systems, including grid infrastructure, renewable energy assets, and EV charging networks across multiple regions.
+
+//           Inspired by a lifelong exposure to service through his family, he is passionate about using engineering and energy access as tools for social and economic development. His work focuses on bridging the gap between technical innovation and community impact, especially in underserved regions.
+
+//           He is committed to empowering the next generation and expanding access to education and reliable energy infrastructure through charitable initiatives.`,
+//   },
+
+//   {
+//     id: 11,
+//     name: "Mr Moyosore Shonubi",
+//     role: "Board Trustee",
+//     bio: `Moyosore Shonubi holds a Bachelor’s degree in Business Administration and has extensive experience in financial services.
+
+//           He is motivated by a desire to use his professional background to create meaningful social impact for vulnerable children across the country.`,
+//   },
+// ];
+
 export const boardMembers: TeamMember[] = [
   {
     id: 1,
     name: "Dr. Femi Onanuga",
     role: "Chairman, Board of Trustees",
+    quote:
+      "Good health is the foundation upon which every child's future is built. When we invest in communities, we invest in generations yet to come.",
     bio: `Dr. Onanuga is a medical doctor and public health specialist with over 30 years of experience in the Lagos State government as a civil and public servant.
 
           He spent the bulk of his career in the Lagos State civil service as a consultant and administrator, rising to the position of Permanent Secretary before retiring in 2014. In 2015, he served as a Special Adviser in Primary Healthcare under the then Governor of Lagos State, Mr. Akinwunmi Ambode, where he used his experience to improve healthcare delivery across the state.
@@ -195,6 +281,8 @@ export const boardMembers: TeamMember[] = [
     id: 2,
     name: "Mrs. Olayide Shonubi",
     role: "Founder & Executive Director",
+    quote:
+      "Every child deserves to be seen, heard, and given the chance to thrive. That belief is not just what drives this foundation — it is what defines us.",
     bio: `She was born in Ijebu Ode, Ogun State, on February 12, 1954.
 
           As a child, she often played the role of a teacher in her make-believe school, where she taught morals through stories. Her mother, an educationist, noticed her passion for children and encouraged her to pursue teaching.
@@ -218,6 +306,8 @@ export const boardMembers: TeamMember[] = [
     id: 3,
     name: "Mr. Abiodun Shonubi",
     role: "Board Trustee",
+    quote:
+      "Decades of experience taught me that sustainable change is built on knowledge, capacity, and the courage to act. We owe children nothing less.",
     bio: `ABIODUN SHONUBI (FNIMN, MIST, MNSE, MBA, B.Sc, Cert. Computer Programming)
 
           Managing Director/CEO of Loomash Investment Ltd.
@@ -229,6 +319,8 @@ export const boardMembers: TeamMember[] = [
     id: 7,
     name: "Mrs Olusola Ilori",
     role: "Board Trustee",
+    quote:
+      "Sound financial stewardship is an act of trust — and when the beneficiaries are children, that responsibility becomes sacred.",
     bio: `Olusola Ilori is a Fellow of the Chartered Institute of Bankers and a seasoned finance professional with over 28 years of experience in banking.
 
           She held leadership roles at First Bank of Nigeria, including Branch Manager, Senior Credit Risk Analyst, and Head of the Remedial Business Unit. After retiring from banking, she transitioned into real estate and stockbroking and currently serves as Finance Director at Ketroids Integrated Limited.
@@ -240,6 +332,8 @@ export const boardMembers: TeamMember[] = [
     id: 10,
     name: "Engr. Oluwaseun Shonubi",
     role: "Board Trustee",
+    quote:
+      "Engineering solves problems — but the most important infrastructure we can build is a world where every child has light, education, and opportunity.",
     bio: `Oluwaseun Shonubi is an electrical power systems engineer and energy infrastructure leader with experience in utilities, renewable energy, and large-scale electrification projects.
 
           He has contributed to the deployment of critical power systems, including grid infrastructure, renewable energy assets, and EV charging networks across multiple regions.
@@ -253,12 +347,49 @@ export const boardMembers: TeamMember[] = [
     id: 11,
     name: "Mr Moyosore Shonubi",
     role: "Board Trustee",
-    bio: `Moyosore Shonubi holds a Bachelor’s degree in Business Administration and has extensive experience in financial services.
+    quote:
+      "Business acumen means little if it is not directed toward something greater than profit. For me, that something greater is the welfare of vulnerable children.",
+    bio: `Moyosore Shonubi holds a Bachelor's degree in Business Administration and has extensive experience in financial services.
 
           He is motivated by a desire to use his professional background to create meaningful social impact for vulnerable children across the country.`,
   },
-];
 
+  {
+    id: 12,
+    name: "Wasimi Afolayan",
+    role: "Board Trustee",
+    quote:
+      "A child protected today is a community strengthened tomorrow. This work is not charity — it is an investment in our collective future.",
+    bio: `Bio coming soon.`,
+  },
+
+  {
+    id: 13,
+    name: "Juwan Olaleye",
+    role: "Board Trustee",
+    quote:
+      "The measure of any society is how it treats its most vulnerable. I am proud to be part of an organisation that refuses to look away.",
+    bio: `Bio coming soon.`,
+  },
+
+  {
+    id: 14,
+    name: "Ladi Sanni",
+    role: "Board Trustee",
+    quote:
+      "When we give children safety, love, and education, we give them the tools to write their own story — and change ours in the process.",
+    bio: `Bio coming soon.`,
+  },
+
+  {
+    id: 15,
+    name: "Toyosi Kalamole",
+    role: "Board Trustee",
+    quote:
+      "Advocacy without action is just noise. I am here because I believe in turning compassion into real, lasting change for children who need it most.",
+    bio: `Bio coming soon.`,
+  },
+];
 export const awards: Award[] = [
   {
     year: "2013",
@@ -357,14 +488,14 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "2",
-    name: "Mrs. Adunola B.",
+    name: "Mrs. Bunmi Adewale.",
     role: "Parent of Sponsored Child",
     quote:
       "My daughter used to cry because she had no books. Now she comes home excited every day. The foundation gives her meals, uniforms, and a place to study. I thank God for CRA Foundation.",
   },
   {
     id: "3",
-    name: "Mr. Tunde K.",
+    name: "Chief (Mrs.) F. Onakoya",
     role: "Monthly Donor & Volunteer",
     quote:
       "I started donating monthly after seeing the children at the learning center. The transformation is real — these children glow with confidence. It is the best investment I have ever made.",
