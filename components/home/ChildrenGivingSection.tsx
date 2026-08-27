@@ -117,6 +117,68 @@ export default function ChildrenGivingSection() {
           color: var(--neutral-700);
           box-shadow: 0 1px 3px rgba(0,0,0,.04);
         }
+
+        .cgtc-eyebrow { font-size: .74rem; margin-bottom: 1.25rem; }
+      .cgtc-intro { font-size: 1rem; max-width: 32rem; }
+      .cgtc-pill-row { gap: .625rem; margin: 1.5rem 0 2rem; }
+      .cgtc-pill { font-size: .8rem; padding: .4rem .875rem; gap: .4rem; }
+      .cgtc-pill-icon { width: .95rem; height: .95rem; }
+      .cgtc-badge-num { font-size: .9rem; }
+      .cgtc-badge-sub { font-size: .7rem; }
+      .cgtc-badge-icon { width: 2.25rem; height: 2.25rem; }
+      .cgtc-badge-icon-svg { width: 1.05rem; height: 1.05rem; }
+
+      @media (min-width: 1440px) {
+        .cgtc-grid { gap: 4rem; }
+        .cgtc-eyebrow { font-size: .78rem; margin-bottom: 1.375rem; }
+        .cgtc-intro { font-size: 1.05rem; max-width: 34rem; }
+        .cgtc-pill-row { gap: .7rem; margin: 1.625rem 0 2.125rem; }
+        .cgtc-pill { font-size: .825rem; padding: .425rem .925rem; }
+        .cgtc-pill-icon { width: 1rem; height: 1rem; }
+        .cgtc-badge-num { font-size: .95rem; }
+        .cgtc-badge-sub { font-size: .72rem; }
+        .cgtc-badge-icon { width: 2.375rem; height: 2.375rem; }
+        .cgtc-badge-icon-svg { width: 1.1rem; height: 1.1rem; }
+      }
+
+      @media (min-width: 1536px) {
+        .cgtc-grid { gap: 4.5rem; }
+        .cgtc-eyebrow { font-size: .82rem; margin-bottom: 1.5rem; }
+        .cgtc-intro { font-size: 1.15rem; max-width: 38rem; }
+        .cgtc-pill-row { gap: .75rem; margin: 1.75rem 0 2.25rem; }
+        .cgtc-pill { font-size: .875rem; padding: .45rem .975rem; }
+        .cgtc-pill-icon { width: 1.025rem; height: 1.025rem; }
+        .cgtc-badge-num { font-size: 1rem; }
+        .cgtc-badge-sub { font-size: .74rem; }
+        .cgtc-badge-icon { width: 2.5rem; height: 2.5rem; }
+        .cgtc-badge-icon-svg { width: 1.15rem; height: 1.15rem; }
+      }
+
+      @media (min-width: 1680px) {
+        .cgtc-grid { gap: 5rem; }
+        .cgtc-eyebrow { font-size: .88rem; margin-bottom: 1.625rem; }
+        .cgtc-intro { font-size: 1.25rem; max-width: 40rem; }
+        .cgtc-pill-row { gap: .8rem; margin: 1.875rem 0 2.375rem; }
+        .cgtc-pill { font-size: 1rem; padding: .475rem 1.025rem; }
+        .cgtc-pill-icon { width: 1.05rem; height: 1.05rem; }
+        .cgtc-badge-num { font-size: 1.05rem; }
+        .cgtc-badge-sub { font-size: .78rem; }
+        .cgtc-badge-icon { width: 2.625rem; height: 2.625rem; }
+        .cgtc-badge-icon-svg { width: 1.2rem; height: 1.2rem; }
+      }
+
+      @media (min-width: 1920px) {
+        .cgtc-grid { gap: 6rem; }
+        .cgtc-eyebrow { font-size: 1rem; margin-bottom: 1.875rem; }
+        .cgtc-intro { font-size: 1.42rem; max-width: 47rem; }
+        .cgtc-pill-row { gap: .9rem; margin: 2.125rem 0 2.75rem; }
+        .cgtc-pill { font-size: 1.15rem; padding: .55rem 1.175rem; }
+        .cgtc-pill-icon { width: 1.175rem; height: 1.175rem; }
+        .cgtc-badge-num { font-size: 1.2rem; }
+        .cgtc-badge-sub { font-size: .88rem; }
+        .cgtc-badge-icon { width: 3rem; height: 3rem; }
+        .cgtc-badge-icon-svg { width: 1.375rem; height: 1.375rem; }
+      }
       `}</style>
 
       <section className="section-padding cgtc-section">
@@ -160,11 +222,11 @@ export default function ChildrenGivingSection() {
             {/* ── Left: Text ── */}
             <div>
               <div
+                className="cgtc-eyebrow"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: ".5rem",
-                  marginBottom: "1.25rem",
                 }}
               >
                 <span
@@ -177,7 +239,6 @@ export default function ChildrenGivingSection() {
                 />
                 <span
                   style={{
-                    fontSize: ".74rem",
                     fontWeight: 700,
                     letterSpacing: ".09em",
                     textTransform: "uppercase",
@@ -193,11 +254,10 @@ export default function ChildrenGivingSection() {
               </h2>
 
               <p
+                className="cgtc-intro"
                 style={{
-                  fontSize: "1rem",
                   color: "var(--neutral-600)",
                   lineHeight: 1.8,
-                  maxWidth: "32rem",
                   marginBottom: 0,
                 }}
               >
@@ -212,9 +272,7 @@ export default function ChildrenGivingSection() {
               <div className="cgtc-pill-row">
                 {highlights.map(({ icon: Icon, label, color }) => (
                   <span key={label} className="cgtc-pill">
-                    <Icon
-                      style={{ width: ".95rem", height: ".95rem", color }}
-                    />
+                    <Icon className="cgtc-pill-icon" style={{ color }} />
                     {label}
                   </span>
                 ))}
@@ -263,14 +321,14 @@ export default function ChildrenGivingSection() {
               </div>
 
               {/* Floating badge */}
+
               <div
                 className="cgtc-badge"
                 style={{ top: "-1rem", left: "-1rem" }}
               >
                 <div
+                  className="cgtc-badge-icon"
                   style={{
-                    width: "2.25rem",
-                    height: "2.25rem",
                     borderRadius: "8px",
                     background: "linear-gradient(135deg, #DC2626, #F87171)",
                     display: "flex",
@@ -280,17 +338,14 @@ export default function ChildrenGivingSection() {
                   }}
                 >
                   <RiHeartsLine
-                    style={{
-                      width: "1.05rem",
-                      height: "1.05rem",
-                      color: "#fff",
-                    }}
+                    className="cgtc-badge-icon-svg"
+                    style={{ color: "#fff" }}
                   />
                 </div>
                 <div>
                   <p
+                    className="cgtc-badge-num"
                     style={{
-                      fontSize: ".9rem",
                       fontWeight: 800,
                       color: "var(--neutral-900)",
                       lineHeight: 1,
@@ -301,8 +356,8 @@ export default function ChildrenGivingSection() {
                     Kid-Led
                   </p>
                   <p
+                    className="cgtc-badge-sub"
                     style={{
-                      fontSize: ".7rem",
                       color: "var(--neutral-400)",
                       margin: ".15rem 0 0",
                       fontWeight: 500,

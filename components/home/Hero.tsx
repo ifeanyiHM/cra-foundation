@@ -64,10 +64,10 @@ export default function Hero() {
     }, 320);
   };
 
-  useEffect(() => {
-    const t = setInterval(() => goTo((current + 1) % slides.length), 9000);
-    return () => clearInterval(t);
-  }, [current, animating]);
+  // useEffect(() => {
+  //   const t = setInterval(() => goTo((current + 1) % slides.length), 9000);
+  //   return () => clearInterval(t);
+  // }, [current, animating]);
 
   const slide = slides[current];
 
@@ -250,6 +250,14 @@ export default function Hero() {
           flex-shrink: 0;
         }
 
+        .hero-trust-title {
+          font-size: .78rem;
+        }
+
+        .hero-trust-sub {
+          font-size: .72rem;
+        }
+
         /* ── Right photo panel ── */
         .hero-photo-panel {
           display: none;
@@ -371,6 +379,14 @@ export default function Hero() {
           50%     { transform: translateY(-7px); }
         }
 
+        .hero-badge-quote-text {
+          font-size: .78rem;
+        }
+
+        .hero-badge-quote-source {
+          font-size: .69rem;
+        }
+
         .hero-badge-stat {
           position: absolute;
           bottom: 3rem;
@@ -406,6 +422,10 @@ export default function Hero() {
         /* MOBILE: hide caption strip — too cluttered on small screens */
         @media (max-width: 1023px) {
           .hero-photo-caption { display: none; }
+        }
+
+        .hero-caption-text {
+          font-size: .78rem;
         }
 
         .hero-dots {
@@ -480,6 +500,71 @@ export default function Hero() {
         @media (max-width: 1023px) {
           .hero-mobile-dots { display: flex; }
         }
+
+        /* ── Continue the responsive scale past 1280px, matching header.tsx ── */
+        @media (min-width: 1440px) {
+          .hero-body { padding-top: 6.25rem; gap: .5rem; }
+          .hero-eyebrow-text { font-size: .78rem; }
+          .hero-headline { font-size: clamp(2rem, 3.4vw + .5rem, 3.25rem); }
+          .hero-sub { font-size: 1.05rem; max-width: 33rem; }
+          .hero-ctas { gap: .75rem; }
+          .hero-trust { padding: .8125rem 1.0625rem; gap: .6875rem; }
+          .hero-trust-icon { width: 1.875rem; height: 1.875rem; }
+          .hero-trust-title { font-size: .8125rem; }
+          .hero-trust-sub { font-size: .75rem; }
+          .hero-badge-quote-text { font-size: .8125rem; }
+          .hero-badge-quote-source { font-size: .72rem; }
+          .hero-caption-text { font-size: .8125rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .hero-body { padding-top: 6.5rem; gap: 1rem; }
+          .hero-eyebrow-text { font-size: .85rem; }
+          .hero-headline { font-size: clamp(2rem, 3.4vw + .5rem, 3.5rem); }
+          .hero-sub { font-size: 1.13rem; max-width: 34.5rem; margin: 0 0 2.5rem; }
+          .hero-ctas { gap: .8125rem; margin-bottom: 2.8rem; }
+          .hero-trust { padding: .875rem 1.125rem; gap: .75rem; }
+          .hero-trust-icon { width: 2.2rem; height: 2.2rem; }
+          .hero-trust-title { font-size: .89rem; }
+          .hero-trust-sub { font-size: .82rem; }
+          .hero-badge-quote {max-width: 14rem;}
+          .hero-badge-quote-text { font-size: .9rem; }
+          .hero-badge-quote-source { font-size: .8rem; }
+          .hero-caption-text { font-size: .9rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .hero-body { padding-top: 6.75rem; gap: 1.5rem; }
+          .hero-eyebrow { margin-bottom: 1.5rem;}
+          .hero-eyebrow-text { font-size: .92rem; }
+          .hero-headline { font-size: clamp(2rem, 3.4vw + .5rem, 3.75rem); }
+          .hero-sub { font-size: 1.23rem; max-width: 38.5rem; margin: 0 0 2.7rem; }
+          .hero-ctas { gap: .875rem; margin-bottom: 3rem; }
+          .hero-trust { padding: .9375rem 1.1875rem; gap: .8125rem; }
+          .hero-trust-icon { width: 2.225rem; height: 2.225rem; }
+          .hero-trust-title { font-size: .95rem; }
+          .hero-trust-sub { font-size: .88rem; }
+          .hero-badge-quote {padding: .3rem 1.425rem;}
+          .hero-badge-quote-text { font-size: .96rem; }
+          .hero-badge-quote-source { font-size: .86rem; }
+          .hero-caption-text { font-size: .96rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .hero-body { padding-top: 7.25rem; gap: 2rem; }
+          .hero-eyebrow { margin-bottom: 1.9rem;}
+          .hero-eyebrow-text { font-size: 1.1rem; }
+          .hero-headline { font-size: clamp(2rem, 3.4vw + .5rem, 4.3rem); }
+          .hero-sub { font-size: 1.4rem; max-width: 43rem; margin: 0 0 3rem;}
+          .hero-ctas { gap: 1rem; margin-bottom: 3.5rem; }
+          .hero-trust { padding: 1rem 1.25rem; gap: .875rem; }
+          .hero-trust-icon { width: 2.7rem; height: 2.7rem; }
+          .hero-trust-title { font-size: 1.2rem; }
+          .hero-trust-sub { font-size: 1.1rem; }
+          .hero-badge-quote-text { font-size: 1.1rem; }
+          .hero-badge-quote-source { font-size: 1rem; }
+          .hero-caption-text { font-size: 1.1rem; }
+        }
       `}
       </style>
 
@@ -551,8 +636,8 @@ export default function Hero() {
               </div>
               <div>
                 <p
+                  className="hero-trust-title"
                   style={{
-                    fontSize: ".78rem",
                     fontWeight: 700,
                     color: "#111827",
                     margin: 0,
@@ -562,8 +647,8 @@ export default function Hero() {
                   Trusted & Government Recognised
                 </p>
                 <p
+                  className="hero-trust-sub"
                   style={{
-                    fontSize: ".72rem",
                     color: "#6B7280",
                     margin: "0.15rem 0 0",
                     lineHeight: 1,
@@ -648,8 +733,8 @@ export default function Hero() {
                     }}
                   />
                   <span
+                    className="hero-caption-text"
                     style={{
-                      fontSize: ".78rem",
                       fontWeight: 600,
                       color: "#fff",
                     }}
@@ -693,8 +778,8 @@ export default function Hero() {
                   }}
                 />
                 <p
+                  className="hero-badge-quote-text"
                   style={{
-                    fontSize: ".78rem",
                     fontWeight: 600,
                     color: "#111827",
                     lineHeight: 0.5,
@@ -705,8 +790,8 @@ export default function Hero() {
                 </p>
               </div>
               <p
+                className="hero-badge-quote-source"
                 style={{
-                  fontSize: ".69rem",
                   color: "#9CA3AF",
                   margin: 0,
                   fontWeight: 500,

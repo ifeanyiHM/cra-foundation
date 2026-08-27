@@ -123,9 +123,76 @@ export default function Header() {
     color: #fff;
   }
 
+  /* ── Continue the responsive scale past 1280px ── */
 
+  .topbar-row {
+    height: 2.25rem;
+    transition: height .2s ease;
+  }
 
+  .header-row {
+    height: 3.75rem;
+    gap: .75rem;
+    transition: height .2s ease, gap .2s ease;
+  }
 
+  .site-logo img {
+    width: 150px;
+    height: auto;
+    transition: width .2s ease;
+  }
+
+  @media (min-width: 1440px) {
+    .topbar-row { height: 2.375rem !important; }
+    .topbar-link { font-size: .8rem !important; }
+
+    .header-row { height: 4.1rem !important; gap: .875rem !important; }
+    .nav-link { font-size: .875rem !important; padding: .5rem .8rem !important; }
+    .dropdown-item { font-size: .875rem !important; padding: .55rem .8rem !important; }
+    .desktop-nav-block { gap: .25rem !important; margin-left: .75rem !important; }
+    .cta-block { gap: .625rem !important; }
+    .cta-block .btn-sm { padding: .5625rem 1rem !important; font-size: .84rem !important; }
+    .site-logo img { width: 170px !important; }
+  }
+
+  @media (min-width: 1536px) {
+    .topbar-row { height: 2.5rem !important; }
+    .topbar-link { font-size: .82rem !important; }
+
+    .header-row { height: 4.225rem !important; gap: 1rem !important; }
+    .nav-link { font-size: .95rem !important; padding: .55rem .85rem !important; }
+    .dropdown-item { font-size: .9rem !important; padding: .6rem .85rem !important; }
+    .desktop-nav-block { gap: .3rem !important; margin-left: .875rem !important; }
+    .cta-block { gap: .75rem !important; }
+    .cta-block .btn-sm { padding: .625rem 1.125rem !important; font-size: .9rem !important; }
+    .site-logo img { width: 180px !important; }
+  }
+
+  @media (min-width: 1680px) {
+    .topbar-row { height: 2.625rem !important; }
+    .topbar-link { font-size: .84rem !important; }
+
+    .header-row { height: 4.35rem !important; gap: 1.125rem !important; }
+    .nav-link { font-size: 1.05rem !important; padding: .6rem .9rem !important; }
+    .dropdown-item { font-size: .925rem !important; padding: .65rem .9rem !important; }
+    .desktop-nav-block { gap: .375rem !important; margin-left: 1rem !important; }
+    .cta-block { gap: .875rem !important; }
+    .cta-block .btn-sm { padding: .6875rem 1.25rem !important; font-size: .95rem !important; }
+    .site-logo img { width: 190px !important; }
+  }
+
+  @media (min-width: 1920px) {
+    .topbar-row { height: 2.75rem !important; }
+    .topbar-link { font-size: .86rem !important; }
+
+    .header-row { height: 5rem !important; gap: 1.25rem !important; }
+    .nav-link { font-size: 1.2rem !important; padding: .65rem 1rem !important; }
+    .dropdown-item { font-size: .95rem !important; padding: .7rem 1rem !important; }
+    .desktop-nav-block { gap: .5rem !important; margin-left: 1.25rem !important; }
+    .cta-block { gap: 1rem !important; }
+    .cta-block .btn-sm { padding: .75rem 1.375rem !important; font-size: 1.15rem !important; }
+    .site-logo img { width: 205px !important; }
+  }
 `}</style>
 
       <header
@@ -140,6 +207,7 @@ export default function Header() {
       >
         {/* Top utility bar */}
         <div
+          className="topbar-row"
           style={{
             background: "var(--neutral-950)",
             overflow: "hidden",
@@ -154,7 +222,7 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              height: "2.25rem",
+              height: "100%",
             }}
           >
             <div
@@ -235,17 +303,16 @@ export default function Header() {
           }}
         >
           <div
-            className="container-max"
+            className="container-max header-row"
             style={{
               display: "flex",
               alignItems: "center",
-              height: "3.75rem",
-              gap: ".75rem",
             }}
           >
             {/* Logo */}
             <Link
               href="/"
+              className="site-logo"
               style={{
                 display: "flex",
                 alignItems: "center",

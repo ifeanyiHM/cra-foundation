@@ -50,6 +50,7 @@ module.exports = {
         dots: "radial-gradient(circle, #E8400C 1px, transparent 1px)",
       },
       screens: {
+        xl1: "1440px",
         xl2: "1536px",
         xl3: "1680px",
         xl4: "1920px",
