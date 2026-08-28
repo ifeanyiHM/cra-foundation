@@ -362,6 +362,99 @@ export default function HowToHelp() {
   .hth-card:nth-child(3),
   .hth-card:nth-child(4) { grid-column: span 1 !important; }
 }
+
+/* === RESPONSIVE SCALE > 1280px === */
+.hth-header { max-width: 38rem; margin-bottom: 3rem; }
+.hth-header-sub { font-size: .9375rem; }
+.hth-grid { gap: 1rem; margin-bottom: 3.5rem; }
+.hth-card-body { padding: 1.625rem; }
+.hth-card-tag { font-size: .625rem; margin-bottom: .625rem; padding: .2rem .625rem; }
+.hth-card-title { font-size: 1.125rem; }
+.hth-card-large-title { font-size: 1.5rem; }
+.hth-card-desc { font-size: .8125rem; }
+.hth-card-cta { font-size: .72rem; }
+.hth-card-num { font-size: .6875rem; }
+.hth-banner { padding: 3rem 2.5rem; gap: 2rem; }
+.hth-banner-label { font-size: .65rem; margin-bottom: .625rem; }
+.hth-banner-title { font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin-bottom: .5rem; }
+.hth-banner-desc { font-size: .9rem; max-width: 34rem; }
+.hth-banner-cta { font-size: .875rem; padding: .875rem 1.875rem; }
+
+@media (min-width: 1440px) {
+  .hth-header { max-width: 41rem; margin-bottom: 3.25rem; }
+  .hth-header-sub { font-size: .975rem; }
+  .hth-grid { gap: 1.125rem; margin-bottom: 3.75rem; }
+  .hth-card {  min-height: 230px; }
+  .hth-card-body { padding: 1.75rem; }
+  .hth-card-tag { font-size: .65rem; margin-bottom: .675rem; padding: .225rem .675rem; }
+  .hth-card-title { font-size: 1.175rem !important; }
+  .hth-card-large-title { font-size: 1.575rem !important; }
+  .hth-card-desc { font-size: .8675rem; }
+  .hth-card-cta { font-size: .74rem; }
+  .hth-card-num { font-size: .715rem; }
+  .hth-banner { padding: 3.25rem 2.75rem; gap: 2.25rem; }
+  .hth-banner-label { font-size: .68rem; margin-bottom: .675rem; }
+  .hth-banner-title { font-size: clamp(1.3rem, 2.5vw, 1.85rem); }
+  .hth-banner-desc { font-size: .95rem; max-width: 36rem; }
+  .hth-banner-cta { font-size: .9rem; padding: .925rem 2rem; }
+}
+
+@media (min-width: 1536px) {
+  .hth-header { max-width: 44rem; margin-bottom: 3.5rem; }
+  .hth-header-sub { font-size: 1.025rem; }
+  .hth-grid { gap: 1.25rem; margin-bottom: 4rem; }
+  .hth-card {  min-height: 250px; }
+  .hth-card-body { padding: 1.875rem; }
+  .hth-card-tag { font-size: .695rem; margin-bottom: .7rem; padding: .25rem .725rem; }
+  .hth-card-title { font-size: 1.225rem !important; }
+  .hth-card-large-title { font-size: 1.65rem !important; }
+  .hth-card-desc { font-size: .9225rem; }
+  .hth-card-cta { font-size: .79rem; }
+  .hth-card-num { font-size: .74rem; }
+  .hth-banner { padding: 3.7rem 3rem; gap: 2.5rem; }
+  .hth-banner-label { font-size: .81rem; margin-bottom: .7rem; }
+  .hth-banner-title { font-size: clamp(1.375rem, 2.5vw, 2.05rem); }
+  .hth-banner-desc { font-size: 1.1rem; max-width: 38rem; }
+  .hth-banner-cta { font-size: .1.05rem; padding: .975rem 2.125rem; }
+}
+
+@media (min-width: 1680px) {
+  .hth-header { max-width: 48rem; margin-bottom: 3.75rem; }
+  .hth-header-sub { font-size: 1.1rem; }
+  .hth-grid { gap: 1.375rem; margin-bottom: 4.25rem; }
+  .hth-card {  min-height: 270px; }
+  .hth-card-body { padding: 2rem; }
+  .hth-card-tag { font-size: .76rem; margin-bottom: .75rem; padding: .275rem .775rem; }
+  .hth-card-title { font-size: 1.275rem !important; }
+  .hth-card-large-title { font-size: 1.75rem !important; }
+  .hth-card-desc { font-size: 1rem; }
+  .hth-card-cta { font-size: .85rem; }
+  .hth-card-num { font-size: .775rem; }
+  .hth-banner { padding: 3.95rem 3.25rem; gap: 2.75rem; }
+  .hth-banner-label { font-size: .84rem; margin-bottom: .75rem; }
+  .hth-banner-title { font-size: clamp(1.45rem, 2.5vw, 2.2rem); }
+  .hth-banner-desc { font-size: 1.2rem; max-width: 42rem; }
+  .hth-banner-cta { font-size: 1.1rem; padding: 1.025rem 2.25rem; }
+}
+
+@media (min-width: 1920px) {
+  .hth-header { max-width: 54rem; margin-bottom: 4.25rem; }
+  .hth-header-sub { font-size: 1.25rem; }
+  .hth-grid { gap: 1.625rem; margin-bottom: 5rem; }
+  .hth-card {  min-height: 310px; }
+  .hth-card-body { padding: 2.375rem; }
+  .hth-card-tag { font-size: .95rem; margin-bottom: .875rem; padding: .3rem .875rem; }
+  .hth-card-title { font-size: 1.525rem !important; }
+  .hth-card-large-title { font-size: 2.1rem !important; }
+  .hth-card-desc { font-size: 1.2rem; }
+  .hth-card-cta { font-size: .95rem; }
+  .hth-card-num { font-size: .875rem; }
+  .hth-banner { padding: 4.55rem 3.75rem; gap: 3.25rem; }
+  .hth-banner-label { font-size: .94rem; margin-bottom: .875rem; }
+  .hth-banner-title { font-size: clamp(1.625rem, 2.5vw, 2.5rem); }
+  .hth-banner-desc { font-size: 1.35rem; max-width: 48rem; }
+  .hth-banner-cta { font-size: 1.35rem; padding: 1.125rem 2.625rem; }
+}
 `}</style>
       <section
         className="section-padding"
@@ -372,15 +465,12 @@ export default function HowToHelp() {
       >
         <div className="container-max">
           {/* Header */}
-          <div style={{ maxWidth: "38rem", marginBottom: "3rem" }}>
+          <div className="hth-header">
             <p className="section-label">Get Involved</p>
             <h2 style={{ margin: "0 0 0.875rem" }}>How You Can Help</h2>
             <p
-              style={{
-                fontSize: "0.9375rem",
-                color: "var(--neutral-500)",
-                lineHeight: 1.7,
-              }}
+              className="hth-header-sub"
+              style={{ color: "var(--neutral-500)", lineHeight: 1.7 }}
             >
               Few things in life are more important than helping needy children.
               There are many ways to make a lasting difference.
@@ -392,11 +482,14 @@ export default function HowToHelp() {
             {ways.map(({ title, desc, href, tag, image, cta }, i) => (
               <Link key={title} href={href} className="hth-card">
                 <Image src={image} alt={title} fill className="hth-card-img" />
-                <div className="hth-card-overlay" />
                 <span className="hth-card-num">0{i + 1}</span>
                 <div className="hth-card-body">
                   <span className="hth-card-tag">{tag}</span>
-                  <h3 className="hth-card-title">{title}</h3>
+                  <h3
+                    className={`hth-card-title${i < 2 ? " hth-card-large-title" : ""}`}
+                  >
+                    {title}
+                  </h3>
                   <p className="hth-card-desc">{desc}</p>
                   <span className="hth-card-cta">{cta}</span>
                 </div>
@@ -413,8 +506,7 @@ export default function HowToHelp() {
                 Have Something Special on Your Heart?
               </h3>
               <p className="hth-banner-desc">
-                Call and tell us what The Lord has placed on your mind to do for
-                the needy children.
+                Call and tell us what The Lord has placed on your mind...
               </p>
             </div>
             <a href="tel:08063811840" className="hth-banner-cta">

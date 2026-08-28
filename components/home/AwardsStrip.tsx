@@ -114,66 +114,136 @@ export default function AwardsStrip() {
             gap: .875rem;
           }
         }
+
+        /* === RESPONSIVE SCALE > 1280px === */
+        .awards-section { padding: 5rem 0 4rem; }
+        .awards-header { margin-bottom: 3rem; gap: 1.25rem; }
+        .awards-header-sub { font-size: .9375rem; max-width: 34rem; }
+        .awards-count { padding: .625rem 1rem; }
+        .awards-count-icon { width: 1rem; height: 1rem; }
+        .awards-count-label { font-size: .845rem; }
+        .award-img-wrap { height: 16rem; }
+        .award-body { padding: 1.125rem 1.25rem .5rem; }
+        .award-body-title { font-size: .845rem; }
+        .award-body-issuer { font-size: .775rem; }
+        .award-body-cta { font-size: .775rem; }
+        .award-year-badge { font-size: .7rem; }
+        .award-issuer-label { font-size: .72rem; }
+
+        @media (min-width: 1440px) {
+          .awards-section { padding: 5.5rem 0 4.5rem; }
+          .awards-header { margin-bottom: 3.25rem; }
+          .awards-header-sub { font-size: .975rem; max-width: 36rem; }
+          .awards-count { padding: .675rem 1.075rem; }
+          .awards-count-label { font-size: .875rem; }
+          .award-img-wrap { height: 17rem; }
+          .award-body { padding: 1.2rem 1.325rem .55rem; }
+          .award-body-title { font-size: .875rem; }
+          .award-body-issuer { font-size: .8rem; }
+          .award-body-cta { font-size: .8rem; }
+          .award-year-badge { font-size: .72rem; }
+          .award-issuer-label { font-size: .74rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .awards-section { padding: 6rem 0 5rem; }
+          .awards-header { margin-bottom: 3.5rem; }
+          .awards-header-sub { font-size: 1.025rem; max-width: 38rem; }
+          .awards-count { padding: .725rem 1.125rem; }
+          .award-label-badge {width: 2.225rem; height: 2.225rem;}
+          .award-label-badge-sub {width: 1.15rem !important; height: 1.15rem !important;}
+          .awards-count-label { font-size: .9rem; }
+          .award-img-wrap { height: 18rem; }
+          .award-body { padding: 1.275rem 1.4rem .6rem; }
+          .award-body-title { font-size: 1rem; }
+          .award-body-issuer { font-size: .925rem; }
+          .award-body-cta { font-size: .925rem; }
+          .award-year-badge { font-size: .84rem; }
+          .award-issuer-label { font-size: .86rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .awards-section { padding: 6.5rem 0 5.5rem; }
+          .awards-header { margin-bottom: 3.75rem; }
+          .awards-header-sub { font-size: 1.1rem; max-width: 42rem; }
+          .awards-count { padding: .775rem 1.2rem; }
+          .award-label-badge {width: 2.325rem; height: 2.325rem;}
+          .award-label-badge-sub {width: 1.25rem !important; height: 1.25rem !important;}
+          .awards-count-label { font-size: 1.075rem; }
+          .award-img-wrap { height: 19.5rem; }
+          .award-body { padding: 1.35rem 1.5rem .75rem; }
+          .award-body-title { font-size: 1.05rem; }
+          .award-body-issuer { font-size: .975rem; }
+          .award-body-cta { font-size: .975rem; }
+          .award-year-badge { font-size: .88rem; }
+          .award-issuer-label { font-size: .9rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .awards-section { padding: 7.5rem 0 6.5rem; }
+          .awards-header { margin-bottom: 4.25rem; }
+          .awards-header-sub { font-size: 1.25rem; max-width: 48rem; }
+          .awards-count { padding: .875rem 1.375rem; }
+          .award-label-badge {width: 2.925rem; height: 2.925rem;}
+          .award-label-badge-sub {width: 1.45rem !important; height: 1.45rem !important;}
+          .awards-count-label { font-size: 1.2rem; }
+          .award-img-wrap { height: 23rem; }
+          .award-body { padding: 1.5rem 1.75rem .75rem; }
+          .award-body-title { font-size: 1.25rem; }
+          .award-body-issuer { font-size: 1.075rem; }
+          .award-body-cta { font-size: 1.075rem; }
+          .award-year-badge { font-size: .98rem; }
+          .award-issuer-label { font-size: 1.075rem; }
+        }
       `}</style>
 
       <section
+        className="awards-section"
         style={{
           background: "var(--neutral-50)",
           borderTop: "1px solid var(--border-subtle)",
-          padding: "5rem 0 4rem",
         }}
       >
         <div className="container-max">
-          {/* Header */}
+          {/* header */}
           <div
+            className="awards-header"
             style={{
               display: "flex",
               flexWrap: "wrap",
               alignItems: "flex-end",
               justifyContent: "space-between",
-              gap: "1.25rem",
-              marginBottom: "3rem",
             }}
           >
             <div>
               <p className="section-label">Recognition</p>
               <h2 style={{ margin: "0 0 .625rem" }}>Awards & Laurels</h2>
               <p
-                style={{
-                  fontSize: ".9375rem",
-                  color: "var(--neutral-500)",
-                  maxWidth: "34rem",
-                  lineHeight: 1.7,
-                }}
+                className="awards-header-sub"
+                style={{ color: "var(--neutral-500)", lineHeight: 1.7 }}
               >
                 Formally recognised by Lagos State Government and educational
                 authorities since 2013. Click any award to view it in detail.
               </p>
             </div>
             <div
+              className="awards-count"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: ".5rem",
-                padding: ".625rem 1rem",
                 background: "#fff",
                 border: "1px solid var(--border-subtle)",
                 borderRadius: "10px",
               }}
             >
               <RiMedalLine
-                style={{
-                  width: "1rem",
-                  height: "1rem",
-                  color: "var(--accent-amber)",
-                }}
+                className="awards-count-icon"
+                style={{ color: "var(--accent-amber)" }}
               />
               <span
-                style={{
-                  fontSize: ".845rem",
-                  fontWeight: 600,
-                  color: "var(--neutral-700)",
-                }}
+                className="awards-count-label"
+                style={{ fontWeight: 600, color: "var(--neutral-700)" }}
               >
                 6 Awards Received
               </span>
@@ -219,10 +289,10 @@ export default function AwardsStrip() {
                   >
                     {award.year}
                   </div>
-
                   {/* Medal icon */}
                   <div className="award-label-badge">
                     <RiMedalLine
+                      className="award-label-badge-sub"
                       style={{
                         width: ".95rem",
                         height: ".95rem",
@@ -230,15 +300,13 @@ export default function AwardsStrip() {
                       }}
                     />
                   </div>
-
-                  {/* Issuer short name on image */}
                   <div
+                    className="award-issuer-label"
                     style={{
                       position: "absolute",
                       bottom: ".625rem",
                       left: ".75rem",
                       right: ".75rem",
-                      fontSize: ".72rem",
                       fontWeight: 700,
                       color: "rgba(255,255,255,.9)",
                       textShadow: "0 1px 4px rgba(0,0,0,.5)",
@@ -248,8 +316,6 @@ export default function AwardsStrip() {
                     {award.label}
                   </div>
                 </div>
-
-                {/* Body */}
                 <div
                   className="award-body"
                   style={{
@@ -259,12 +325,11 @@ export default function AwardsStrip() {
                   }}
                 >
                   <p
+                    className="award-body-title"
                     style={{
-                      fontSize: ".845rem",
                       fontWeight: 700,
                       color: "var(--neutral-900)",
                       lineHeight: 1.4,
-                      /* Reserve exactly 2 lines so short titles don't collapse the space */
                       minHeight: "calc(1.4em * 2)",
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
@@ -274,13 +339,11 @@ export default function AwardsStrip() {
                   >
                     {award.title}
                   </p>
-
                   <p
+                    className="award-body-issuer"
                     style={{
-                      fontSize: ".775rem",
                       color: "var(--neutral-400)",
                       lineHeight: 1.5,
-                      /* Reserve exactly 2 lines */
                       minHeight: "calc(1.5em * 2)",
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
@@ -291,13 +354,12 @@ export default function AwardsStrip() {
                   >
                     {award.issuer}
                   </p>
-
                   <div
+                    className="award-body-cta"
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
                       gap: ".3rem",
-                      fontSize: ".775rem",
                       fontWeight: 600,
                       color: award?.color?.to,
                     }}

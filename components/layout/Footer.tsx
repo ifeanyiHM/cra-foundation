@@ -62,25 +62,150 @@ export default function Footer() {
         .footer-social:hover { background:rgba(255,255,255,0.08);color:#fff;border-color:rgba(255,255,255,0.2); }
         .footer-legal-link { font-size:0.8125rem;color:rgba(255,255,255,0.35);transition:color 0.15s;text-decoration:none; }
         .footer-legal-link:hover { color:rgba(255,255,255,0.65); }
+        .site-logo img {width: 150px; height: auto; transition: width .2s ease;
+  }
+
+        /* === RESPONSIVE SCALE > 1280px === */
+        .footer-top { padding: 4rem 1.25rem 0; }
+        .footer-grid { gap: 2.5rem 2rem; padding-bottom: 3rem; }
+        .footer-brand-desc { font-size: .845rem; margin-bottom: 1.5rem; }
+        .footer-social-label { font-size: .72rem; margin-bottom: .625rem; }
+        .footer-social { width: 2rem; height: 2rem; }
+        .footer-social-icon { width: .875rem; height: .875rem; }
+        .footer-social-gap { gap: .5rem; }
+        .footer-group-label { font-size: .72rem; margin-bottom: 1.125rem; }
+        .footer-link { font-size: .875rem; }
+        .footer-link-gap { gap: .5rem; }
+        .footer-contact-gap { gap: .875rem; margin-bottom: 1.5rem; }
+        .footer-contact-icon { width: .875rem; height: .875rem; }
+        .footer-bank-label { font-size: .7rem; margin-bottom: .5rem; }
+        .footer-bank-name { font-size: .845rem; }
+        .footer-bank-num { font-size: 1rem; }
+        .footer-bank-holder { font-size: .74rem; }
+        .footer-bank-pad { padding: 1rem; }
+        .footer-bottom { padding: 1.25rem 0; }
+        .footer-copy { font-size: .8125rem; }
+        .footer-legal-link { font-size: .8125rem; }
+        .footer-dev { font-size: .78rem; }
+
+        @media (min-width: 1440px) {
+          .footer-top { padding: 4.5rem 1.25rem 0; }
+          .footer-grid { gap: 2.75rem 2.25rem; padding-bottom: 3.25rem; }
+          .footer-brand-desc { font-size: .875rem; margin-bottom: 1.625rem; }
+          .footer-social-label { font-size: .74rem; margin-bottom: .65rem; }
+          .footer-social { width: 2.125rem; height: 2.125rem; }
+          .footer-social-icon { width: .9rem; height: .9rem; }
+          .footer-social-gap { gap: .55rem; }
+          .footer-group-label { font-size: .74rem; margin-bottom: 1.175rem; }
+          .footer-link { font-size: .9rem; }
+          .footer-link-gap { gap: .55rem; }
+          .footer-contact-gap { gap: .925rem; margin-bottom: 1.625rem; }
+          .footer-contact-icon { width: .9rem; height: .9rem; }
+          .footer-bank-label { font-size: .72rem; margin-bottom: .525rem; }
+          .footer-bank-name { font-size: .875rem; }
+          .footer-bank-num { font-size: 1.05rem; }
+          .footer-bank-holder { font-size: .76rem; }
+          .footer-bank-pad { padding: 1.075rem; }
+          .footer-bottom { padding: 1.375rem 0; }
+          .footer-copy { font-size: .8375rem; }
+          .footer-legal-link { font-size: .8375rem; }
+          .footer-dev { font-size: .8rem; }
+          .site-logo img { width: 170px !important; }
+        }
+
+        @media (min-width: 1536px) {
+          .footer-top { padding: 5rem 1.25rem 0; }
+          .footer-grid { gap: 3rem 2.5rem; padding-bottom: 3.5rem; }
+          .footer-brand-desc { font-size: 1.05rem; margin-bottom: 1.75rem; }
+          .footer-social-label { font-size: .81rem; margin-bottom: .675rem; }
+          .footer-social { width: 2.35rem; height: 2.35rem; }
+          .footer-social-icon { width: 1.025rem; height: 1.025rem; }
+          .footer-social-gap { gap: .575rem; }
+          .footer-group-label { font-size: .86rem; margin-bottom: 1.225rem; }
+          .footer-link { font-size: .95rem; }
+          .footer-link-gap { gap: .575rem; }
+          .footer-contact-gap { gap: .975rem; margin-bottom: 1.75rem; }
+          .footer-contact-icon { width: .925rem; height: .925rem; }
+          .footer-bank-label { font-size: .84rem; margin-bottom: .55rem; }
+          .footer-bank-name { font-size: 1rem; }
+          .footer-bank-num { font-size: 1.2rem; }
+          .footer-bank-holder { font-size: .88rem; }
+          .footer-bank-pad { padding: 1.125rem; }
+          .footer-bottom { padding: 1.5rem 0; }
+          .footer-copy { font-size: .9625rem; }
+          .footer-legal-link { font-size: .9625rem; }
+          .footer-dev { font-size: .92rem; }
+          .site-logo img { width: 180px !important; }
+        }
+
+        @media (min-width: 1680px) {
+          .footer-top { padding: 5.5rem 1.25rem 0; }
+          .footer-grid { gap: 3.25rem 2.75rem; padding-bottom: 3.75rem; }
+          .footer-brand-desc { font-size: 1.05rem; margin-bottom: 1.875rem; }
+          .footer-social-label { font-size: .83rem; margin-bottom: .7rem; }
+          .footer-social { width: 2.475rem; height: 2.475rem; }
+          .footer-social-icon { width: 1.075rem; height: 1.075rem; }
+          .footer-social-gap { gap: .6rem; }
+          .footer-group-label { font-size: .88rem; margin-bottom: 1.275rem; }
+          .footer-link { font-size: 1.055rem; }
+          .footer-link-gap { gap: .7rem; }
+          .footer-contact-gap { gap: 1.025rem; margin-bottom: 1.875rem; }
+          .footer-contact-icon { width: 1.075rem; height: 1.075rem; }
+          .footer-bank-label { font-size: .86rem; margin-bottom: .575rem; }
+          .footer-bank-name { font-size: 1.05rem; }
+          .footer-bank-num { font-size: 1.175rem; }
+          .footer-bank-holder { font-size: .92rem; }
+          .footer-bank-pad { padding: 1.2rem; }
+          .footer-bottom { padding: 1.625rem 0; }
+          .footer-copy { font-size: 1.0rem; }
+          .footer-legal-link { font-size: 1.0rem; }
+          .footer-dev { font-size: .96rem; }
+          .site-logo img { width: 190px !important; }
+        }
+
+        @media (min-width: 1920px) {
+          .footer-top { padding: 6.5rem 1.25rem 0; }
+          .footer-grid { gap: 3.75rem 3.25rem; padding-bottom: 4.25rem; }
+          .footer-brand-desc { font-size: 1.22rem; margin-bottom: 2.125rem; }
+          .footer-social-label { font-size: .98rem; margin-bottom: .8rem; }
+          .footer-social { width: 2.725rem; height: 2.725rem; }
+          .footer-social-icon { width: 1.2rem; height: 1.2rem; }
+          .footer-social-gap { gap: .8rem; }
+          .footer-group-label { font-size: .98rem; margin-bottom: 1.425rem; }
+          .footer-link { font-size: 1.2rem; }
+          .footer-link-gap { gap: .83rem; }
+          .footer-contact-gap { gap: 1.175rem; margin-bottom: 2.125rem; }
+          .footer-contact-icon { width: 1.2rem; height: 1.2rem; }
+          .footer-bank-label { font-size: .96rem; margin-bottom: .65rem; }
+          .footer-bank-name { font-size: 1.175rem; }
+          .footer-bank-num { font-size: 1.45rem; }
+          .footer-bank-holder { font-size: 1.02rem; }
+          .footer-bank-pad { padding: 1.375rem; }
+          .footer-bottom { padding: 1.875rem 0; }
+          .footer-copy { font-size: 1.12rem; }
+          .footer-legal-link { font-size: 1.12rem; }
+          .footer-dev { font-size: 1.08rem; }
+          .site-logo img { width: 205px !important; }
+        }
       `}</style>
 
-      <div className="container-max" style={{ padding: "4rem 1.25rem 0" }}>
+      <div className="container-max footer-top">
         <div
+          className="footer-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(175px, 1fr))",
-            gap: "2.5rem 2rem",
-            paddingBottom: "3rem",
             borderBottom: "1px solid rgba(255,255,255,0.06)",
           }}
         >
           {/* Brand */}
           <div>
             <div
+              className="site-logo"
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "0.625rem",
+                gap: ".625rem",
                 marginBottom: "1.25rem",
               }}
             >
@@ -93,29 +218,24 @@ export default function Footer() {
               />
             </div>
             <p
-              style={{
-                fontSize: "0.845rem",
-                lineHeight: 1.7,
-                color: "rgba(255,255,255,0.4)",
-                marginBottom: "1.5rem",
-              }}
+              className="footer-brand-desc"
+              style={{ lineHeight: 1.7, color: "rgba(255,255,255,.4)" }}
             >
               Nurturing underprivileged children in Lagos through education,
               welfare, and advocacy since 2010.
             </p>
             <p
+              className="footer-social-label"
               style={{
-                fontSize: "0.72rem",
                 fontWeight: 700,
-                letterSpacing: "0.06em",
+                letterSpacing: ".06em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.25)",
-                marginBottom: "0.625rem",
+                color: "rgba(255,255,255,.25)",
               }}
             >
               Follow Us
             </p>
-            <div style={{ display: "flex", gap: "0.5rem" }}>
+            <div className="footer-social-gap" style={{ display: "flex" }}>
               {socialLinks.map(({ Icon, href }, i) => (
                 <a
                   key={i}
@@ -124,7 +244,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-social"
                 >
-                  <Icon style={{ width: "0.875rem", height: "0.875rem" }} />
+                  <Icon className="footer-social-icon" />
                 </a>
               ))}
             </div>
@@ -134,23 +254,22 @@ export default function Footer() {
           {Object.entries(footerLinks).map(([group, links]) => (
             <div key={group}>
               <p
+                className="footer-group-label"
                 style={{
-                  fontSize: "0.72rem",
                   fontWeight: 700,
-                  letterSpacing: "0.07em",
+                  letterSpacing: ".07em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.25)",
-                  marginBottom: "1.125rem",
+                  color: "rgba(255,255,255,.25)",
                 }}
               >
                 {group}
               </p>
               <ul
+                className="footer-link-gap"
                 style={{
                   listStyle: "none",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "0.5rem",
                 }}
               >
                 {links.map((link) => (
@@ -167,24 +286,19 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <p
+              className="footer-group-label"
               style={{
-                fontSize: "0.72rem",
                 fontWeight: 700,
-                letterSpacing: "0.07em",
+                letterSpacing: ".07em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.25)",
-                marginBottom: "1.125rem",
+                color: "rgba(255,255,255,.25)",
               }}
             >
               Contact
             </p>
             <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.875rem",
-                marginBottom: "1.5rem",
-              }}
+              className="footer-contact-gap"
+              style={{ display: "flex", flexDirection: "column" }}
             >
               {[
                 {
@@ -209,15 +323,14 @@ export default function Footer() {
                   style={{
                     display: "flex",
                     alignItems: "flex-start",
-                    gap: "0.5rem",
+                    gap: ".5rem",
                   }}
                 >
                   <Icon
+                    className="footer-contact-icon"
                     style={{
-                      width: "0.875rem",
-                      height: "0.875rem",
                       color: "var(--brand-600)",
-                      marginTop: "0.2rem",
+                      marginTop: ".2rem",
                       flexShrink: 0,
                     }}
                   />
@@ -225,103 +338,91 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Bank card — inline with contact (md:hidden xl:block) */}
             <div
-              className="md:hidden xl:block"
+              className="footer-bank-pad md:hidden xl:block"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.07)",
+                background: "rgba(255,255,255,.04)",
+                border: "1px solid rgba(255,255,255,.07)",
                 borderRadius: "var(--radius-lg)",
-                padding: "1rem",
               }}
             >
               <p
+                className="footer-bank-label"
                 style={{
-                  fontSize: "0.7rem",
                   fontWeight: 700,
-                  letterSpacing: "0.06em",
+                  letterSpacing: ".06em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.25)",
-                  marginBottom: "0.5rem",
+                  color: "rgba(255,255,255,.25)",
                 }}
               >
                 Bank Donation
               </p>
               <p
-                style={{
-                  fontSize: "0.845rem",
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.7)",
-                }}
+                className="footer-bank-name"
+                style={{ fontWeight: 600, color: "rgba(255,255,255,.7)" }}
               >
                 Zenith Bank
               </p>
               <p
+                className="footer-bank-num"
                 style={{
-                  fontSize: "1rem",
                   fontWeight: 800,
                   color: "var(--brand-600)",
-                  letterSpacing: "0.05em",
+                  letterSpacing: ".05em",
                 }}
               >
                 1012771274
               </p>
               <p
-                style={{
-                  fontSize: "0.74rem",
-                  color: "rgba(255,255,255,0.25)",
-                  marginTop: "0.2rem",
-                }}
+                className="footer-bank-holder"
+                style={{ color: "rgba(255,255,255,.25)", marginTop: ".2rem" }}
               >
                 Children&apos;s Right Advocate Foundation
               </p>
             </div>
           </div>
+
+          {/* Bank card — standalone (hidden md:block xl:hidden) */}
           <div
-            className="hidden md:block xl:hidden"
+            className="footer-bank-pad hidden md:block xl:hidden"
             style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "rgba(255,255,255,.04)",
+              border: "1px solid rgba(255,255,255,.07)",
               borderRadius: "var(--radius-lg)",
-              padding: "1rem",
             }}
           >
             <p
+              className="footer-bank-label"
               style={{
-                fontSize: "0.7rem",
                 fontWeight: 700,
-                letterSpacing: "0.06em",
+                letterSpacing: ".06em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.25)",
-                marginBottom: "0.5rem",
+                color: "rgba(255,255,255,.25)",
               }}
             >
               Bank Donation
             </p>
             <p
-              style={{
-                fontSize: "0.845rem",
-                fontWeight: 600,
-                color: "rgba(255,255,255,0.7)",
-              }}
+              className="footer-bank-name"
+              style={{ fontWeight: 600, color: "rgba(255,255,255,.7)" }}
             >
               Zenith Bank
             </p>
             <p
+              className="footer-bank-num"
               style={{
-                fontSize: "1rem",
                 fontWeight: 800,
                 color: "var(--brand-600)",
-                letterSpacing: "0.05em",
+                letterSpacing: ".05em",
               }}
             >
               1012771274
             </p>
             <p
-              style={{
-                fontSize: "0.74rem",
-                color: "rgba(255,255,255,0.25)",
-                marginTop: "0.2rem",
-              }}
+              className="footer-bank-holder"
+              style={{ color: "rgba(255,255,255,.25)", marginTop: ".2rem" }}
             >
               Children&apos;s Right Advocate Foundation
             </p>
@@ -330,7 +431,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ padding: "1.25rem 0" }}>
+      <div className="footer-bottom">
         <div
           className="container-max"
           style={{
@@ -338,10 +439,10 @@ export default function Footer() {
             flexWrap: "wrap",
             alignItems: "center",
             justifyContent: "space-between",
-            gap: "0.75rem",
+            gap: ".75rem",
           }}
         >
-          <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.3)" }}>
+          <p className="footer-copy" style={{ color: "rgba(255,255,255,.3)" }}>
             © {year} Children&apos;s Right Advocate Foundation. All rights
             reserved.
           </p>
@@ -353,17 +454,17 @@ export default function Footer() {
               Terms of Use
             </Link>
             <span
+              className="footer-dev"
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "0.3rem",
-                fontSize: "0.78rem",
-                color: "rgba(255,255,255,0.2)",
+                gap: ".3rem",
+                color: "rgba(255,255,255,.2)",
               }}
             >
               Developed by
               <a
-                href="https://ihemestudio.vercel.app/"
+                href="https://ihemestudio.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-legal-link"
