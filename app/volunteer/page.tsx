@@ -100,25 +100,15 @@ export default function VolunteerPage() {
         style={{ background: "var(--white)" }}
       >
         <div className="container-max">
-          <div
-            style={{
-              gap: "5rem",
-              alignItems: "center",
-              marginBottom: "5rem",
-            }}
-            className="grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]"
-          >
+          <div className="vol-why-gap grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
             <div>
               <p className="section-label">Why Volunteer</p>
               <h2 style={{ marginBottom: "1.25rem" }}>
                 Your Time Changes Everything
               </h2>
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1rem",
-                }}
+                className="vol-why-text"
+                style={{ display: "flex", flexDirection: "column" }}
               >
                 {[
                   "Volunteering with CRA Foundation is one of the most meaningful things you can do. You will work directly with children who are hungry for knowledge, attention, and positive role models.",
@@ -127,11 +117,8 @@ export default function VolunteerPage() {
                 ].map((t, i) => (
                   <p
                     key={i}
-                    style={{
-                      fontSize: "0.9375rem",
-                      color: "var(--neutral-500)",
-                      lineHeight: 1.75,
-                    }}
+                    className="vol-why-p"
+                    style={{ color: "var(--neutral-500)", lineHeight: 1.75 }}
                   >
                     {t}
                   </p>
@@ -139,30 +126,20 @@ export default function VolunteerPage() {
               </div>
             </div>
             <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "0.875rem",
-              }}
+              className="vol-perks-grid"
+              style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
             >
               {perks.map(([title, desc]) => (
-                <div
-                  key={title}
-                  className="card"
-                  style={{ padding: "1.25rem" }}
-                >
+                <div key={title} className="card vol-perk-pad">
                   <p
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "0.875rem",
-                      color: "var(--neutral-900)",
-                      marginBottom: "0.2rem",
-                    }}
+                    className="vol-perk-title"
+                    style={{ fontWeight: 600, color: "var(--neutral-900)" }}
                   >
                     {title}
                   </p>
                   <p
-                    style={{ fontSize: "0.8rem", color: "var(--neutral-400)" }}
+                    className="vol-perk-desc"
+                    style={{ color: "var(--neutral-400)" }}
                   >
                     {desc}
                   </p>
@@ -172,50 +149,32 @@ export default function VolunteerPage() {
           </div>
 
           {/* Roles */}
-          <div style={{ marginBottom: "5rem" }}>
+          <div className="vol-roles-mb">
             <p className="section-label">Open Roles</p>
-            <h2 style={{ marginBottom: "2rem" }}>Volunteer Roles Available</h2>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
-                gap: "1rem",
-              }}
-            >
+            <h2 className="vol-roles-header">Volunteer Roles Available</h2>
+            <div className="vol-roles-grid">
               {roles.map(({ icon: Icon, title, desc, accent }) => (
-                <div
-                  key={title}
-                  className="card card-hover"
-                  style={{ padding: "1.625rem" }}
-                >
+                <div key={title} className="card card-hover vol-role-pad">
                   <div
+                    className="vol-role-icon"
                     style={{
-                      width: "2.5rem",
-                      height: "2.5rem",
                       borderRadius: "var(--radius-md)",
                       background: accent.bg,
                       border: `1px solid ${accent.border}`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      marginBottom: "1.125rem",
                     }}
                   >
                     <Icon
-                      style={{
-                        width: "1.125rem",
-                        height: "1.125rem",
-                        color: accent.icon,
-                      }}
+                      className="vol-role-icon-svg"
+                      style={{ color: accent.icon }}
                     />
                   </div>
-                  <h4 style={{ marginBottom: "0.5rem" }}>{title}</h4>
+                  <h4 className="vol-role-title">{title}</h4>
                   <p
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "var(--neutral-500)",
-                      lineHeight: 1.65,
-                    }}
+                    className="vol-role-desc"
+                    style={{ color: "var(--neutral-500)", lineHeight: 1.65 }}
                   >
                     {desc}
                   </p>
@@ -234,75 +193,57 @@ export default function VolunteerPage() {
               padding: "clamp(1rem,4vw,3rem)",
             }}
           >
-            <div
-              style={{
-                gap: "4rem",
-                alignItems: "start",
-              }}
-              className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]"
-            >
+            <div className="vol-form-gap grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
               <div>
                 <p className="section-label">Apply Now</p>
                 <h2 style={{ marginBottom: "1rem" }}>Join Our Team</h2>
                 <p
-                  style={{
-                    fontSize: "0.9375rem",
-                    color: "var(--neutral-500)",
-                    lineHeight: 1.75,
-                    marginBottom: "2rem",
-                  }}
+                  className="vol-form-intro"
+                  style={{ color: "var(--neutral-500)", lineHeight: 1.75 }}
                 >
                   Complete the form and we&apos;ll match you with the perfect
                   volunteer opportunity within 48 hours.
                 </p>
                 <div
+                  className="vol-form-loc-pad"
                   style={{
                     background: "var(--neutral-950)",
                     borderRadius: "var(--radius-xl)",
-                    padding: "1.5rem",
                   }}
                 >
                   <p
+                    className="vol-form-loc-label"
                     style={{
-                      fontSize: "0.74rem",
                       fontWeight: 700,
-                      letterSpacing: "0.08em",
+                      letterSpacing: ".08em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.3)",
-                      marginBottom: "0.875rem",
+                      color: "rgba(255,255,255,.3)",
                     }}
                   >
                     Our Location
                   </p>
                   <p
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "rgba(255,255,255,0.7)",
-                      lineHeight: 1.65,
-                    }}
+                    className="vol-form-loc-addr"
+                    style={{ color: "rgba(255,255,255,.7)", lineHeight: 1.65 }}
                   >
                     40B Ayilara Street,
                     <br />
                     Surulere, Lagos, Nigeria
                   </p>
                   <p
+                    className="vol-form-loc-phone-label"
                     style={{
-                      fontSize: "0.74rem",
                       fontWeight: 700,
-                      letterSpacing: "0.08em",
+                      letterSpacing: ".08em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.3)",
-                      marginTop: "1rem",
-                      marginBottom: "0.375rem",
+                      color: "rgba(255,255,255,.3)",
                     }}
                   >
                     Phone
                   </p>
                   <p
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "rgba(255,255,255,0.7)",
-                    }}
+                    className="vol-form-loc-phone"
+                    style={{ color: "rgba(255,255,255,.7)" }}
                   >
                     08063811840
                   </p>
@@ -315,6 +256,139 @@ export default function VolunteerPage() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        /* === RESPONSIVE SCALE > 1280px === */
+
+        /* Why volunteer */
+        .vol-why-gap { gap: 5rem; align-items: center; margin-bottom: 5rem; }
+        .vol-why-text { gap: 1rem; }
+        .vol-why-p { font-size: .9375rem; }
+        .vol-perks-grid { gap: .875rem; }
+        .vol-perk-pad { padding: 1.25rem; }
+        .vol-perk-title { font-size: .875rem; margin-bottom: .2rem; }
+        .vol-perk-desc { font-size: .8rem; }
+
+        /* Roles */
+        .vol-roles-mb { margin-bottom: 5rem; }
+        .vol-roles-header { margin-bottom: 2rem; }
+        .vol-roles-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1rem;}
+        .vol-role-pad { padding: 1.625rem; }
+        .vol-role-icon { width: 2.5rem; height: 2.5rem; margin-bottom: 1.125rem; }
+        .vol-role-icon-svg { width: 1.125rem; height: 1.125rem; }
+        .vol-role-title { margin-bottom: .5rem; }
+        .vol-role-desc { font-size: .875rem; }
+
+        /* Form section */
+        .vol-form-gap { gap: 4rem; align-items: start; }
+        .vol-form-intro { font-size: .9375rem; margin-bottom: 2rem; }
+        .vol-form-loc-pad { padding: 1.5rem; }
+        .vol-form-loc-label { font-size: .74rem; margin-bottom: .875rem; }
+        .vol-form-loc-addr { font-size: .875rem; }
+        .vol-form-loc-phone-label { font-size: .74rem; margin-top: 1rem; margin-bottom: .375rem; }
+        .vol-form-loc-phone { font-size: .875rem; }
+
+        @media (min-width: 1440px) {
+          .vol-why-gap { gap: 5.5rem; margin-bottom: 5.5rem; }
+          .vol-why-text { gap: 1.075rem; }
+          .vol-why-p { font-size: .975rem; }
+          .vol-perks-grid { gap: .925rem; }
+          .vol-perk-pad { padding: 1.325rem; }
+          .vol-perk-title { font-size: .9rem; margin-bottom: .225rem; }
+          .vol-perk-desc { font-size: .825rem; }
+
+          .vol-roles-mb { margin-bottom: 5.5rem; }
+          .vol-roles-header { margin-bottom: 2.125rem; }
+          .vol-roles-grid {grid-template-columns: repeat(4, 1fr);}
+          .vol-role-pad { padding: 1.75rem; }
+          .vol-role-icon { width: 2.625rem; height: 2.625rem; margin-bottom: 1.2rem; }
+          .vol-role-icon-svg { width: 1.175rem; height: 1.175rem; }
+          .vol-role-desc { font-size: .9rem; }
+
+          .vol-form-gap { gap: 4.25rem; }
+          .vol-form-intro { font-size: .975rem; margin-bottom: 2.125rem; }
+          .vol-form-loc-pad { padding: 1.625rem; }
+          .vol-form-loc-label { font-size: .76rem; margin-bottom: .925rem; }
+          .vol-form-loc-addr { font-size: .9rem; }
+          .vol-form-loc-phone-label { font-size: .76rem; margin-top: 1.075rem; margin-bottom: .4rem; }
+          .vol-form-loc-phone { font-size: .9rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .vol-why-gap { gap: 6.5rem; margin-bottom: 6.5rem; }
+          .vol-why-text { gap: 1.25rem; }
+          .vol-why-p { font-size: 1.075rem; }
+          .vol-perks-grid { gap: 1.05rem; }
+          .vol-perk-pad { padding: 1.5rem; }
+          .vol-perk-title { font-size: 1rem; margin-bottom: .275rem; }
+          .vol-perk-desc { font-size: .925rem; }
+
+          .vol-roles-mb { margin-bottom: 6.5rem; }
+          .vol-roles-header { margin-bottom: 2.375rem; }
+          .vol-role-pad { padding: 1.975rem; }
+          .vol-role-icon { width: 2.875rem; height: 2.875rem; margin-bottom: 1.375rem; }
+          .vol-role-icon-svg { width: 1.3rem; height: 1.3rem; }
+          .vol-role-desc { font-size: 1rem; }
+
+          .vol-form-gap { gap: 4.75rem; }
+          .vol-form-intro { font-size: 1.075rem; margin-bottom: 2.375rem; }
+          .vol-form-loc-pad { padding: 1.875rem; }
+          .vol-form-loc-label { font-size: .84rem; margin-bottom: 1.05rem; }
+          .vol-form-loc-addr { font-size: 1rem; }
+          .vol-form-loc-phone-label { font-size: .84rem; margin-top: 1.2rem; margin-bottom: .475rem; }
+          .vol-form-loc-phone { font-size: 1rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .vol-why-gap { gap: 7.5rem; margin-bottom: 7.5rem; }
+          .vol-why-text { gap: 1.4rem; }
+          .vol-why-p { font-size: 1.175rem; }
+          .vol-perks-grid { gap: 1.175rem; }
+          .vol-perk-pad { padding: 1.675rem; }
+          .vol-perk-title { font-size: 1.1rem; margin-bottom: .3rem; }
+          .vol-perk-desc { font-size: 1.025rem; }
+
+          .vol-roles-mb { margin-bottom: 7.5rem; }
+          .vol-roles-header { margin-bottom: 2.625rem; }
+          .vol-role-pad { padding: 2.175rem; }
+          .vol-role-icon { width: 3.125rem; height: 3.125rem; margin-bottom: 1.5rem; }
+          .vol-role-icon-svg { width: 1.425rem; height: 1.425rem; }
+          .vol-role-desc { font-size: 1.1rem; }
+
+          .vol-form-gap { gap: 5.25rem; }
+          .vol-form-intro { font-size: 1.175rem; margin-bottom: 2.625rem; }
+          .vol-form-loc-pad { padding: 2.125rem; }
+          .vol-form-loc-label { font-size: .92rem; margin-bottom: 1.175rem; }
+          .vol-form-loc-addr { font-size: 1.1rem; }
+          .vol-form-loc-phone-label { font-size: .92rem; margin-top: 1.375rem; margin-bottom: .525rem; }
+          .vol-form-loc-phone { font-size: 1.1rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .vol-why-gap { gap: 9rem; margin-bottom: 9rem; }
+          .vol-why-text { gap: 1.625rem; }
+          .vol-why-p { font-size: 1.35rem; }
+          .vol-perks-grid { gap: 1.375rem; }
+          .vol-perk-pad { padding: 1.975rem; }
+          .vol-perk-title { font-size: 1.275rem; margin-bottom: .375rem; }
+          .vol-perk-desc { font-size: 1.175rem; }
+
+          .vol-roles-mb { margin-bottom: 9rem; }
+          .vol-roles-header { margin-bottom: 3rem; }
+          .vol-role-pad { padding: 2.625rem; }
+          .vol-role-icon { width: 3.625rem; height: 3.625rem; margin-bottom: 1.75rem; }
+          .vol-role-icon-svg { width: 1.65rem; height: 1.65rem; }
+          .vol-role-desc { font-size: 1.275rem; }
+
+          .vol-form-gap { gap: 6.25rem; }
+          .vol-form-intro { font-size: 1.35rem; margin-bottom: 3rem; }
+          .vol-form-loc-pad { padding: 2.5rem; }
+          .vol-form-loc-label { font-size: 1.075rem; margin-bottom: 1.375rem; }
+          .vol-form-loc-addr { font-size: 1.275rem; }
+          .vol-form-loc-phone-label { font-size: 1.075rem; margin-top: 1.625rem; margin-bottom: .625rem; }
+          .vol-form-loc-phone { font-size: 1.275rem; }
+        }
+      `}</style>
     </>
   );
 }

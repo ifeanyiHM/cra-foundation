@@ -42,52 +42,44 @@ export default function SponsorPage() {
 
       {/* How it works */}
       <section
+        className="sp-how-pad"
         style={{
           background: "var(--neutral-50)",
           borderBottom: "1px solid var(--border-subtle)",
-          padding: "3.5rem 0",
         }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2rem" }}>
+          <div className="sp-how-header">
             <p className="section-label">How It Works</p>
             <h2>Simple Steps to Change a Life</h2>
           </div>
           <div
+            className="sp-how-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
-              gap: "1rem",
             }}
           >
             {steps.map(({ n, title, desc }) => (
-              <div key={n} className="card" style={{ padding: "1.5rem" }}>
+              <div key={n} className="card sp-step-pad">
                 <div
+                  className="sp-step-num"
                   style={{
-                    width: "2rem",
-                    height: "2rem",
                     borderRadius: "var(--radius-md)",
                     background: "var(--neutral-950)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "0.78rem",
                     fontWeight: 800,
-                    color: "rgba(255,255,255,0.7)",
-                    marginBottom: "1rem",
+                    color: "rgba(255,255,255,.7)",
                   }}
                 >
                   {n}
                 </div>
-                <h4 style={{ fontSize: "0.9375rem", marginBottom: "0.375rem" }}>
-                  {title}
-                </h4>
+                <h4 className="sp-step-title">{title}</h4>
                 <p
-                  style={{
-                    fontSize: "0.845rem",
-                    color: "var(--neutral-400)",
-                    lineHeight: 1.65,
-                  }}
+                  className="sp-step-desc"
+                  style={{ color: "var(--neutral-400)", lineHeight: 1.65 }}
                 >
                   {desc}
                 </p>
@@ -103,34 +95,21 @@ export default function SponsorPage() {
         style={{ background: "var(--white)" }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2rem" }}>
+          <div className="sp-grid-header">
             <p className="section-label">Available Children</p>
             <h2>Children Awaiting Sponsorship</h2>
             <p
-              style={{
-                color: "var(--neutral-500)",
-                fontSize: "0.9375rem",
-                maxWidth: "38rem",
-                marginTop: "0.75rem",
-                lineHeight: 1.7,
-              }}
+              className="sp-grid-sub"
+              style={{ color: "var(--neutral-500)", lineHeight: 1.7 }}
             >
               Each child has a story, a dream, and a future waiting to be
               unlocked with your help.
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))",
-              gap: "1rem",
-              marginBottom: "3.5rem",
-            }}
-          >
+          <div className="sp-grid">
             {sponsorChildren.map((child) => {
               const imageSrc = `/images/sac/${child.name}.jpeg`;
-
               return (
                 <div
                   key={child.id}
@@ -140,10 +119,9 @@ export default function SponsorPage() {
                     opacity: child.sponsored ? 0.6 : 1,
                   }}
                 >
-                  {/* Avatar */}
                   <div
+                    className="sp-child-img"
                     style={{
-                      height: "16rem",
                       background: "var(--neutral-950)",
                       position: "relative",
                       overflow: "hidden",
@@ -155,10 +133,7 @@ export default function SponsorPage() {
                         alt={child.name}
                         fill
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        style={{
-                          objectFit: "cover",
-                          objectPosition: "top",
-                        }}
+                        style={{ objectFit: "cover", objectPosition: "top" }}
                       />
                     ) : (
                       <div
@@ -175,35 +150,30 @@ export default function SponsorPage() {
                             width: "4rem",
                             height: "4rem",
                             borderRadius: "50%",
-                            background: "rgba(255,255,255,0.06)",
-                            border: "2px solid rgba(255,255,255,0.1)",
+                            background: "rgba(255,255,255,.06)",
+                            border: "2px solid rgba(255,255,255,.1)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                             fontSize: "1.375rem",
                             fontWeight: 800,
-                            color: "rgba(255,255,255,0.5)",
-                            letterSpacing: "-0.02em",
+                            color: "rgba(255,255,255,.5)",
+                            letterSpacing: "-.02em",
                           }}
                         >
                           {child.name.charAt(0)}
                         </div>
                       </div>
                     )}
-
                     <div
-                      style={{
-                        position: "absolute",
-                        top: "0.75rem",
-                        right: "0.75rem",
-                        zIndex: 1,
-                      }}
+                      style={{ position: "absolute", zIndex: 1 }}
+                      className="sp-child-status"
                     >
                       <span
+                        className="sp-child-status"
                         style={{
-                          padding: "0.2rem 0.6rem",
+                          padding: ".2rem .6rem",
                           borderRadius: "999px",
-                          fontSize: "0.72rem",
                           fontWeight: 700,
                           background: child.sponsored
                             ? "var(--accent-green-50)"
@@ -218,10 +188,9 @@ export default function SponsorPage() {
                     </div>
                   </div>
 
-                  {/* Body */}
                   <div
+                    className="sp-child-body"
                     style={{
-                      padding: "1.25rem",
                       flex: 1,
                       display: "flex",
                       flexDirection: "column",
@@ -232,33 +201,23 @@ export default function SponsorPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        marginBottom: "0.375rem",
+                        marginBottom: ".375rem",
                       }}
                     >
-                      <h4 style={{ fontSize: "0.9375rem" }}>{child.name}</h4>
-
+                      <h4 className="sp-child-name">{child.name}</h4>
                       <span
-                        style={{
-                          fontSize: "0.78rem",
-                          color: "var(--neutral-400)",
-                          fontWeight: 500,
-                        }}
+                        className="sp-child-age"
+                        style={{ color: "var(--neutral-400)", fontWeight: 500 }}
                       >
                         Age {child.age}
                       </span>
                     </div>
-
                     <p
-                      style={{
-                        fontSize: "0.78rem",
-                        color: "var(--brand-600)",
-                        fontWeight: 500,
-                        marginBottom: "0.625rem",
-                      }}
+                      className="sp-child-school"
+                      style={{ color: "var(--brand-600)", fontWeight: 500 }}
                     >
                       {child.school}
                     </p>
-
                     {!child.sponsored ? (
                       <a
                         href="#sponsor-form"
@@ -270,36 +229,26 @@ export default function SponsorPage() {
                         }}
                       >
                         <RiHeartLine
-                          style={{
-                            width: "0.875rem",
-                            height: "0.875rem",
-                          }}
+                          style={{ width: ".875rem", height: ".875rem" }}
                         />
                         Sponsor {child.name.split(" ")[0]}
                       </a>
                     ) : (
                       <div
+                        className="sp-child-sponsored"
                         style={{
-                          padding: "0.625rem",
                           background: "var(--accent-green-50)",
                           borderRadius: "var(--radius-md)",
                           textAlign: "center",
-                          fontSize: "0.845rem",
                           fontWeight: 600,
                           color: "var(--accent-green-600)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          gap: "0.375rem",
                           marginTop: "auto",
                         }}
                       >
-                        <RiCheckLine
-                          style={{
-                            width: "0.875rem",
-                            height: "0.875rem",
-                          }}
-                        />
+                        <RiCheckLine className="sp-child-sponsored-icon" />
                         Sponsored
                       </div>
                     )}
@@ -319,34 +268,21 @@ export default function SponsorPage() {
               padding: "clamp(1rem,4vw,3rem)",
             }}
           >
-            <div
-              style={{
-                gap: "4rem",
-                alignItems: "start",
-              }}
-              className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]"
-            >
+            <div className="sp-form-gap grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
               <div>
                 <p className="section-label">Ready to Help?</p>
                 <h2 style={{ marginBottom: "1rem" }}>Become a Sponsor</h2>
                 <p
-                  style={{
-                    fontSize: "0.9375rem",
-                    color: "var(--neutral-500)",
-                    lineHeight: 1.75,
-                    marginBottom: "1.5rem",
-                  }}
+                  className="sp-form-intro"
+                  style={{ color: "var(--neutral-500)", lineHeight: 1.75 }}
                 >
                   Your monthly sponsorship covers a child&apos;s school fees,
                   meals, uniform, books, and health care. A small commitment
                   creates a lifetime of impact.
                 </p>
                 <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.625rem",
-                  }}
+                  className="sp-tier-gap"
+                  style={{ display: "flex", flexDirection: "column" }}
                 >
                   {[
                     "₦10,000/month — Basic Support",
@@ -355,18 +291,16 @@ export default function SponsorPage() {
                   ].map((opt) => (
                     <div
                       key={opt}
+                      className="sp-tier-text"
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: "0.625rem",
-                        fontSize: "0.875rem",
                         color: "var(--neutral-700)",
                       }}
                     >
                       <div
+                        className="sp-tier-check"
                         style={{
-                          width: "1.25rem",
-                          height: "1.25rem",
                           borderRadius: "50%",
                           background: "var(--accent-green-50)",
                           border: "1px solid #D1FAE5",
@@ -377,11 +311,8 @@ export default function SponsorPage() {
                         }}
                       >
                         <RiCheckLine
-                          style={{
-                            width: "0.7rem",
-                            height: "0.7rem",
-                            color: "var(--accent-green-600)",
-                          }}
+                          className="sp-tier-check-svg"
+                          style={{ color: "var(--accent-green-600)" }}
                         />
                       </div>
                       {opt}
@@ -396,6 +327,160 @@ export default function SponsorPage() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        /* === RESPONSIVE SCALE > 1280px === */
+
+        /* How it works */
+        .sp-how-pad { padding: 3.5rem 0; }
+        .sp-how-header { margin-bottom: 2rem; }
+        .sp-how-grid { gap: 1rem; }
+        .sp-step-pad { padding: 1.5rem; }
+        .sp-step-num { width: 2rem; height: 2rem; font-size: .78rem; margin-bottom: 1rem; }
+        .sp-step-title { font-size: .9375rem; margin-bottom: .375rem; }
+        .sp-step-desc { font-size: .845rem; }
+
+        /* Children grid */
+        .sp-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 1rem;}
+        .sp-grid-header { margin-bottom: 2rem; }
+        .sp-grid-sub { font-size: .9375rem; max-width: 38rem; margin-top: .75rem; }
+        .sp-grid { gap: 1rem; margin-bottom: 3.5rem; }
+        .sp-child-img { height: 16rem; }
+        .sp-child-status { font-size: .72rem; padding: .2rem .6rem; top: .75rem; right: .75rem; }
+        .sp-child-body { padding: 1.25rem; }
+        .sp-child-name { font-size: .9375rem; }
+        .sp-child-age { font-size: .78rem; }
+        .sp-child-school { font-size: .78rem; margin-bottom: .625rem; }
+        .sp-child-sponsored { font-size: .845rem; padding: .625rem; gap: .375rem; }
+        .sp-child-sponsored-icon { width: .875rem; height: .875rem; }
+
+        /* Form section */
+        .sp-form-gap { gap: 4rem; align-items: start; }
+        .sp-form-intro { font-size: .9375rem; margin-bottom: 1.5rem; }
+        .sp-tier-gap { gap: .625rem; }
+        .sp-tier-text { font-size: .875rem; gap: .625rem; }
+        .sp-tier-check { width: 1.25rem; height: 1.25rem; }
+        .sp-tier-check-svg { width: .7rem; height: .7rem; }
+
+        @media (min-width: 1280px) {
+          .sp-grid { grid-template-columns: repeat(5, 1fr); }
+        }
+
+        @media (min-width: 1440px) {
+          .sp-how-pad { padding: 4rem 0; }
+          .sp-how-header { margin-bottom: 2.25rem; }
+          .sp-how-grid { gap: 1.125rem; }
+          .sp-step-pad { padding: 1.625rem; }
+          .sp-step-num { width: 2.125rem; height: 2.125rem; font-size: .8rem; margin-bottom: 1.075rem; }
+          .sp-step-title { font-size: .975rem; margin-bottom: .4rem; }
+          .sp-step-desc { font-size: .875rem; }
+
+          .sp-grid-header { margin-bottom: 2.25rem; }
+          .sp-grid-sub { font-size: .975rem; max-width: 40rem; margin-top: .8rem; }
+          .sp-grid { gap: 1.125rem; margin-bottom: 3.75rem; }
+          .sp-child-img { height: 17rem; }
+          .sp-child-status { font-size: .74rem; }
+          .sp-child-body { padding: 1.375rem; }
+          .sp-child-name { font-size: .975rem; }
+          .sp-child-age { font-size: .8rem; }
+          .sp-child-school { font-size: .8rem; margin-bottom: .675rem; }
+          .sp-child-sponsored { font-size: .875rem; padding: .675rem; }
+
+          .sp-form-gap { gap: 4.25rem; }
+          .sp-form-intro { font-size: .975rem; margin-bottom: 1.625rem; }
+          .sp-tier-gap { gap: .675rem; }
+          .sp-tier-text { font-size: .9rem; }
+          .sp-tier-check { width: 1.3rem; height: 1.3rem; }
+          .sp-tier-check-svg { width: .72rem; height: .72rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .sp-how-pad { padding: 4.75rem 0; }
+          .sp-how-header { margin-bottom: 2.5rem; }
+          .sp-how-grid { gap: 1.25rem; }
+          .sp-step-pad { padding: 1.875rem; }
+          .sp-step-num { width: 2.375rem; height: 2.375rem; font-size: .9rem; margin-bottom: 1.2rem; }
+          .sp-step-title { font-size: 1.075rem; margin-bottom: .45rem; }
+          .sp-step-desc { font-size: .975rem; }
+
+          .sp-grid-header { margin-bottom: 2.5rem; }
+          .sp-grid-sub { font-size: 1.075rem; max-width: 44rem; margin-top: .9rem; }
+          .sp-grid { gap: 1.25rem; margin-bottom: 4.25rem; }
+          .sp-child-img { height: 18.5rem; }
+          .sp-child-status { font-size: .82rem; padding: .225rem .7rem; }
+          .sp-child-body { padding: 1.625rem; }
+          .sp-child-name { font-size: 1.075rem; }
+          .sp-child-age { font-size: .9rem; }
+          .sp-child-school { font-size: .9rem; margin-bottom: .75rem; }
+          .sp-child-sponsored { font-size: .975rem; padding: .775rem; }
+          .sp-child-sponsored-icon { width: .975rem; height: .975rem; }
+
+          .sp-form-gap { gap: 4.75rem; }
+          .sp-form-intro { font-size: 1.075rem; margin-bottom: 1.875rem; }
+          .sp-tier-gap { gap: .775rem; }
+          .sp-tier-text { font-size: 1rem; gap: .7rem; }
+          .sp-tier-check { width: 1.475rem; height: 1.475rem; }
+          .sp-tier-check-svg { width: .82rem; height: .82rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .sp-how-pad { padding: 5.5rem 0; }
+          .sp-how-header { margin-bottom: 2.75rem; }
+          .sp-how-grid { gap: 1.375rem; }
+          .sp-step-pad { padding: 2.125rem; }
+          .sp-step-num { width: 2.625rem; height: 2.625rem; font-size: 1rem; margin-bottom: 1.375rem; }
+          .sp-step-title { font-size: 1.175rem; margin-bottom: .5rem; }
+          .sp-step-desc { font-size: 1.075rem; }
+
+          .sp-grid-header { margin-bottom: 2.75rem; }
+          .sp-grid-sub { font-size: 1.175rem; max-width: 48rem; margin-top: 1rem; }
+          .sp-grid { gap: 1.375rem; margin-bottom: 4.75rem; }
+          .sp-child-img { height: 20rem; }
+          .sp-child-status { font-size: .9rem; padding: .25rem .775rem; }
+          .sp-child-body { padding: 1.875rem; }
+          .sp-child-name { font-size: 1.175rem; }
+          .sp-child-age { font-size: .975rem; }
+          .sp-child-school { font-size: .975rem; margin-bottom: .825rem; }
+          .sp-child-sponsored { font-size: 1.075rem; padding: .875rem; }
+          .sp-child-sponsored-icon { width: 1.075rem; height: 1.075rem; }
+
+          .sp-form-gap { gap: 5.25rem; }
+          .sp-form-intro { font-size: 1.175rem; margin-bottom: 2.125rem; }
+          .sp-tier-gap { gap: .875rem; }
+          .sp-tier-text { font-size: 1.1rem; gap: .775rem; }
+          .sp-tier-check { width: 1.625rem; height: 1.625rem; }
+          .sp-tier-check-svg { width: .9rem; height: .9rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .sp-how-pad { padding: 6.5rem 0; }
+          .sp-how-header { margin-bottom: 3.25rem; }
+          .sp-how-grid { gap: 1.625rem; }
+          .sp-step-pad { padding: 2.5rem; }
+          .sp-step-num { width: 3rem; height: 3rem; font-size: 1.175rem; margin-bottom: 1.625rem; }
+          .sp-step-title { font-size: 1.35rem; margin-bottom: .6rem; }
+          .sp-step-desc { font-size: 1.225rem; }
+
+          .sp-grid-header { margin-bottom: 3.25rem; }
+          .sp-grid-sub { font-size: 1.35rem; max-width: 56rem; margin-top: 1.175rem; }
+          .sp-grid { gap: 1.625rem; margin-bottom: 5.5rem; }
+          .sp-child-img { height: 23rem; }
+          .sp-child-status { font-size: 1.025rem; padding: .3rem .9rem; }
+          .sp-child-body { padding: 2.25rem; }
+          .sp-child-name { font-size: 1.35rem; }
+          .sp-child-age { font-size: 1.125rem; }
+          .sp-child-school { font-size: 1.125rem; margin-bottom: .975rem; }
+          .sp-child-sponsored { font-size: 1.25rem; padding: 1.025rem; }
+          .sp-child-sponsored-icon { width: 1.25rem; height: 1.25rem; }
+
+          .sp-form-gap { gap: 6.25rem; }
+          .sp-form-intro { font-size: 1.35rem; margin-bottom: 2.5rem; }
+          .sp-tier-gap { gap: 1rem; }
+          .sp-tier-text { font-size: 1.275rem; gap: .9rem; }
+          .sp-tier-check { width: 1.875rem; height: 1.875rem; }
+          .sp-tier-check-svg { width: 1.05rem; height: 1.05rem; }
+        }
+      `}</style>
     </>
   );
 }

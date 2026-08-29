@@ -284,6 +284,48 @@ function ImageCarousel({
         @media (max-width: 480px) {
           .carousel-thumb { width: 64px; height: 46px; }
         }
+
+        /* === CAROUSEL RESPONSIVE SCALE > 1280px === */
+        .carousel-btn { width: 2.75rem; height: 2.75rem; }
+        .carousel-btn-svg { width: 1.5rem; height: 1.5rem; }
+        .carousel-counter { font-size: .75rem; padding: .25rem .625rem; }
+        .carousel-dots { gap: .5rem; padding: .875rem 1rem 0; }
+        .carousel-dot { width: 8px; height: 8px; }
+        .carousel-thumbs { gap: .5rem; padding: .75rem; }
+        .carousel-thumb { width: 80px; height: 56px; }
+
+        @media (min-width: 1440px) {
+          .carousel-btn { width: 2.875rem; height: 2.875rem; }
+          .carousel-counter { font-size: .775rem; padding: .275rem .675rem; }
+          .carousel-thumb { width: 88px; height: 62px; }
+        }
+
+        @media (min-width: 1536px) {
+          .carousel-btn { width: 3.125rem; height: 3.125rem; }
+          .carousel-counter { font-size: .875rem; padding: .3rem .75rem; }
+          .carousel-dots { gap: .625rem; padding: 1rem 1.25rem 0; }
+          .carousel-dot { width: 9px; height: 9px; }
+          .carousel-thumbs { gap: .625rem; padding: .875rem; }
+          .carousel-thumb { width: 100px; height: 70px; }
+        }
+
+        @media (min-width: 1680px) {
+          .carousel-btn { width: 3.375rem; height: 3.375rem; }
+          .carousel-counter { font-size: .95rem; padding: .325rem .825rem; }
+          .carousel-dots { gap: .7rem; padding: 1.125rem 1.375rem 0; }
+          .carousel-dot { width: 10px; height: 10px; }
+          .carousel-thumbs { gap: .7rem; padding: 1rem; }
+          .carousel-thumb { width: 112px; height: 78px; }
+        }
+
+        @media (min-width: 1920px) {
+          .carousel-btn { width: 3.875rem; height: 3.875rem; }
+          .carousel-counter { font-size: 1.1rem; padding: .375rem .975rem; }
+          .carousel-dots { gap: .8rem; padding: 1.375rem 1.625rem 0; }
+          .carousel-dot { width: 11px; height: 11px; }
+          .carousel-thumbs { gap: .8rem; padding: 1.25rem; }
+          .carousel-thumb { width: 130px; height: 90px; }
+        }
       `}</style>
     </div>
   );
@@ -309,62 +351,56 @@ export default function ArticlePage({
   return (
     <div style={{ paddingTop: "4rem" }}>
       {/* ── Page header ───────────────────────────────────────── */}
-      <div style={{ background: "var(--neutral-950)", padding: "4rem 0 3rem" }}>
-        <div className="container-max" style={{ maxWidth: "52rem" }}>
+      <div
+        className="art-header-outer"
+        style={{ background: "var(--neutral-950)" }}
+      >
+        <div className="container-max art-header-inner">
           <Link
             href="/news"
+            className="art-back"
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: "0.375rem",
-              marginBottom: "1.5rem",
-              fontSize: "0.845rem",
               fontWeight: 600,
-              color: "rgba(255,255,255,0.35)",
+              color: "rgba(255,255,255,.35)",
               textDecoration: "none",
-              transition: "color 0.15s ease",
+              transition: "color .15s ease",
             }}
           >
-            <RiArrowLeftLine
-              style={{ width: "0.875rem", height: "0.875rem" }}
-            />
+            <RiArrowLeftLine className="art-back-icon" />
             All Articles
           </Link>
 
           <span
+            className="art-cat-badge"
             style={{
               display: "inline-block",
-              padding: "0.2rem 0.6rem",
               borderRadius: "999px",
-              fontSize: "0.72rem",
               fontWeight: 700,
               background: s.bg,
               color: s.color,
-              marginBottom: "1.25rem",
             }}
           >
             {article.category}
           </span>
 
-          <h1 style={{ color: "#fff", marginBottom: "1.25rem" }}>
+          <h1 className="art-title-mb" style={{ color: "#fff" }}>
             {article.title}
           </h1>
 
           <div
+            className="art-meta"
             style={{
               display: "flex",
-              gap: "1.25rem",
-              color: "rgba(255,255,255,0.35)",
-              fontSize: "0.845rem",
+              color: "rgba(255,255,255,.35)",
               flexWrap: "wrap",
             }}
           >
             <span
-              style={{ display: "flex", alignItems: "center", gap: "0.375rem" }}
+              style={{ display: "flex", alignItems: "center", gap: ".375rem" }}
             >
-              <RiCalendarLine
-                style={{ width: "0.875rem", height: "0.875rem" }}
-              />
+              <RiCalendarLine className="art-meta-icon" />
               {article.date}
             </span>
             {article.author && (
@@ -372,10 +408,10 @@ export default function ArticlePage({
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.375rem",
+                  gap: ".375rem",
                 }}
               >
-                <RiUserLine style={{ width: "0.875rem", height: "0.875rem" }} />
+                <RiUserLine className="art-meta-icon" />
                 {article.author}
               </span>
             )}
@@ -384,31 +420,25 @@ export default function ArticlePage({
       </div>
 
       {/* ── Article body ──────────────────────────────────────── */}
-      <div
-        className="container-max"
-        style={{ maxWidth: "52rem", padding: "3.5rem 1.25rem" }}
-      >
-        {/* Carousel */}
+      <div className="container-max art-body-outer">
         <ImageCarousel images={article.images} title={article.title} />
 
-        {/* Lead excerpt */}
         <p
+          className="art-excerpt"
           style={{
-            fontSize: "1.125rem",
             fontWeight: 500,
             color: "var(--neutral-700)",
             lineHeight: 1.8,
-            marginBottom: "2rem",
             borderLeft: "3px solid var(--brand-600)",
-            paddingLeft: "1.25rem",
           }}
         >
           {article.excerpt}
         </p>
 
-        {/* Body paragraphs */}
+        {/* body paragraph */}
         <div
-          style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}
+          className="art-body-gap"
+          style={{ display: "flex", flexDirection: "column" }}
         >
           {[
             "The Children's Right Advocate Foundation continues its unwavering commitment to supporting underprivileged children across Lagos State. This initiative reflects the core values upon which the foundation was built — a deep, holistic care for children who society has left behind.",
@@ -418,11 +448,8 @@ export default function ArticlePage({
           ].map((p, i) => (
             <p
               key={i}
-              style={{
-                fontSize: "0.9375rem",
-                lineHeight: 1.8,
-                color: "var(--neutral-600)",
-              }}
+              className="art-body-p"
+              style={{ lineHeight: 1.8, color: "var(--neutral-600)" }}
             >
               {p}
             </p>
@@ -431,22 +458,13 @@ export default function ArticlePage({
 
         {/* Divider */}
         <div
-          style={{
-            height: "1px",
-            background: "var(--border-subtle)",
-            margin: "3rem 0",
-          }}
+          className="art-divider"
+          style={{ height: "1px", background: "var(--border-subtle)" }}
         />
 
         {/* Related articles */}
-        <h3 style={{ marginBottom: "1.5rem" }}>More Stories</h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-            gap: "1rem",
-          }}
-        >
+        <h3 className="art-related-header">More Stories</h3>
+        <div className="art-related-grid">
           {related.map((rel) => {
             const rs = catStyle[rel.category] || {
               bg: "var(--neutral-100)",
@@ -463,12 +481,11 @@ export default function ArticlePage({
                   overflow: "hidden",
                 }}
               >
-                {/* Related thumbnail */}
                 <div
+                  className="art-related-thumb"
                   style={{
                     position: "relative",
                     width: "100%",
-                    height: "120px",
                     overflow: "hidden",
                   }}
                 >
@@ -479,51 +496,44 @@ export default function ArticlePage({
                     sizes="220px"
                     style={{
                       objectFit: "cover",
-                      transition: "transform 0.5s ease",
+                      transition: "transform .5s ease",
                     }}
                     className="news-related-img"
                   />
                 </div>
-
-                <div style={{ padding: "1rem 1.25rem 1.25rem" }}>
+                <div className="art-related-body">
                   <span
+                    className="art-related-cat"
                     style={{
                       display: "inline-block",
-                      padding: "0.2rem 0.5rem",
                       borderRadius: "999px",
-                      fontSize: "0.7rem",
                       fontWeight: 700,
                       background: rs.bg,
                       color: rs.color,
-                      marginBottom: "0.625rem",
                     }}
                   >
                     {rel.category}
                   </span>
                   <p
+                    className="art-related-title line-clamp-2"
                     style={{
-                      fontSize: "0.875rem",
                       fontWeight: 500,
                       color: "var(--neutral-900)",
                       lineHeight: 1.4,
-                      marginBottom: "0.5rem",
                     }}
-                    className="line-clamp-2"
                   >
                     {rel.title}
                   </p>
                   <p
+                    className="art-related-date"
                     style={{
-                      fontSize: "0.78rem",
                       color: "var(--neutral-400)",
                       display: "flex",
                       alignItems: "center",
-                      gap: "0.3rem",
+                      gap: ".3rem",
                     }}
                   >
-                    <RiCalendarLine
-                      style={{ width: "0.75rem", height: "0.75rem" }}
-                    />
+                    <RiCalendarLine className="art-related-date-icon" />
                     {rel.date}
                   </p>
                 </div>
@@ -536,35 +546,164 @@ export default function ArticlePage({
           .card:hover .news-related-img {
             transform: scale(1.05) !important;
           }
+
+          /* === PAGE RESPONSIVE SCALE > 1280px === */
+
+          /* Article header */
+          .art-header-outer { padding: 4rem 0 3rem; }
+          .art-header-inner { max-width: 52rem; }
+          .art-back { font-size: .845rem; margin-bottom: 1.5rem; gap: .375rem; }
+          .art-back-icon { width: .875rem; height: .875rem; }
+          .art-cat-badge { font-size: .72rem; padding: .2rem .6rem; margin-bottom: 1.25rem; }
+          .art-title-mb { margin-bottom: 1.25rem; }
+          .art-meta { font-size: .845rem; gap: 1.25rem; }
+          .art-meta-icon { width: .875rem; height: .875rem; }
+
+          /* Article body */
+          .art-body-outer { max-width: 52rem; padding: 3.5rem 1.25rem; }
+          .art-carousel-mb { margin-bottom: 2.5rem; }
+          .art-excerpt { font-size: 1.125rem; margin-bottom: 2rem; padding-left: 1.25rem; }
+          .art-body-gap { gap: 1.25rem; }
+          .art-body-p { font-size: .9375rem; }
+          .art-divider { margin: 3rem 0; }
+          .art-related-header { margin-bottom: 1.5rem; }
+          .art-related-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 1rem;}
+          .art-related-thumb { height: 120px; }
+          .art-related-body { padding: 1rem 1.25rem 1.25rem; }
+          .art-related-cat { font-size: .7rem; padding: .2rem .5rem; margin-bottom: .625rem; }
+          .art-related-title { font-size: .875rem; margin-bottom: .5rem; }
+          .art-related-date { font-size: .78rem; }
+          .art-related-date-icon { width: .75rem; height: .75rem; }
+
+          /* CTA */
+          .art-cta-outer { padding: 4rem 0; }
+          .art-cta-sub { max-width: 28rem; margin: 0 auto 2rem; }
+          .art-cta-btns { gap: .75rem; }
+
+          @media (min-width: 1440px) {
+            .art-header-outer { padding: 4.5rem 0 3.25rem; }
+            .art-header-inner { max-width: 56rem; }
+            .art-back { font-size: .875rem; margin-bottom: 1.625rem; }
+            .art-cat-badge { font-size: .74rem; margin-bottom: 1.325rem; }
+            .art-meta { font-size: .875rem; gap: 1.375rem; }
+
+            .art-body-outer { max-width: 56rem; padding: 3.75rem 1.25rem; }
+            .art-excerpt { font-size: 1.175rem; margin-bottom: 2.125rem; padding-left: 1.375rem; }
+            .art-body-gap { gap: 1.375rem; }
+            .art-body-p { font-size: .975rem; }
+            .art-divider { margin: 3.25rem 0; }
+            .art-related-header { margin-bottom: 1.625rem; }
+            .art-related-grid {grid-template-columns: repeat(3, 1fr); }
+            .art-related-thumb { height: 130px; }
+            .art-related-body { padding: 1.075rem 1.325rem 1.325rem; }
+            .art-related-cat { font-size: .72rem; margin-bottom: .675rem; }
+            .art-related-title { font-size: .9rem; margin-bottom: .525rem; }
+            .art-related-date { font-size: .8rem; }
+
+            .art-cta-outer { padding: 4.5rem 0; }
+            .art-cta-sub { max-width: 30rem; margin: 0 auto 2.125rem; font-size: .975rem; }
+            .art-cta-btns { gap: .8rem; }
+          }
+
+          @media (min-width: 1536px) {
+            .art-header-outer { padding: 5.25rem 0 3.75rem; }
+            .art-header-inner { max-width: 62rem; }
+            .art-back { font-size: .975rem; margin-bottom: 1.875rem; }
+            .art-cat-badge { font-size: .84rem; margin-bottom: 1.5rem; }
+            .art-meta { font-size: .975rem; gap: 1.625rem; }
+            .art-meta-icon { width: 1rem; height: 1rem; }
+
+            .art-body-outer { max-width: 62rem; padding: 4.25rem 1.25rem; }
+            .art-excerpt { font-size: 1.325rem; margin-bottom: 2.375rem; padding-left: 1.625rem; }
+            .art-body-gap { gap: 1.625rem; }
+            .art-body-p { font-size: 1.075rem; }
+            .art-divider { margin: 3.75rem 0; }
+            .art-related-header { margin-bottom: 1.875rem; }
+            .art-related-thumb { height: 150px; }
+            .art-related-body { padding: 1.2rem 1.5rem 1.5rem; }
+            .art-related-cat { font-size: .8rem; margin-bottom: .75rem; }
+            .art-related-title { font-size: 1rem; margin-bottom: .575rem; }
+            .art-related-date { font-size: .9rem; }
+            .art-related-date-icon { width: .875rem; height: .875rem; }
+
+            .art-cta-outer { padding: 5.25rem 0; }
+            .art-cta-sub { max-width: 34rem; margin: 0 auto 2.375rem; font-size: 1.075rem; }
+            .art-cta-btns { gap: .925rem; }
+          }
+
+          @media (min-width: 1680px) {
+            .art-header-outer { padding: 6rem 0 4.25rem; }
+            .art-header-inner { max-width: 68rem; }
+            .art-back { font-size: 1.05rem; margin-bottom: 2.125rem; }
+            .art-cat-badge { font-size: .92rem; margin-bottom: 1.625rem; }
+            .art-meta { font-size: 1.05rem; gap: 1.875rem; }
+            .art-meta-icon { width: 1.1rem; height: 1.1rem; }
+
+            .art-body-outer { max-width: 68rem; padding: 4.75rem 1.25rem; }
+            .art-excerpt { font-size: 1.475rem; margin-bottom: 2.625rem; padding-left: 1.875rem; }
+            .art-body-gap { gap: 1.875rem; }
+            .art-body-p { font-size: 1.175rem; }
+            .art-divider { margin: 4.25rem 0; }
+            .art-related-header { margin-bottom: 2.125rem; }
+            .art-related-thumb { height: 168px; }
+            .art-related-body { padding: 1.35rem 1.625rem 1.625rem; }
+            .art-related-cat { font-size: .88rem; margin-bottom: .825rem; }
+            .art-related-title { font-size: 1.1rem; margin-bottom: .625rem; }
+            .art-related-date { font-size: .975rem; }
+            .art-related-date-icon { width: .95rem; height: .95rem; }
+
+            .art-cta-outer { padding: 6rem 0; }
+            .art-cta-sub { max-width: 38rem; margin: 0 auto 2.625rem; font-size: 1.175rem; }
+            .art-cta-btns { gap: 1rem; }
+          }
+
+          @media (min-width: 1920px) {
+            .art-header-outer { padding: 7.5rem 0 5rem; }
+            .art-header-inner { max-width: 80rem; }
+            .art-back { font-size: 1.225rem; margin-bottom: 2.5rem; }
+            .art-cat-badge { font-size: 1.075rem; margin-bottom: 1.875rem; }
+            .art-meta { font-size: 1.225rem; gap: 2.25rem; }
+            .art-meta-icon { width: 1.275rem; height: 1.275rem; }
+
+            .art-body-outer { max-width: 80rem; padding: 5.5rem 1.25rem; }
+            .art-excerpt { font-size: 1.7rem; margin-bottom: 3rem; padding-left: 2.25rem; }
+            .art-body-gap { gap: 2.25rem; }
+            .art-body-p { font-size: 1.35rem; }
+            .art-divider { margin: 5rem 0; }
+            .art-related-header { margin-bottom: 2.5rem; }
+            .art-related-thumb { height: 200px; }
+            .art-related-body { padding: 1.625rem 1.875rem 1.875rem; }
+            .art-related-cat { font-size: 1rem; margin-bottom: .975rem; }
+            .art-related-title { font-size: 1.275rem; margin-bottom: .75rem; }
+            .art-related-date { font-size: 1.125rem; }
+            .art-related-date-icon { width: 1.1rem; height: 1.1rem; }
+
+            .art-cta-outer { padding: 7.5rem 0; }
+            .art-cta-sub { max-width: 44rem; margin: 0 auto 3rem; font-size: 1.35rem; }
+            .art-cta-btns { gap: 1.25rem; }
+          }
         `}</style>
       </div>
 
       {/* ── CTA ───────────────────────────────────────────────── */}
       <div
-        style={{
-          background: "var(--neutral-950)",
-          padding: "4rem 0",
-          textAlign: "center",
-        }}
+        className="art-cta-outer"
+        style={{ background: "var(--neutral-950)", textAlign: "center" }}
       >
         <div className="container-max">
-          <h2 style={{ color: "#fff", marginBottom: "0.875rem" }}>
+          <h2 style={{ color: "#fff", marginBottom: ".875rem" }}>
             Be Part of These Stories
           </h2>
           <p
-            style={{
-              color: "rgba(255,255,255,0.45)",
-              maxWidth: "28rem",
-              margin: "0 auto 2rem",
-              lineHeight: 1.7,
-            }}
+            className="art-cta-sub"
+            style={{ color: "rgba(255,255,255,.45)", lineHeight: 1.7 }}
           >
             Your support creates the stories we tell. Donate or volunteer today.
           </p>
           <div
+            className="art-cta-btns"
             style={{
               display: "flex",
-              gap: "0.75rem",
               justifyContent: "center",
               flexWrap: "wrap",
             }}
@@ -581,274 +720,3 @@ export default function ArticlePage({
     </div>
   );
 }
-
-// import type { Metadata } from "next";
-// import { news } from "@/data";
-// import { notFound } from "next/navigation";
-// import Link from "next/link";
-// import { RiCalendarLine, RiUserLine, RiArrowLeftLine } from "react-icons/ri";
-
-// interface Props {
-//   params: Promise<{ id: string }>;
-// }
-
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const { id } = await params;
-//   const article = news.find((n) => n.id === id);
-//   return { title: article?.title ?? "Article Not Found" };
-// }
-
-// const catStyle: Record<string, { bg: string; color: string }> = {
-//   Events: { bg: "var(--brand-50)", color: "var(--brand-600)" },
-//   News: { bg: "var(--accent-blue-50)", color: "var(--accent-blue-600)" },
-//   Impact: { bg: "var(--accent-green-50)", color: "var(--accent-green-600)" },
-//   Health: { bg: "var(--accent-teal-50)", color: "var(--accent-teal-600)" },
-//   Milestone: {
-//     bg: "var(--accent-violet-50)",
-//     color: "var(--accent-violet-600)",
-//   },
-//   Programs: { bg: "var(--accent-amber-50)", color: "var(--accent-amber)" },
-// };
-
-// export default async function ArticlePage({ params }: Props) {
-//   const { id } = await params;
-//   const article = news.find((n) => n.id === id);
-//   if (!article) notFound();
-//   const related = news.filter((n) => n.id !== id).slice(0, 3);
-
-//   return (
-//     <div style={{ paddingTop: "4rem" }}>
-//       {/* Header */}
-//       <div style={{ background: "var(--neutral-950)", padding: "4rem 0 3rem" }}>
-//         <div className="container-max" style={{ maxWidth: "48rem" }}>
-//           {/* <Link href="/news" style={{ display:'inline-flex', alignItems:'center', gap:'0.4rem', fontSize:'0.845rem', fontWeight:600, color:'rgba(255,255,255,0.35)', marginBottom:'1.5rem', transition:'color 0.15s' }}
-//             onMouseEnter={e => (e.currentTarget as HTMLElement).style.color='rgba(255,255,255,0.7)'}
-//             onMouseLeave={e => (e.currentTarget as HTMLElement).style.color='rgba(255,255,255,0.35)'}>
-//             <RiArrowLeftLine style={{ width:'0.875rem', height:'0.875rem' }} /> All Articles
-//           </Link> */}
-//           <Link
-//             href="/news"
-//             className="inline-flex items-center gap-2 mb-6 text-[0.845rem] font-semibold text-white/35 hover:text-white/70 transition-colors"
-//           >
-//             <RiArrowLeftLine className="w-[0.875rem] h-[0.875rem]" />
-//             All Articles
-//           </Link>
-//           {(() => {
-//             const s = catStyle[article.category] || {
-//               bg: "var(--neutral-100)",
-//               color: "var(--neutral-600)",
-//             };
-//             return (
-//               <span
-//                 style={{
-//                   display: "inline-block",
-//                   padding: "0.2rem 0.6rem",
-//                   borderRadius: "999px",
-//                   fontSize: "0.72rem",
-//                   fontWeight: 700,
-//                   background: s.bg,
-//                   color: s.color,
-//                   marginBottom: "1.25rem",
-//                 }}
-//               >
-//                 {article.category}
-//               </span>
-//             );
-//           })()}
-//           <h1 style={{ color: "#fff", marginBottom: "1.25rem" }}>
-//             {article.title}
-//           </h1>
-//           <div
-//             style={{
-//               display: "flex",
-//               gap: "1.25rem",
-//               color: "rgba(255,255,255,0.35)",
-//               fontSize: "0.845rem",
-//             }}
-//           >
-//             <span
-//               style={{ display: "flex", alignItems: "center", gap: "0.375rem" }}
-//             >
-//               <RiCalendarLine
-//                 style={{ width: "0.875rem", height: "0.875rem" }}
-//               />
-//               {article.date}
-//             </span>
-//             {article.author && (
-//               <span
-//                 style={{
-//                   display: "flex",
-//                   alignItems: "center",
-//                   gap: "0.375rem",
-//                 }}
-//               >
-//                 <RiUserLine style={{ width: "0.875rem", height: "0.875rem" }} />
-//                 {article.author}
-//               </span>
-//             )}
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Content */}
-//       <div
-//         className="container-max"
-//         style={{ maxWidth: "48rem", padding: "3.5rem 1.25rem" }}
-//       >
-//         <p
-//           style={{
-//             fontSize: "1.125rem",
-//             fontWeight: 500,
-//             color: "var(--neutral-700)",
-//             lineHeight: 1.8,
-//             marginBottom: "2rem",
-//             borderLeft: "3px solid var(--brand-600)",
-//             paddingLeft: "1.25rem",
-//           }}
-//         >
-//           {article.excerpt}
-//         </p>
-//         <div
-//           style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}
-//         >
-//           {[
-//             "The Children's Right Advocate Foundation continues its unwavering commitment to supporting underprivileged children across Lagos State. This initiative reflects the core values upon which the foundation was built — a deep, holistic care for children who society has left behind.",
-//             "Our programs operate daily to ensure that every child enrolled receives not just academic support, but also nutritional, emotional, and health-related care. We believe that a hungry child cannot learn, and an unwell child cannot thrive — so we address every dimension of a child's well-being.",
-//             "Through the dedication of our board, staff, volunteers, and donors, we are able to maintain all our active programs including after-school lessons, midday meals, school supply procurement, health check-ups, and our learning resource center.",
-//             "We remain deeply grateful to all who support this mission — through donations, sponsorships, volunteering, or simply spreading the word. Each contribution, no matter the size, directly changes a life. To get involved, please visit our programs page or contact us directly.",
-//           ].map((p, i) => (
-//             <p
-//               key={i}
-//               style={{
-//                 fontSize: "0.9375rem",
-//                 lineHeight: 1.8,
-//                 color: "var(--neutral-600)",
-//               }}
-//             >
-//               {p}
-//             </p>
-//           ))}
-//         </div>
-
-//         {/* Divider */}
-//         <div
-//           style={{
-//             height: "1px",
-//             background: "var(--border-subtle)",
-//             margin: "3rem 0",
-//           }}
-//         />
-
-//         {/* Related */}
-//         <h3 style={{ marginBottom: "1.5rem" }}>More Stories</h3>
-//         <div
-//           style={{
-//             display: "grid",
-//             gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
-//             gap: "1rem",
-//           }}
-//         >
-//           {related.map((rel) => {
-//             const s = catStyle[rel.category] || {
-//               bg: "var(--neutral-100)",
-//               color: "var(--neutral-600)",
-//             };
-//             return (
-//               <Link
-//                 key={rel.id}
-//                 href={`/news/${rel.id}`}
-//                 className="card card-hover"
-//                 style={{
-//                   display: "block",
-//                   padding: "1.25rem",
-//                   textDecoration: "none",
-//                 }}
-//               >
-//                 <span
-//                   style={{
-//                     display: "inline-block",
-//                     padding: "0.2rem 0.5rem",
-//                     borderRadius: "999px",
-//                     fontSize: "0.7rem",
-//                     fontWeight: 700,
-//                     background: s.bg,
-//                     color: s.color,
-//                     marginBottom: "0.75rem",
-//                   }}
-//                 >
-//                   {rel.category}
-//                 </span>
-//                 <p
-//                   style={{
-//                     fontSize: "0.875rem",
-//                     fontWeight: 500,
-//                     color: "var(--neutral-900)",
-//                     lineHeight: 1.4,
-//                     marginBottom: "0.5rem",
-//                   }}
-//                   className="line-clamp-2"
-//                 >
-//                   {rel.title}
-//                 </p>
-//                 <p
-//                   style={{
-//                     fontSize: "0.78rem",
-//                     color: "var(--neutral-400)",
-//                     display: "flex",
-//                     alignItems: "center",
-//                     gap: "0.3rem",
-//                   }}
-//                 >
-//                   <RiCalendarLine
-//                     style={{ width: "0.75rem", height: "0.75rem" }}
-//                   />
-//                   {rel.date}
-//                 </p>
-//               </Link>
-//             );
-//           })}
-//         </div>
-//       </div>
-
-//       {/* CTA */}
-//       <div
-//         style={{
-//           background: "var(--neutral-950)",
-//           padding: "4rem 0",
-//           textAlign: "center",
-//         }}
-//       >
-//         <div className="container-max">
-//           <h2 style={{ color: "#fff", marginBottom: "0.875rem" }}>
-//             Be Part of These Stories
-//           </h2>
-//           <p
-//             style={{
-//               color: "rgba(255,255,255,0.45)",
-//               maxWidth: "28rem",
-//               margin: "0 auto 2rem",
-//               lineHeight: 1.7,
-//             }}
-//           >
-//             Your support creates the stories we tell. Donate or volunteer today.
-//           </p>
-//           <div
-//             style={{
-//               display: "flex",
-//               gap: "0.75rem",
-//               justifyContent: "center",
-//               flexWrap: "wrap",
-//             }}
-//           >
-//             <Link href="/donate" className="btn btn-white btn-lg">
-//               Donate Now
-//             </Link>
-//             <Link href="/volunteer" className="btn btn-outline-white btn-lg">
-//               Volunteer
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

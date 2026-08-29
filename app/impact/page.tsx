@@ -66,36 +66,28 @@ export default function ImpactPage() {
         style={{ background: "var(--white)" }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2.5rem" }}>
+          <div className="imp-stats-header">
             <p className="section-label">By the Numbers</p>
             <h2>Our Story in Statistics</h2>
           </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(220px,1fr))",
-              gap: "1rem",
-            }}
-          >
+          <div className="imp-stats-grid">
             {impactStats.map((stat, i) => (
-              <div key={i} className="card" style={{ padding: "2rem 1.5rem" }}>
+              <div key={i} className="card imp-stat-pad">
                 <div
+                  className="imp-stat-num"
                   style={{
-                    fontSize: "2.75rem",
                     fontWeight: 800,
                     color: "var(--neutral-950)",
-                    letterSpacing: "-0.05em",
+                    letterSpacing: "-.05em",
                     lineHeight: 1,
-                    marginBottom: "0.5rem",
                   }}
                 >
                   {stat.number}
                 </div>
-                <h4 style={{ fontSize: "0.9375rem", marginBottom: "0.3rem" }}>
-                  {stat.label}
-                </h4>
+                <h4 className="imp-stat-label">{stat.label}</h4>
                 <p
-                  style={{ fontSize: "0.845rem", color: "var(--neutral-400)" }}
+                  className="imp-stat-desc"
+                  style={{ color: "var(--neutral-400)" }}
                 >
                   {stat.description}
                 </p>
@@ -114,7 +106,7 @@ export default function ImpactPage() {
         }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2.5rem" }}>
+          <div className="imp-timeline-header">
             <p className="section-label">History</p>
             <h2>Our Journey</h2>
           </div>
@@ -129,7 +121,6 @@ export default function ImpactPage() {
             <div
               style={{
                 position: "absolute",
-                // left: "5.25rem",
                 top: 0,
                 bottom: 0,
                 width: "1px",
@@ -140,28 +131,23 @@ export default function ImpactPage() {
             {timeline.map((e, i) => (
               <div
                 key={i}
-                style={{
-                  display: "flex",
-                  gap: "1.5rem",
-                  paddingBottom: "2rem",
-                  position: "relative",
-                }}
+                className="imp-timeline-row"
+                style={{ display: "flex", position: "relative" }}
               >
                 <div
                   style={{
-                    // width: "4.5rem",
                     flexShrink: 0,
                     textAlign: "right",
-                    paddingTop: "0.2rem",
+                    paddingTop: ".2rem",
                   }}
                   className="w-2 md:w-18"
                 >
                   <span
+                    className="imp-timeline-year"
                     style={{
-                      fontSize: "0.78rem",
                       fontWeight: 700,
                       color: "var(--brand-600)",
-                      letterSpacing: "-0.01em",
+                      letterSpacing: "-.01em",
                     }}
                   >
                     {e.year}
@@ -173,33 +159,24 @@ export default function ImpactPage() {
                     flexShrink: 0,
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "0.2rem",
+                    paddingTop: ".2rem",
                   }}
                 >
                   <div
+                    className="imp-timeline-dot"
                     style={{
-                      width: "0.625rem",
-                      height: "0.625rem",
                       borderRadius: "50%",
                       background: "var(--brand-600)",
-                      marginTop: "0.15rem",
+                      marginTop: ".15rem",
                       flexShrink: 0,
                     }}
                   />
                 </div>
-                <div
-                  className="card"
-                  style={{ flex: 1, padding: "1.25rem 1.5rem" }}
-                >
-                  <h4 style={{ fontSize: "0.9375rem", marginBottom: "0.3rem" }}>
-                    {e.title}
-                  </h4>
+                <div className="card imp-timeline-card" style={{ flex: 1 }}>
+                  <h4 className="imp-timeline-title">{e.title}</h4>
                   <p
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "var(--neutral-500)",
-                      lineHeight: 1.65,
-                    }}
+                    className="imp-timeline-desc"
+                    style={{ color: "var(--neutral-500)", lineHeight: 1.65 }}
                   >
                     {e.desc}
                   </p>
@@ -219,37 +196,21 @@ export default function ImpactPage() {
         }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2.5rem" }}>
+          <div className="imp-geo-header">
             <p className="section-label">Geographic Reach</p>
             <h2>Where We Work</h2>
           </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
-              gap: "1rem",
-            }}
-          >
+          <div className="imp-geo-grid">
             {lgas.map((lga) => (
-              <div
-                key={lga.name}
-                className="card flex flex-col"
-                style={{ padding: "1.5rem" }}
-              >
+              <div key={lga.name} className="card flex flex-col imp-geo-card">
                 <RiMapPin2Line
-                  style={{
-                    width: "1.25rem",
-                    height: "1.25rem",
-                    color: "var(--brand-600)",
-                    marginBottom: "0.75rem",
-                  }}
+                  className="imp-geo-icon"
+                  style={{ color: "var(--brand-600)" }}
                 />
-                <h4 style={{ fontSize: "0.9375rem", marginBottom: "0.375rem" }}>
-                  {lga.name}
-                </h4>
+                <h4 className="imp-geo-name">{lga.name}</h4>
                 <p
+                  className="imp-geo-desc"
                   style={{
-                    fontSize: "0.845rem",
                     color: "var(--neutral-400)",
                     lineHeight: 1.6,
                     marginTop: "auto",
@@ -272,58 +233,41 @@ export default function ImpactPage() {
         }}
       >
         <div className="container-max">
-          <div style={{ marginBottom: "2.5rem" }}>
+          <div className="imp-testi-header">
             <p className="section-label">Stories</p>
             <h2>Voices of Transformation</h2>
           </div>
-          <div
-            style={{
-              display: "grid",
-              // gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))",
-              gap: "1rem",
-            }}
-          >
+          <div style={{ display: "grid", gap: "1rem" }}>
             {testimonials.map((t) => (
-              <div key={t.id} className="card" style={{ padding: "2rem" }}>
+              <div key={t.id} className="card imp-testi-card">
                 <RiDoubleQuotesL
-                  style={{
-                    width: "1.75rem",
-                    height: "1.75rem",
-                    color: "var(--brand-600)",
-                    opacity: 0.3,
-                    marginBottom: "1rem",
-                  }}
+                  className="imp-testi-icon"
+                  style={{ color: "var(--brand-600)", opacity: 0.3 }}
                 />
                 <p
+                  className="imp-testi-quote"
                   style={{
-                    fontSize: "0.9375rem",
                     lineHeight: 1.75,
                     color: "var(--neutral-600)",
                     fontStyle: "italic",
-                    marginBottom: "1.5rem",
                   }}
                 >
                   &quot;{t.quote}&quot;
                 </p>
                 <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.75rem",
-                  }}
+                  className="imp-testi-gap"
+                  style={{ display: "flex", alignItems: "center" }}
                 >
                   <div
+                    className="imp-testi-avatar"
                     style={{
-                      width: "2.25rem",
-                      height: "2.25rem",
                       borderRadius: "50%",
                       background: "var(--neutral-950)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      fontSize: "0.845rem",
                       fontWeight: 700,
-                      color: "rgba(255,255,255,0.7)",
+                      color: "rgba(255,255,255,.7)",
                       flexShrink: 0,
                     }}
                   >
@@ -331,19 +275,14 @@ export default function ImpactPage() {
                   </div>
                   <div>
                     <p
-                      style={{
-                        fontWeight: 600,
-                        fontSize: "0.875rem",
-                        color: "var(--neutral-900)",
-                      }}
+                      className="imp-testi-name"
+                      style={{ fontWeight: 600, color: "var(--neutral-900)" }}
                     >
                       {t.name}
                     </p>
                     <p
-                      style={{
-                        fontSize: "0.78rem",
-                        color: "var(--neutral-400)",
-                      }}
+                      className="imp-testi-role"
+                      style={{ color: "var(--neutral-400)" }}
                     >
                       {t.role}
                     </p>
@@ -360,29 +299,22 @@ export default function ImpactPage() {
 
       {/* CTA */}
       <div
+        className="imp-cta-outer"
         style={{
           background: "var(--neutral-50)",
           borderTop: "1px solid var(--border-subtle)",
-          padding: "4rem 0",
           textAlign: "center",
         }}
       >
         <div className="container-max">
-          <h2 style={{ marginBottom: "0.875rem" }}>Help Us Grow Our Impact</h2>
-          <p
-            style={{
-              color: "var(--neutral-500)",
-              maxWidth: "28rem",
-              margin: "0 auto 2rem",
-              lineHeight: 1.7,
-            }}
-          >
+          <h2 style={{ marginBottom: ".875rem" }}>Help Us Grow Our Impact</h2>
+          <p className="imp-cta-sub" style={{ color: "var(--neutral-500)" }}>
             Every donation adds to this story. Be part of the next chapter.
           </p>
           <div
+            className="imp-cta-btns"
             style={{
               display: "flex",
-              gap: "0.75rem",
               justifyContent: "center",
               flexWrap: "wrap",
             }}
@@ -396,6 +328,192 @@ export default function ImpactPage() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        /* === RESPONSIVE SCALE > 1280px === */
+
+        /* Stats */
+        .imp-stats-header { margin-bottom: 2.5rem; }
+        .imp-stats-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 1rem;}
+        .imp-stat-pad { padding: 2rem 1.5rem; }
+        .imp-stat-num { font-size: 2.75rem; margin-bottom: .5rem; }
+        .imp-stat-label { font-size: .9375rem; margin-bottom: .3rem; }
+        .imp-stat-desc { font-size: .845rem; }
+
+        /* Timeline */
+        .imp-timeline-header { margin-bottom: 2.5rem; }
+        .imp-timeline-year { font-size: .78rem; }
+        .imp-timeline-dot { width: .625rem; height: .625rem; }
+        .imp-timeline-card { padding: 1.25rem 1.5rem; }
+        .imp-timeline-title { font-size: .9375rem; margin-bottom: .3rem; }
+        .imp-timeline-desc { font-size: .875rem; }
+        .imp-timeline-row { gap: 1.5rem; padding-bottom: 2rem; }
+
+        /* Geographic */
+        .imp-geo-header { margin-bottom: 2.5rem; }
+        .imp-geo-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 1rem;}
+        .imp-geo-card { padding: 1.5rem; }
+        .imp-geo-icon { width: 1.25rem; height: 1.25rem; margin-bottom: .75rem; }
+        .imp-geo-name { font-size: .9375rem; margin-bottom: .375rem; }
+        .imp-geo-desc { font-size: .845rem; }
+
+        /* Testimonials */
+        .imp-testi-header { margin-bottom: 2.5rem; }
+        .imp-testi-card { padding: 2rem; }
+        .imp-testi-icon { width: 1.75rem; height: 1.75rem; margin-bottom: 1rem; }
+        .imp-testi-quote { font-size: .9375rem; margin-bottom: 1.5rem; }
+        .imp-testi-avatar { width: 2.25rem; height: 2.25rem; font-size: .845rem; }
+        .imp-testi-name { font-size: .875rem; }
+        .imp-testi-role { font-size: .78rem; }
+        .imp-testi-gap { gap: .75rem; }
+
+        /* CTA */
+        .imp-cta-outer { padding: 4rem 0; }
+        .imp-cta-sub { max-width: 28rem; margin: 0 auto 2rem; line-height: 1.7; }
+        .imp-cta-btns { gap: .75rem; }
+
+        @media (min-width: 1440px) {
+          .imp-stats-header { margin-bottom: 2.75rem; }
+          .imp-stats-grid { grid-template-columns: repeat(5, 1fr);}
+          .imp-stat-pad { padding: 2.125rem 1.625rem; }
+          .imp-stat-num { font-size: 2.95rem; margin-bottom: .55rem; }
+          .imp-stat-label { font-size: .975rem; margin-bottom: .325rem; }
+          .imp-stat-desc { font-size: .875rem; }
+
+          .imp-timeline-header { margin-bottom: 2.75rem; }
+          .imp-timeline-year { font-size: .8rem; }
+          .imp-timeline-dot { width: .675rem; height: .675rem; }
+          .imp-timeline-card { padding: 1.375rem 1.625rem; }
+          .imp-timeline-title { font-size: .975rem; margin-bottom: .325rem; }
+          .imp-timeline-desc { font-size: .9rem; }
+          .imp-timeline-row { gap: 1.625rem; padding-bottom: 2.125rem; }
+
+          .imp-geo-header { margin-bottom: 2.75rem; }
+          .imp-geo-grid { grid-template-columns: repeat(5, 1fr);}
+          .imp-geo-card { padding: 1.625rem; }
+          .imp-geo-icon { width: 1.3rem; height: 1.3rem; margin-bottom: .8rem; }
+          .imp-geo-name { font-size: .975rem; margin-bottom: .4rem; }
+          .imp-geo-desc { font-size: .875rem; }
+
+          .imp-testi-header { margin-bottom: 2.75rem; }
+          .imp-testi-card { padding: 2.125rem; }
+          .imp-testi-icon { width: 1.825rem; height: 1.825rem; margin-bottom: 1.075rem; }
+          .imp-testi-quote { font-size: .975rem; margin-bottom: 1.625rem; }
+          .imp-testi-avatar { width: 2.375rem; height: 2.375rem; font-size: .875rem; }
+          .imp-testi-name { font-size: .9rem; }
+          .imp-testi-role { font-size: .8rem; }
+          .imp-testi-gap { gap: .8rem; }
+
+          .imp-cta-outer { padding: 4.5rem 0; }
+          .imp-cta-sub { max-width: 30rem; margin: 0 auto 2.125rem; font-size: .975rem; }
+          .imp-cta-btns { gap: .8rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .imp-stats-header { margin-bottom: 3.125rem; }
+          .imp-stat-pad { padding: 2.375rem 1.875rem; }
+          .imp-stat-num { font-size: 3.375rem; margin-bottom: .65rem; }
+          .imp-stat-label { font-size: 1.075rem; margin-bottom: .375rem; }
+          .imp-stat-desc { font-size: .975rem; }
+
+          .imp-timeline-header { margin-bottom: 3.125rem; }
+          .imp-timeline-year { font-size: .9rem; }
+          .imp-timeline-dot { width: .775rem; height: .775rem; }
+          .imp-timeline-card { padding: 1.625rem 1.875rem; }
+          .imp-timeline-title { font-size: 1.075rem; margin-bottom: .375rem; }
+          .imp-timeline-desc { font-size: 1rem; }
+          .imp-timeline-row { gap: 1.875rem; padding-bottom: 2.375rem; }
+
+          .imp-geo-header { margin-bottom: 3.125rem; }
+          .imp-geo-card { padding: 1.875rem; }
+          .imp-geo-icon { width: 1.475rem; height: 1.475rem; margin-bottom: .925rem; }
+          .imp-geo-name { font-size: 1.075rem; margin-bottom: .475rem; }
+          .imp-geo-desc { font-size: .975rem; }
+
+          .imp-testi-header { margin-bottom: 3.125rem; }
+          .imp-testi-card { padding: 2.375rem; }
+          .imp-testi-icon { width: 2.075rem; height: 2.075rem; margin-bottom: 1.2rem; }
+          .imp-testi-quote { font-size: 1.075rem; margin-bottom: 1.875rem; }
+          .imp-testi-avatar { width: 2.625rem; height: 2.625rem; font-size: .975rem; }
+          .imp-testi-name { font-size: 1rem; }
+          .imp-testi-role { font-size: .9rem; }
+          .imp-testi-gap { gap: .925rem; }
+
+          .imp-cta-outer { padding: 5.25rem 0; }
+          .imp-cta-sub { max-width: 34rem; margin: 0 auto 2.375rem; font-size: 1.075rem; }
+          .imp-cta-btns { gap: .925rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .imp-stats-header { margin-bottom: 3.5rem; }
+          .imp-stat-pad { padding: 2.625rem 2.125rem; }
+          .imp-stat-num { font-size: 3.75rem; margin-bottom: .725rem; }
+          .imp-stat-label { font-size: 1.175rem; margin-bottom: .425rem; }
+          .imp-stat-desc { font-size: 1.075rem; }
+
+          .imp-timeline-header { margin-bottom: 3.5rem; }
+          .imp-timeline-year { font-size: 1rem; }
+          .imp-timeline-dot { width: .875rem; height: .875rem; }
+          .imp-timeline-card { padding: 1.875rem 2.125rem; }
+          .imp-timeline-title { font-size: 1.175rem; margin-bottom: .425rem; }
+          .imp-timeline-desc { font-size: 1.1rem; }
+          .imp-timeline-row { gap: 2.125rem; padding-bottom: 2.625rem; }
+
+          .imp-geo-header { margin-bottom: 3.5rem; }
+          .imp-geo-card { padding: 2.125rem; }
+          .imp-geo-icon { width: 1.625rem; height: 1.625rem; margin-bottom: 1.025rem; }
+          .imp-geo-name { font-size: 1.175rem; margin-bottom: .525rem; }
+          .imp-geo-desc { font-size: 1.075rem; }
+
+          .imp-testi-header { margin-bottom: 3.5rem; }
+          .imp-testi-card { padding: 2.625rem; }
+          .imp-testi-icon { width: 2.275rem; height: 2.275rem; margin-bottom: 1.325rem; }
+          .imp-testi-quote { font-size: 1.175rem; margin-bottom: 2.125rem; }
+          .imp-testi-avatar { width: 2.875rem; height: 2.875rem; font-size: 1.075rem; }
+          .imp-testi-name { font-size: 1.1rem; }
+          .imp-testi-role { font-size: .975rem; }
+          .imp-testi-gap { gap: 1rem; }
+
+          .imp-cta-outer { padding: 6rem 0; }
+          .imp-cta-sub { max-width: 38rem; margin: 0 auto 2.625rem; font-size: 1.175rem; }
+          .imp-cta-btns { gap: 1rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .imp-stats-header { margin-bottom: 4rem; }
+          .imp-stat-pad { padding: 3rem 2.5rem; }
+          .imp-stat-num { font-size: 4.5rem; margin-bottom: .875rem; }
+          .imp-stat-label { font-size: 1.35rem; margin-bottom: .5rem; }
+          .imp-stat-desc { font-size: 1.225rem; }
+
+          .imp-timeline-header { margin-bottom: 4rem; }
+          .imp-timeline-year { font-size: 1.175rem; }
+          .imp-timeline-dot { width: 1rem; height: 1rem; }
+          .imp-timeline-card { padding: 2.25rem 2.5rem; }
+          .imp-timeline-title { font-size: 1.35rem; margin-bottom: .5rem; }
+          .imp-timeline-desc { font-size: 1.275rem; }
+          .imp-timeline-row { gap: 2.5rem; padding-bottom: 3rem; }
+
+          .imp-geo-header { margin-bottom: 4rem; }
+          .imp-geo-card { padding: 2.5rem; }
+          .imp-geo-icon { width: 1.875rem; height: 1.875rem; margin-bottom: 1.2rem; }
+          .imp-geo-name { font-size: 1.35rem; margin-bottom: .625rem; }
+          .imp-geo-desc { font-size: 1.225rem; }
+
+          .imp-testi-header { margin-bottom: 4rem; }
+          .imp-testi-card { padding: 3rem; }
+          .imp-testi-icon { width: 2.625rem; height: 2.625rem; margin-bottom: 1.5rem; }
+          .imp-testi-quote { font-size: 1.35rem; margin-bottom: 2.5rem; }
+          .imp-testi-avatar { width: 3.25rem; height: 3.25rem; font-size: 1.225rem; }
+          .imp-testi-name { font-size: 1.25rem; }
+          .imp-testi-role { font-size: 1.1rem; }
+          .imp-testi-gap { gap: 1.175rem; }
+
+          .imp-cta-outer { padding: 7.5rem 0; }
+          .imp-cta-sub { max-width: 44rem; margin: 0 auto 3rem; font-size: 1.35rem; }
+          .imp-cta-btns { gap: 1.25rem; }
+        }
+    `}</style>
     </>
   );
 }

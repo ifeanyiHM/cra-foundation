@@ -13,7 +13,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
     description: member.role,
   };
 }
-
+// gjhjhj bnnnnnnnnnnnnnnnn
 export default async function BoardMemberPage({
   params,
 }: {
@@ -412,6 +412,123 @@ export default async function BoardMemberPage({
           margin: 0;
           line-height: 1.2;
         }
+
+        /* === RESPONSIVE SCALE > 1440px === */
+
+        @media (min-width: 1440px) {
+          .bmp-hero { padding: 6.75rem 0 0; }
+          .bmp-hero-inner { gap: 4rem; padding-top: 1.5rem; }
+          .bmp-photo-frame { max-width: 345px; height: 370px; }
+          .bmp-back { font-size: .8375rem; margin-bottom: 2.125rem; }
+          .bmp-role-tag { font-size: .72rem; padding: .275rem .8rem; margin-bottom: 1.325rem; }
+          .bmp-name { font-size: 3.5rem; margin: 0 0 1.625rem; }
+          .bmp-divider { width: 3.25rem; margin-bottom: 1.625rem; }
+          .bmp-bio-short { font-size: .975rem; max-width: 40rem; }
+
+          .bmp-body { padding-top: 4.5rem; padding-bottom: 5.5rem; gap: 3.5rem; }
+          .bmp-section-label { font-size: .72rem; margin-bottom: .925rem; }
+          .bmp-bio-full { font-size: .975rem; margin: 0 0 3.25rem; }
+          .bmp-quote { padding: 1.625rem 1.875rem; margin-bottom: 3.25rem; }
+          .bmp-quote p { font-size: 1.1rem; }
+          .bmp-quote cite { font-size: .825rem; }
+          .bmp-sidebar-title { font-size: .72rem; margin-bottom: 1.325rem; padding-bottom: .925rem; }
+          .bmp-related-card { gap: .925rem; padding: .925rem; }
+          .bmp-related-img { width: 3.125rem; height: 3.125rem; }
+          .bmp-related-name { font-size: .9rem; }
+          .bmp-related-role { font-size: .775rem; }
+
+          .bmp-cta-strip { padding: 4rem 1.25rem; }
+          .bmp-cta-label { font-size: .68rem; margin-bottom: .55rem; }
+          .bmp-cta-title { font-size: 1.75rem; }
+          .bmp-cta-btns { gap: .8rem; }
+        }
+
+        @media (min-width: 1536px) {
+          .bmp-hero { padding: 7rem 0 0; }
+          .bmp-hero-inner { gap: 6rem; padding-top: 2.5rem; }
+          .bmp-photo-frame { max-width: 350px; height: 380px; }
+          .bmp-back { font-size: .9rem; margin-bottom: 2.375rem; }
+          .bmp-role-tag { font-size: .8rem; padding: .325rem .9rem; margin-bottom: 1.5rem; }
+          .bmp-name { font-size: 3.65rem; margin: 0 0 1.875rem; }
+          .bmp-divider { width: 3.75rem; margin-bottom: 1.875rem; }
+          .bmp-bio-short { font-size: 1.075rem; max-width: 44rem; }
+
+          .bmp-body { grid-template-columns: 1fr 380px; padding-top: 5.25rem; padding-bottom: 6.5rem; gap: 5rem; }
+          .bmp-section-label { font-size: .8rem; margin-bottom: 1.05rem; }
+          .bmp-bio-full { font-size: 1.075rem; margin: 0 0 3.75rem; }
+          .bmp-quote { padding: 1.875rem 2.125rem; margin-bottom: 3.75rem; }
+          .bmp-quote p { font-size: 1.225rem; }
+          .bmp-quote cite { font-size: .925rem; }
+          .bmp-sidebar-title { font-size: .8rem; margin-bottom: 1.5rem; padding-bottom: 1.05rem; }
+          .bmp-related-list {max-height: 28rem;}
+          .bmp-related-card { gap: 1.05rem; padding: 1.05rem; }
+          .bmp-related-img { width: 3.5rem; height: 3.5rem; }
+          .bmp-related-name { font-size: 1rem; }
+          .bmp-related-role { font-size: .875rem; }
+
+          .bmp-cta-strip { padding: 4.75rem 1.25rem; }
+          .bmp-cta-label { font-size: .76rem; margin-bottom: .625rem; }
+          .bmp-cta-title { font-size: 2rem; }
+          .bmp-cta-btns { gap: .925rem; }
+        }
+
+        @media (min-width: 1680px) {
+          .bmp-hero { padding: 7.5rem 0 0; }
+          .bmp-hero-inner { gap: 8rem; padding-top: 3rem; }
+          .bmp-photo-frame { max-width: 400px; height: 420px; }
+          .bmp-back { font-size: .975rem; margin-bottom: 2.625rem; }
+          .bmp-role-tag { font-size: .88rem; padding: .35rem 1rem; margin-bottom: 1.625rem; }
+          .bmp-name { font-size: 4rem; margin: 0 0 2.125rem; }
+          .bmp-divider { width: 4.25rem; margin-bottom: 2.125rem; }
+          .bmp-bio-short { font-size: 1.175rem; max-width: 48rem; }
+
+          .bmp-body { grid-template-columns: 1fr 400px; padding-top: 6rem; padding-bottom: 7.5rem; gap: 6rem; }
+          .bmp-section-label { font-size: .88rem; margin-bottom: 1.175rem; }
+          .bmp-bio-full { font-size: 1.175rem; margin: 0 0 4.25rem; }
+          .bmp-quote { padding: 2.125rem 2.375rem; margin-bottom: 4.25rem; }
+          .bmp-quote p { font-size: 1.35rem; }
+          .bmp-quote cite { font-size: 1rem; }
+          .bmp-sidebar-title { font-size: .88rem; margin-bottom: 1.625rem; padding-bottom: 1.175rem; }
+          .bmp-related-list {max-height: 30rem;}
+          .bmp-related-card { gap: 1.175rem; padding: 1.175rem; }
+          .bmp-related-img { width: 3.875rem; height: 3.875rem; }
+          .bmp-related-name { font-size: 1.1rem; }
+          .bmp-related-role { font-size: .95rem; }
+
+          .bmp-cta-strip { padding: 5.5rem 1.25rem; }
+          .bmp-cta-label { font-size: .84rem; margin-bottom: .7rem; }
+          .bmp-cta-title { font-size: 2.25rem; }
+          .bmp-cta-btns { gap: 1rem; }
+        }
+
+        @media (min-width: 1920px) {
+          .bmp-hero { padding: 7rem 0 0; }
+          .bmp-hero-inner { grid-template-columns: 520px 1fr; padding-top: 4rem; }
+          .bmp-photo-frame { max-width: 460px; height: 500px; }
+          .bmp-back { font-size: 1.125rem; margin-bottom: 3rem; }
+          .bmp-role-tag { font-size: 1rem; padding: .4rem 1.175rem; margin-bottom: 1.875rem; }
+          .bmp-name { font-size: 4.5rem; margin: 0 0 2.5rem; }
+          .bmp-divider { width: 5rem; margin-bottom: 2.5rem; }
+          .bmp-bio-short { font-size: 1.35rem; max-width: 56rem; }
+
+          .bmp-body { grid-template-columns: 1fr 470px; padding-top: 7.5rem; padding-bottom: 9rem; gap: 7.5rem; }
+          .bmp-section-label { font-size: 1rem; margin-bottom: 1.375rem; }
+          .bmp-bio-full { font-size: 1.35rem; margin: 0 0 5rem; }
+          .bmp-quote { padding: 2.5rem 2.875rem; margin-bottom: 5rem; }
+          .bmp-quote p { font-size: 1.6rem; }
+          .bmp-quote cite { font-size: 1.175rem; }
+          .bmp-sidebar-title { font-size: 1rem; margin-bottom: 1.875rem; padding-bottom: 1.375rem; }
+          .bmp-related-list {max-height: 36rem;}
+          .bmp-related-card { gap: 1.375rem; padding: 1.375rem; }
+          .bmp-related-img { width: 4.5rem; height: 4.5rem; }
+          .bmp-related-name { font-size: 1.25rem; }
+          .bmp-related-role { font-size: 1.075rem; }
+
+          .bmp-cta-strip { padding: 6.5rem 1.25rem; }
+          .bmp-cta-label { font-size: .96rem; margin-bottom: .875rem; }
+          .bmp-cta-title { font-size: 2.75rem; }
+          .bmp-cta-btns { gap: 1.25rem; }
+        }
       `}</style>
 
       <div className="bmp-root">
@@ -530,7 +647,10 @@ export default async function BoardMemberPage({
               <div className="bmp-cta-label">Support the Mission</div>
               <h2 className="bmp-cta-title">Help Us Nurture More Dreams</h2>
             </div>
-            <div style={{ display: "flex", gap: ".75rem", flexWrap: "wrap" }}>
+            <div
+              className="bmp-cta-btns"
+              style={{ display: "flex", flexWrap: "wrap" }}
+            >
               <Link href="/donate" className="btn btn-primary btn-lg">
                 Donate Now
               </Link>
