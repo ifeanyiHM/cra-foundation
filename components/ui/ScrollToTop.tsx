@@ -6,6 +6,21 @@ import { RiArrowUpLine } from "react-icons/ri";
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [size, setSize] = useState(48);
+
+  useEffect(() => {
+    const updateSize = () => {
+      const w = window.innerWidth;
+      if (w >= 1920) setSize(64);
+      else if (w >= 1680) setSize(58);
+      else if (w >= 1536) setSize(54);
+      else if (w >= 1440) setSize(52);
+      else setSize(48);
+    };
+    updateSize();
+    window.addEventListener("resize", updateSize, { passive: true });
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +36,6 @@ export default function ScrollToTop() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const size = 48;
   const strokeW = 2.5;
   const radius = (size - strokeW) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -35,14 +49,18 @@ export default function ScrollToTop() {
           bottom: 1.75rem;
           right: 1.75rem;
           z-index: 50;
-          width: ${size}px;
-          height: ${size}px;
           cursor: pointer;
           background: none;
           border: none;
           padding: 0;
           transition: opacity .3s ease, transform .3s ease;
         }
+
+        @media (min-width: 1440px) { .stt-btn { bottom: 2rem; right: 2rem; } }
+        @media (min-width: 1536px) { .stt-btn { bottom: 2.25rem; right: 2.25rem; } }
+        @media (min-width: 1680px) { .stt-btn { bottom: 2.5rem; right: 2.5rem; } }
+        @media (min-width: 1920px) { .stt-btn { bottom: 3rem; right: 3rem; } }
+
         .stt-btn.hidden-btn {
           opacity: 0;
           transform: translateY(12px) scale(.9);
@@ -63,16 +81,10 @@ export default function ScrollToTop() {
           justify-content: center;
           transition: background .2s ease;
         }
-        .stt-btn:hover .stt-inner {
-          background: var(--brand-600);
-        }
-        .stt-btn:hover .stt-arrow {
-          transform: translateY(-2px);
-        }
+        .stt-btn:hover .stt-inner { background: var(--brand-600); }
+        .stt-btn:hover .stt-arrow { transform: translateY(-2px); }
 
         .stt-arrow {
-          width: 1rem;
-          height: 1rem;
           color: #fff;
           transition: transform .2s ease;
           flex-shrink: 0;
@@ -96,6 +108,7 @@ export default function ScrollToTop() {
         onClick={scrollToTop}
         aria-label="Scroll to top"
         className={`stt-btn ${visible ? "visible-btn" : "hidden-btn"}`}
+        style={{ width: size, height: size }}
       >
         <svg
           width={size}
@@ -122,7 +135,10 @@ export default function ScrollToTop() {
         </svg>
 
         <div className="stt-inner">
-          <RiArrowUpLine className="stt-arrow" />
+          <RiArrowUpLine
+            className="stt-arrow"
+            style={{ width: size * 0.333, height: size * 0.333 }}
+          />
         </div>
       </button>
     </>

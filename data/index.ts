@@ -175,90 +175,6 @@ export const programs: Program[] = [
   },
 ];
 
-// export const boardMembers: TeamMember[] = [
-//   {
-//     id: 1,
-//     name: "Dr. Femi Onanuga",
-//     role: "Chairman, Board of Trustees",
-//     bio: `Dr. Onanuga is a medical doctor and public health specialist with over 30 years of experience in the Lagos State government as a civil and public servant.
-
-//           He spent the bulk of his career in the Lagos State civil service as a consultant and administrator, rising to the position of Permanent Secretary before retiring in 2014. In 2015, he served as a Special Adviser in Primary Healthcare under the then Governor of Lagos State, Mr. Akinwunmi Ambode, where he used his experience to improve healthcare delivery across the state.
-
-//           Some of his accomplishments include:
-//           - Establishment of Randle Maternity Hospital in Surulere, Lagos
-//           - Establishment of Ifako-Ijaiye General Hospital, Lagos
-//           - Establishment of 27 health posts in Lagos State between 1993 and 2003
-//           - Comprehensive rehabilitation of 68 Primary Health Centres`,
-//   },
-
-//   {
-//     id: 2,
-//     name: "Mrs. Olayide Shonubi",
-//     role: "Founder & Executive Director",
-//     bio: `She was born in Ijebu Ode, Ogun State, on February 12, 1954.
-
-//           As a child, she often played the role of a teacher in her make-believe school, where she taught morals through stories. Her mother, an educationist, noticed her passion for children and encouraged her to pursue teaching.
-
-//           She began her teaching career in a public primary school in Osogbo (now Osun State) immediately after completing her West African School Certificate. There, she encountered many underprivileged and orphaned children who lacked basic school needs.
-
-//           Deeply moved, she shared her experiences with her late mother, who supported her efforts to help these children. From then on, she remained committed to supporting children in need.
-
-//           She trained at United Missionary College, Ibadan, and later studied at the University of Ife (now Obafemi Awolowo University), where she earned both undergraduate and postgraduate degrees in Guidance and Counselling.
-
-//           After graduation, she taught in various states and federal schools. She retired from the Federal Ministry of Education as an Assistant Director in the Inspectorate Division at the age of sixty.
-
-//           Driven by her passion for helping vulnerable children, she established a non-profit organisation to support their development and authored three books on teaching moral values through stories.
-
-//           These stories are read every Friday, and the children also act them out. She intends to use proceeds from her books to support more children in need.
-
-//           She is married to Mr. Abiodun Shonubi and is blessed with children and grandchildren.`,
-//   },
-
-//   {
-//     id: 3,
-//     name: "Mr. Abiodun Shonubi",
-//     role: "Board Trustee",
-//     bio: `ABIODUN SHONUBI (FNIMN, MIST, MNSE, MBA, B.Sc, Cert. Computer Programming)
-
-//           Managing Director/CEO of Loomash Investment Ltd.
-
-//           He is a former academic, marketing practitioner, development and training expert, and later an astute businessman. He has nearly 50 years of diverse experience across academia, multinational corporations, and national organisations. He also spent 19 years with an international capacity development NGO initiated by the Rockefeller Foundation.`,
-//   },
-
-//   {
-//     id: 7,
-//     name: "Mrs Olusola Ilori",
-//     role: "Board Trustee",
-//     bio: `Olusola Ilori is a Fellow of the Chartered Institute of Bankers and a seasoned finance professional with over 28 years of experience in banking.
-
-//           She held leadership roles at First Bank of Nigeria, including Branch Manager, Senior Credit Risk Analyst, and Head of the Remedial Business Unit. After retiring from banking, she transitioned into real estate and stockbroking and currently serves as Finance Director at Ketroids Integrated Limited.
-
-//           She is also an author of "Financial Backups in Retirement" and is happily married with children.`,
-//   },
-
-//   {
-//     id: 10,
-//     name: "Engr. Oluwaseun Shonubi",
-//     role: "Board Trustee",
-//     bio: `Oluwaseun Shonubi is an electrical power systems engineer and energy infrastructure leader with experience in utilities, renewable energy, and large-scale electrification projects.
-
-//           He has contributed to the deployment of critical power systems, including grid infrastructure, renewable energy assets, and EV charging networks across multiple regions.
-
-//           Inspired by a lifelong exposure to service through his family, he is passionate about using engineering and energy access as tools for social and economic development. His work focuses on bridging the gap between technical innovation and community impact, especially in underserved regions.
-
-//           He is committed to empowering the next generation and expanding access to education and reliable energy infrastructure through charitable initiatives.`,
-//   },
-
-//   {
-//     id: 11,
-//     name: "Mr Moyosore Shonubi",
-//     role: "Board Trustee",
-//     bio: `Moyosore Shonubi holds a Bachelor’s degree in Business Administration and has extensive experience in financial services.
-
-//           He is motivated by a desire to use his professional background to create meaningful social impact for vulnerable children across the country.`,
-//   },
-// ];
-
 export const boardMembers: TeamMember[] = [
   {
     id: 1,
@@ -365,29 +281,55 @@ export const boardMembers: TeamMember[] = [
 
   {
     id: 13,
-    name: "Juwan Olaleye",
+    name: "Olajuwon Olaleye",
     role: "Board Trustee",
     quote:
       "The measure of any society is how it treats its most vulnerable. I am proud to be part of an organisation that refuses to look away.",
-    bio: `Bio coming soon.`,
+    bio: `Olajuwon Olaleye is a Certified Public Accountant (CPA) and Enrolled Agent admitted to represent taxpayers before the IRS. He is a Fellow of the Institute of Chartered Accountants of Nigeria (FCA), having trained with Coopers & Lybrand (now PricewaterhouseCoopers). He also holds an Executive MBA from IESE, University of Navarra, Barcelona, Spain.
+
+  His diverse 40-year post-degree career spans Banking & Investment Advisory, Energy Policy & Regulatory Oversight, Enterprise Solutions Architecture for public and private organisations, Project and Program Management, and Corporate Strategy.
+
+  He served as Special Advisor on Energy Infrastructure Development to the Nigerian Government, where he contributed significantly to the privatisation programme and the development of the Nigerian Electricity Market. Consequently, he served as an Advisory Consultant to both the Nigerian Senate and the House of Representatives Committees on Power on legislative and policy resolutions.
+
+  He recently served as Director of Regulatory Compliance at Morgan Stanley, a global financial institution, where he was responsible for Transaction Monitoring and Surveillance of securities trading across global securities markets, including NASDAQ.
+
+  He now operates his tax practice, TaxGenie Advisory Xervices LLC, specialising in tax resolutions for taxpayers under the radar of the Internal Revenue Service (IRS). His team of TaxGeniePros specialises in resolving complex cases because "we know Uncle Sam!"
+
+  As a professional hobby, he engages in crafting cross-border strategic investment initiatives, business turnaround, and instituting transparent ethical values in the fast-paced global workplace. His passion is to align business opportunities with the objective of nation building.
+
+  He is happily married and blessed with children who are doing great exploits towards fulfilling their destinies.
+
+  Designations: CPA, FCA, MBA, ChFC, CISA, CAMS, PMP, M.Div., EA.`,
   },
 
   {
     id: 14,
-    name: "Ladi Sanni",
+    name: "Engr. Ladi Sanni",
     role: "Board Trustee",
     quote:
       "When we give children safety, love, and education, we give them the tools to write their own story — and change ours in the process.",
-    bio: `Bio coming soon.`,
+    bio: `Engr. Ladi Sanni is an accomplished African energy executive with over 25 years of experience spanning natural gas, power generation, distributed energy, infrastructure finance, and energy investment.
+
+  His career includes senior commercial and operational leadership roles at Shell Petroleum Development Company, Viathan Power, Impala Energy, and Starsight Energy. He has managed multi-million-dollar energy businesses across Africa.
+
+  He combines deep sector knowledge with a strong track record of translating strategy into commercially viable and scalable energy businesses across the continent.`,
   },
 
   {
     id: 15,
-    name: "Toyosi Kalamole",
+    name: "Toyosi Kolawole",
     role: "Board Trustee",
     quote:
       "Advocacy without action is just noise. I am here because I believe in turning compassion into real, lasting change for children who need it most.",
-    bio: `Bio coming soon.`,
+    bio: `Toyosi Kolawole is the founder of Audeo Clothing Co. Ltd, a garment manufacturing and retailing company that commenced operations in 2012. The company has established a network of local and global suppliers, enabling it to produce clothing for the African market at affordable prices while offering an alternative to rising overseas manufacturing costs.
+
+  She is also a principal consultant at Audeo Consulting Services. Prior to starting Audeo Consulting, Ms. Kolawole was co-founder and principal consultant at Integrated Business Strategies, a management consulting firm based in Lagos, Nigeria. There, she worked with entrepreneurs and investors, providing new venture development and financial advisory services, while also working with established organisations on operations consulting and strategy development.
+
+  Prior to Integrated Business Strategies, she was a management consultant in the Financial Institutions Group at A.T. Kearney, a multinational consulting firm, where her clients included major global financial institutions.
+
+  Ms. Kolawole has also served as an Executive Director within the MRS Group, one of the largest downstream companies in Nigeria. At MRS, she managed the group's export trades from Nigeria. She also worked at Guaranty Trust Bank, one of Nigeria's foremost banks, and as an independent strategy consultant in Nigeria and the United Kingdom, serving small and medium-sized companies in the retail and food industries.
+
+  Ms. Kolawole holds an MBA from the M.I.T. Sloan School of Management in Cambridge, Massachusetts, USA; a Postgraduate Diploma in Business Administration from the University of Manchester, UK; and a Bachelor of Science in Food Science and Technology from Obafemi Awolowo University, Nigeria.`,
   },
 ];
 export const awards: Award[] = [

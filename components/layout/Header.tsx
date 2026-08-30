@@ -37,163 +37,195 @@ export default function Header() {
   return (
     <>
       <style>{`
-  .nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: .2rem;
-    padding: .45rem .7rem;
-    font-size: .845rem;
-    font-weight: 500;
-    color: var(--neutral-700);
-    border-radius: var(--radius-md);
-    transition: all .15s ease;
-    text-decoration: none;
-    letter-spacing: -.01em;
-  }
-
-  .nav-link:hover {
-    color: var(--neutral-950);
-    background: var(--neutral-100);
-  }
-
-    @media (max-width: 1024px) {
       .nav-link {
-        padding: .45rem .3rem;
-    }
-  }
+        display: inline-flex;
+        align-items: center;
+        gap: .2rem;
+        padding: .45rem .7rem;
+        font-size: .845rem;
+        font-weight: 500;
+        color: var(--neutral-700);
+        border-radius: var(--radius-md);
+        transition: all .15s ease;
+        text-decoration: none;
+        letter-spacing: -.01em;
+      }
 
-  .dropdown-item {
-    display: block;
-    padding: .5rem .75rem;
-    font-size: .845rem;
-    font-weight: 500;
-    color: var(--neutral-600);
-    border-radius: var(--radius-md);
-    transition: all .12s ease;
-    text-decoration: none;
-  }
+      .nav-link:hover {
+        color: var(--neutral-950);
+        background: var(--neutral-100);
+      }
 
-  .dropdown-item:hover {
-    background: var(--neutral-50);
-    color: var(--neutral-950);
-  }
+        @media (max-width: 1024px) {
+          .nav-link {
+            padding: .45rem .3rem;
+        }
+      }
 
-  .mobile-nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: .625rem .75rem;
-    font-size: .9rem;
-    font-weight: 600;
-    color: var(--neutral-800);
-    border-radius: var(--radius-md);
-    transition: background .12s;
-    text-decoration: none;
-  }
+      .dropdown-item {
+        display: block;
+        padding: .5rem .75rem;
+        font-size: .845rem;
+        font-weight: 500;
+        color: var(--neutral-600);
+        border-radius: var(--radius-md);
+        transition: all .12s ease;
+        text-decoration: none;
+      }
 
-  .mobile-nav-link:hover {
-    background: var(--neutral-50);
-  }
+      .dropdown-item:hover {
+        background: var(--neutral-50);
+        color: var(--neutral-950);
+      }
 
-  .mobile-sub-link {
-    display: block;
-    padding: .4rem .5rem;
-    font-size: .845rem;
-    color: var(--neutral-500);
-    border-radius: var(--radius-sm);
-    transition: color .12s;
-    text-decoration: none;
-  }
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .625rem .75rem;
+        font-size: .9rem;
+        font-weight: 600;
+        color: var(--neutral-800);
+        border-radius: var(--radius-md);
+        transition: background .12s;
+        text-decoration: none;
+      }
 
-  .mobile-sub-link:hover {
-    color: var(--brand-600);
-  }
+      .mobile-nav-link:hover {
+        background: var(--neutral-50);
+      }
 
-  .topbar-link {
-    display: flex;
-    align-items: center;
-    gap: .35rem;
-    color: rgba(255,255,255,.5);
-    font-size: .78rem;
-    text-decoration: none;
-    transition: color .15s;
-  }
+      .mobile-sub-link {
+        display: block;
+        padding: .4rem .5rem;
+        font-size: .845rem;
+        color: var(--neutral-500);
+        border-radius: var(--radius-sm);
+        transition: color .12s;
+        text-decoration: none;
+      }
 
-  .topbar-link:hover {
-    color: #fff;
-  }
+      .mobile-sub-link:hover {
+        color: var(--brand-600);
+      }
 
-  /* ── Continue the responsive scale past 1280px ── */
+      .topbar-link {
+        display: flex;
+        align-items: center;
+        gap: .35rem;
+        color: rgba(255,255,255,.5);
+        font-size: .78rem;
+        text-decoration: none;
+        transition: color .15s;
+      }
 
-  .topbar-row {
-    height: 2.25rem;
-    transition: height .2s ease;
-  }
+      .topbar-link:hover {
+        color: #fff;
+      }
 
-  .header-row {
-    height: 3.75rem;
-    gap: .75rem;
-    transition: height .2s ease, gap .2s ease;
-  }
+      /* ── Continue the responsive scale past 1280px ── */
 
-  .site-logo img {
-    width: 150px;
-    height: auto;
-    transition: width .2s ease;
-  }
+      .topbar-row {
+        height: 2.25rem;
+        transition: height .2s ease;
+      }
 
-  @media (min-width: 1440px) {
-    .topbar-row { height: 2.375rem !important; }
-    .topbar-link { font-size: .8rem !important; }
+      .header-row {
+        height: 3.75rem;
+        gap: .75rem;
+        transition: height .2s ease, gap .2s ease;
+      }
 
-    .header-row { height: 4.1rem !important; gap: .875rem !important; }
-    .nav-link { font-size: .875rem !important; padding: .5rem .8rem !important; }
-    .dropdown-item { font-size: .875rem !important; padding: .55rem .8rem !important; }
-    .desktop-nav-block { gap: .25rem !important; margin-left: .75rem !important; }
-    .cta-block { gap: .625rem !important; }
-    .cta-block .btn-sm { padding: .5625rem 1rem !important; font-size: .84rem !important; }
-    .site-logo img { width: 170px !important; }
-  }
+      .site-logo img {
+        width: 150px;
+        height: auto;
+        transition: width .2s ease;
+      }
 
-  @media (min-width: 1536px) {
-    .topbar-row { height: 2.5rem !important; }
-    .topbar-link { font-size: .82rem !important; }
+      @media (min-width: 1440px) {
+        .topbar-row { height: 2.375rem !important; }
 
-    .header-row { height: 4.225rem !important; gap: 1rem !important; }
-    .nav-link { font-size: .95rem !important; padding: .55rem .85rem !important; }
-    .dropdown-item { font-size: .9rem !important; padding: .6rem .85rem !important; }
-    .desktop-nav-block { gap: .3rem !important; margin-left: .875rem !important; }
-    .cta-block { gap: .75rem !important; }
-    .cta-block .btn-sm { padding: .625rem 1.125rem !important; font-size: .9rem !important; }
-    .site-logo img { width: 180px !important; }
-  }
+        .header-row { height: 4.1rem !important; gap: .875rem !important; }
+        .nav-link { font-size: .875rem !important; padding: .5rem .8rem !important; }
+        .dropdown-item { font-size: .875rem !important; padding: .55rem .8rem !important; }
+        .desktop-nav-block { gap: .25rem !important; margin-left: .75rem !important; }
+        .cta-block { gap: .625rem !important; }
+        .cta-block .btn-sm { padding: .5625rem 1rem !important; font-size: .84rem !important; }
+        .site-logo img { width: 170px !important; }
+      }
 
-  @media (min-width: 1680px) {
-    .topbar-row { height: 2.625rem !important; }
-    .topbar-link { font-size: .84rem !important; }
+      @media (min-width: 1536px) {
+        .topbar-row { height: 2.6rem !important; }
 
-    .header-row { height: 4.35rem !important; gap: 1.125rem !important; }
-    .nav-link { font-size: 1.05rem !important; padding: .6rem .9rem !important; }
-    .dropdown-item { font-size: .925rem !important; padding: .65rem .9rem !important; }
-    .desktop-nav-block { gap: .375rem !important; margin-left: 1rem !important; }
-    .cta-block { gap: .875rem !important; }
-    .cta-block .btn-sm { padding: .6875rem 1.25rem !important; font-size: .95rem !important; }
-    .site-logo img { width: 190px !important; }
-  }
+        .header-row { height: 4.225rem !important; gap: 1rem !important; }
+        .nav-link { font-size: .95rem !important; padding: .55rem .85rem !important; }
+        .dropdown-item { font-size: .95rem !important; padding: .6rem .85rem !important; }
+        .desktop-nav-block { gap: .3rem !important; margin-left: .875rem !important; }
+        .cta-block { gap: .75rem !important; }
+        .cta-block .btn-sm { padding: .625rem 1.125rem !important; font-size: .9rem !important; }
+        .site-logo img { width: 180px !important; }
+      }
 
-  @media (min-width: 1920px) {
-    .topbar-row { height: 2.75rem !important; }
-    .topbar-link { font-size: .86rem !important; }
+      @media (min-width: 1680px) {
+        .topbar-row { height: 2.825rem !important; }
 
-    .header-row { height: 5rem !important; gap: 1.25rem !important; }
-    .nav-link { font-size: 1.2rem !important; padding: .65rem 1rem !important; }
-    .dropdown-item { font-size: .95rem !important; padding: .7rem 1rem !important; }
-    .desktop-nav-block { gap: .5rem !important; margin-left: 1.25rem !important; }
-    .cta-block { gap: 1rem !important; }
-    .cta-block .btn-sm { padding: .75rem 1.375rem !important; font-size: 1.15rem !important; }
-    .site-logo img { width: 205px !important; }
-  }
-`}</style>
+        .header-row { height: 4.35rem !important; gap: 1.125rem !important; }
+        .nav-link { font-size: 1.05rem !important; padding: .6rem .9rem !important; }
+        .dropdown-item { font-size: 1.05rem !important; padding: .65rem .9rem !important; }
+        .desktop-nav-block { gap: .375rem !important; margin-left: 1rem !important; }
+        .cta-block { gap: .875rem !important; }
+        .cta-block .btn-sm { padding: .6875rem 1.25rem !important; font-size: .95rem !important; }
+        .site-logo img { width: 190px !important; }
+      }
+
+      @media (min-width: 1920px) {
+        .topbar-row { height: 3.15rem !important; }
+
+        .header-row { height: 5rem !important; gap: 1.25rem !important; }
+        .nav-link { font-size: 1.2rem !important; padding: .65rem 1rem !important; }
+        .dropdown-item { font-size: 1.2rem !important; padding: .7rem 1rem !important; }
+        .desktop-nav-block { gap: .5rem !important; margin-left: 1.25rem !important; }
+        .cta-block { gap: 1rem !important; }
+        .cta-block .btn-sm { padding: .75rem 1.375rem !important; font-size: 1.15rem !important; }
+        .site-logo img { width: 205px !important; }
+      }
+
+       /* Topbar icons */
+        .topbar-icon { width: .8rem; height: .8rem; }
+        .topbar-social-gap { gap: .875rem; }
+        .topbar-contact-gap { gap: 1.5rem; }
+        .topbar-contact-text { font-size: .78rem; }
+
+        @media (min-width: 1440px) {
+          .topbar-contact-gap { gap: 1.625rem !important; }
+          .topbar-social-gap { gap: .95rem !important; }
+          .topbar-icon { width: .85rem !important; height: .85rem !important; }
+          .dropdown-panel { min-width: 14rem !important; }
+        }
+
+        @media (min-width: 1536px) {
+          .topbar-link { font-size: .88rem !important; }
+          .topbar-contact-gap { gap: 1.75rem !important; }
+          .topbar-social-gap { gap: 1rem !important; }
+          .topbar-icon { width: .95rem !important; height: .95rem !important; }
+          .dropdown-panel { min-width: 15rem !important; }
+        }
+
+        @media (min-width: 1680px) {
+          .topbar-link { font-size: .96rem !important; }
+          .topbar-contact-gap { gap: 1.875rem !important; }
+          .topbar-social-gap { gap: 1.075rem !important; }
+          .topbar-icon { width: 1.025rem !important; height: 1.025rem !important; }
+          .dropdown-panel { min-width: 16rem !important; }
+        }
+
+        @media (min-width: 1920px) {
+          .topbar-link { font-size: 1.1rem !important; }
+          .topbar-contact-gap { gap: 2.25rem !important; }
+          .topbar-social-gap { gap: 1.25rem !important; }
+          .topbar-icon { width: 1.175rem !important; height: 1.175rem !important; }
+          .dropdown-panel { min-width: 18rem !important; }
+    `}</style>
 
       <header
         style={{
@@ -211,7 +243,7 @@ export default function Header() {
           style={{
             background: "var(--neutral-950)",
             overflow: "hidden",
-            maxHeight: scrolled ? "0" : "2.25rem",
+            maxHeight: scrolled ? "0" : "5rem",
             opacity: scrolled ? 0 : 1,
             transition: "max-height .3s ease, opacity .3s ease",
           }}
@@ -225,28 +257,27 @@ export default function Header() {
               height: "100%",
             }}
           >
+            {/* Topbar contact links */}
             <div
-              style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}
+              className="topbar-contact-gap"
+              style={{ display: "flex", alignItems: "center" }}
             >
               <a href="tel:08063811840" className="topbar-link">
-                <RiPhoneLine style={{ width: ".8rem", height: ".8rem" }} />{" "}
-                08063811840
+                <RiPhoneLine className="topbar-icon" /> 08063811840
               </a>
               <a
                 href="mailto:admin@crafoundation.com.ng"
                 className="topbar-link hidden! md:flex!"
               >
-                <RiMailLine style={{ width: ".8rem", height: ".8rem" }} />{" "}
+                <RiMailLine className="topbar-icon" />{" "}
                 admin@crafoundation.com.ng
               </a>
             </div>
 
+            {/* Topbar social links */}
             <div
-              style={{
-                alignItems: "center",
-                gap: "0.875rem",
-              }}
-              className="flex"
+              className="topbar-social-gap flex"
+              style={{ alignItems: "center" }}
             >
               <a
                 href="https://web.facebook.com/nurtureadream?rdid=PyoQ16CCNhujAVtX&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1EKD1fnrUs%2F%3F_rdc%3D1%26_rdr#"
@@ -255,7 +286,7 @@ export default function Header() {
                 className="topbar-link"
                 aria-label="Facebook"
               >
-                <RiFacebookFill style={{ width: ".8rem", height: ".8rem" }} />
+                <RiFacebookFill className="topbar-icon" />
               </a>
               <a
                 href="https://www.instagram.com/childrensright?igsh=bHJhaDB2NWlnaTR3"
@@ -264,7 +295,7 @@ export default function Header() {
                 className="topbar-link"
                 aria-label="Instagram"
               >
-                <RiInstagramLine style={{ width: ".8rem", height: ".8rem" }} />
+                <RiInstagramLine className="topbar-icon" />
               </a>
               <a
                 href="https://x.com/your-page"
@@ -273,7 +304,7 @@ export default function Header() {
                 className="topbar-link"
                 aria-label="X (Twitter)"
               >
-                <RiTwitterXFill style={{ width: ".8rem", height: ".8rem" }} />
+                <RiTwitterXFill className="topbar-icon" />
               </a>
               <a
                 href="https://wa.me/2348063811840"
@@ -282,7 +313,7 @@ export default function Header() {
                 className="topbar-link"
                 aria-label="WhatsApp"
               >
-                <RiWhatsappLine style={{ width: ".8rem", height: ".8rem" }} />
+                <RiWhatsappLine className="topbar-icon" />
               </a>
             </div>
           </div>
@@ -365,8 +396,10 @@ export default function Header() {
                       />
                     )}
                   </Link>
+                  {/* Dropdown panel — add className */}
                   {item.children && dropdown === item.label && (
                     <div
+                      className="dropdown-panel"
                       style={{
                         position: "absolute",
                         top: "calc(100% + 4px)",
