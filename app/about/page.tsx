@@ -7,7 +7,6 @@ import {
   RiArrowRightLine,
 } from "react-icons/ri";
 import Link from "next/link";
-import Image from "next/image";
 import { slugify } from "@/lib/utils";
 import AwardsSection from "@/components/programs/AwardSection";
 import BoardImage from "@/components/shared/BoardImage";
@@ -367,18 +366,12 @@ export default function AboutPage() {
                       width: "100%",
                     }}
                   >
-                    {/* <Image
-                      src={`/images/board/${m.name}.webp`}
-                      alt={m.name}
-                      className="board-image mx-auto! object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                      width={208}
-                      height={221}
-                    /> */}
                     <BoardImage
                       name={m.name}
                       width={208}
                       height={221}
                       className="board-image mx-auto! object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      translateNonWebp
                     />
                   </div>
                   <div className="bc-body">

@@ -11,8 +11,12 @@ const FALLBACK_IMAGE =
 interface BoardImageProps {
   name: string;
   className?: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+  priority?: boolean;
+  sizes?: string;
+  translateNonWebp?: boolean;
 }
 
 export default function BoardImage({
@@ -20,6 +24,10 @@ export default function BoardImage({
   className,
   width,
   height,
+  fill = false,
+  priority = false,
+  sizes,
+  translateNonWebp = false,
 }: BoardImageProps) {
   const [extIdx, setExtIdx] = useState(0);
   const [useFallback, setUseFallback] = useState(false);
@@ -34,9 +42,10 @@ export default function BoardImage({
     <Image
       src={imageSrc}
       alt={name}
-      width={width}
-      height={height}
-      className={`rounded-full object-cover ${!isWebp ? "translate-y-3" : ""} ${className ?? ""}`}
+      {...(fill ? { fill: true } : { width, height })}
+      priority={priority}
+      sizes={sizes}
+      className={`rounded-full object-cover ${translateNonWebp && !isWebp ? "translate-y-2" : ""} ${className ?? ""}`}
       onError={() => {
         if (extIdx < EXTENSIONS.length - 1) {
           setExtIdx((i) => i + 1);
@@ -47,58 +56,3 @@ export default function BoardImage({
     />
   );
 }
-
-// "use client";
-// import Image from "next/image";
-// import { useState } from "react";
-
-// const EXTENSIONS = ["webp", "jpg", "jpeg", "png", "avif"];
-
-// interface BoardImageProps {
-//   name: string;
-//   className?: string;
-//   width: number;
-//   height: number;
-// }
-
-// export default function BoardImage({
-//   name,
-//   className,
-//   width,
-//   height,
-// }: BoardImageProps) {
-//   const [extIdx, setExtIdx] = useState(0);
-
-//   // If all extensions fail, show initials fallback
-//   if (extIdx >= EXTENSIONS.length) {
-//     return (
-//       <div
-//         style={{
-//           width: "100%",
-//           height: "100%",
-//           background: "var(--neutral-100)",
-//           display: "flex",
-//           alignItems: "center",
-//           justifyContent: "center",
-//           fontSize: "2rem",
-//           fontWeight: 800,
-//           color: "var(--neutral-400)",
-//           letterSpacing: "-.02em",
-//         }}
-//       >
-//         {name.charAt(0)}
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <Image
-//       src={`/images/board/${name}.${EXTENSIONS[extIdx]}`}
-//       alt={name}
-//       width={width}
-//       height={height}
-//       className={className}
-//       onError={() => setExtIdx((i) => i + 1)}
-//     />
-//   );
-// }

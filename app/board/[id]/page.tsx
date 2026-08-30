@@ -1,6 +1,6 @@
+import BoardImage from "@/components/shared/BoardImage";
 import { boardMembers } from "@/data";
 import { slugify } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RiArrowLeftLine } from "react-icons/ri";
@@ -13,7 +13,7 @@ export function generateMetadata({ params }: { params: { id: string } }) {
     description: member.role,
   };
 }
-// gjhjhj bnnnnnnnnnnnnnnnn
+
 export default async function BoardMemberPage({
   params,
 }: {
@@ -538,13 +538,7 @@ export default async function BoardMemberPage({
             {/* Photo */}
             <div className="bmp-photo-col">
               <div className="bmp-photo-frame">
-                <Image
-                  src={`/images/board/${member.name}.webp`}
-                  alt={member.name}
-                  fill
-                  priority
-                  // style={{ objectFit: "cover", objectPosition: "center top" }}
-                />
+                <BoardImage name={member.name} fill priority />
               </div>
             </div>
 
@@ -618,15 +612,11 @@ export default async function BoardMemberPage({
                   className="bmp-related-card"
                 >
                   <div className="bmp-related-img">
-                    <Image
-                      src={`/images/board/${m.name}.webp`}
-                      alt={m.name}
+                    <BoardImage
+                      name={m.name}
                       fill
                       sizes="48px"
-                      style={{
-                        objectFit: "cover",
-                        objectPosition: "center top",
-                      }}
+                      className="object-cover object-[center_top]"
                     />
                   </div>
 
