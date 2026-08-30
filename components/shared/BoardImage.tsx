@@ -45,7 +45,7 @@ export default function BoardImage({
       {...(fill ? { fill: true } : { width, height })}
       priority={priority}
       sizes={sizes}
-      className={`rounded-full object-cover ${translateNonWebp && !isWebp ? "translate-y-2" : ""} ${className ?? ""}`}
+      className={`rounded-full object-cover ${translateNonWebp && !isWebp ? "translate-y-3" : ""} ${className ?? ""}`}
       onError={() => {
         if (extIdx < EXTENSIONS.length - 1) {
           setExtIdx((i) => i + 1);
