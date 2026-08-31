@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const EXTENSIONS = ["webp", "jpg", "jpeg", "png", "avif"];
+const EXTENSIONS = ["webp", "jpg", "jpeg", "png", "PNG", "avif"];
 
 const FALLBACK_IMAGE =
   "https://i.pinimg.com/1200x/cd/4b/d9/cd4bd9b0ea2807611ba3a67c331bff0b.jpg";
