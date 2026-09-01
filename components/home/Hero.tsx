@@ -64,10 +64,10 @@ export default function Hero() {
     }, 320);
   };
 
-  // useEffect(() => {
-  //   const t = setInterval(() => goTo((current + 1) % slides.length), 9000);
-  //   return () => clearInterval(t);
-  // }, [current, animating]);
+  useEffect(() => {
+    const t = setInterval(() => goTo((current + 1) % slides.length), 9000);
+    return () => clearInterval(t);
+  }, [current, animating]);
 
   const slide = slides[current];
 
