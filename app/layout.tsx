@@ -1,10 +1,10 @@
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+import { CONTACT, SITE_NAME, SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { CONTACT, SITE_NAME, SITE_URL } from "@/lib/constants";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     siteName: "Children's Right Advocate Foundation",
-    images: [{ url: "/cra-logoo.png", alt: SITE_NAME }],
+    images: [{ url: "/opengraph.jpg", alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/cra-logoo.png"],
+    images: ["/opengraph.jpg"],
   },
 };
 
@@ -45,7 +45,7 @@ const organizationJsonLd = {
   "@type": "NGO",
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/cra-logoo.png`,
+  logo: `${SITE_URL}/opengraph.jpg`,
   email: CONTACT.email,
   telephone: CONTACT.phone,
   address: {
