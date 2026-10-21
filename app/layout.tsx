@@ -32,11 +32,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     siteName: "Children's Right Advocate Foundation",
-    images: [{ url: "/opengraph.jpg", alt: SITE_NAME }],
+    images: [
+      {
+        url: "https://cra-foundation.vercel.app/opengraph.jpg",
+        alt: SITE_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/opengraph.jpg"],
+    images: ["https://cra-foundation.vercel.app/opengraph.jpg"],
   },
 };
 
