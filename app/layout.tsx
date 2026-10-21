@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     siteName: "Children's Right Advocate Foundation",
     images: [
       {
-        url: "https://cra-foundation.vercel.app/opengraph.jpg",
+        url: `${SITE_URL}/opengraph.jpg`,
         alt: SITE_NAME,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://cra-foundation.vercel.app/opengraph.jpg"],
+    images: [`${SITE_URL}/opengraph.jpg`],
   },
 };
 
