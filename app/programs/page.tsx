@@ -1,22 +1,26 @@
-import type { Metadata } from "next";
 import PageHeader from "@/components/shared/PageHeader";
 import { programs } from "@/data";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  RiCheckLine,
   RiArrowRightLine,
   RiBook2Line,
-  RiRestaurantLine,
-  RiHeartPulseLine,
-  RiShoppingBagLine,
-  RiGraduationCapLine,
-  RiComputerLine,
-  RiUserHeartLine,
   RiBusLine,
+  RiCheckLine,
+  RiComputerLine,
+  RiGraduationCapLine,
+  RiHeartPulseLine,
+  RiRestaurantLine,
+  RiShoppingBagLine,
+  RiUserHeartLine,
 } from "react-icons/ri";
-import Image from "next/image";
 
-export const metadata: Metadata = { title: "Our Programs" };
+export const metadata: Metadata = {
+  title: "Our Programs",
+  description:
+    "Explore our education, nutrition, health care and mentorship programs that nurture underprivileged children in Lagos.",
+};
 
 const icons = [
   RiBook2Line,

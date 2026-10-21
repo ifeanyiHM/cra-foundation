@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CONTACT, SITE_NAME, SITE_URL } from "@/lib/constants";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
@@ -11,6 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  // "./" resolves to each page's own URL, so every page gets its own canonical
+  alternates: { canonical: "./" },
   title: {
     default: "Children's Right Advocate Foundation — To Nurture a Dream",
     template: "%s · CRA Foundation",
@@ -28,6 +32,27 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     siteName: "Children's Right Advocate Foundation",
+    images: [{ url: "/cra-logoo.png", alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/cra-logoo.png"],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/cra-logoo.png`,
+  email: CONTACT.email,
+  telephone: CONTACT.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "40B Ayilara Street, Surulere",
+    addressLocality: "Lagos",
+    addressCountry: "NG",
   },
 };
 
@@ -39,6 +64,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         <Header />
         <main>{children}</main>
         <ScrollToTop />

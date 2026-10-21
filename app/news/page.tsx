@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
-import Image from "next/image";
 import PageHeader from "@/components/shared/PageHeader";
 import { news } from "@/data";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine, RiCalendarLine } from "react-icons/ri";
 
-export const metadata: Metadata = { title: "News & Events" };
+export const metadata: Metadata = {
+  title: "News & Events",
+  description:
+    "Latest news, events and stories from the Children's Right Advocate Foundation.",
+};
 
 const catStyle: Record<string, { bg: string; color: string }> = {
   Events: { bg: "var(--brand-50)", color: "var(--brand-600)" },

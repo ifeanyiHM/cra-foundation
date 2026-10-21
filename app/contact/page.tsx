@@ -1,15 +1,19 @@
-import type { Metadata } from "next";
-import PageHeader from "@/components/shared/PageHeader";
 import ContactForm from "@/components/forms/ContactForm";
+import PageHeader from "@/components/shared/PageHeader";
+import type { Metadata } from "next";
 import {
-  RiPhoneLine,
+  RiExternalLinkLine,
   RiMailLine,
   RiMapPinLine,
+  RiPhoneLine,
   RiTimeLine,
-  RiExternalLinkLine,
 } from "react-icons/ri";
 
-export const metadata: Metadata = { title: "Contact Us" };
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Contact the Children's Right Advocate Foundation in Surulere, Lagos by phone, email or our contact form.",
+};
 
 export default function ContactPage() {
   return (

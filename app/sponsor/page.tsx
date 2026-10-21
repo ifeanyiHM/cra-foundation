@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
+import SponsorForm from "@/components/forms/SponsorForm";
 import PageHeader from "@/components/shared/PageHeader";
 import { sponsorChildren } from "@/data";
-import SponsorForm from "@/components/forms/SponsorForm";
-import { RiHeartLine, RiCheckLine } from "react-icons/ri";
+import type { Metadata } from "next";
 import Image from "next/image";
+import { RiCheckLine, RiHeartLine } from "react-icons/ri";
 
-export const metadata: Metadata = { title: "Sponsor a Child" };
+export const metadata: Metadata = {
+  title: "Sponsor a Child",
+  description:
+    "Sponsor a child through CRA Foundation and help cover education, nutrition and health care.",
+};
 
 const steps = [
   {

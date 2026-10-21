@@ -1,16 +1,20 @@
-import type { Metadata } from "next";
-import PageHeader from "@/components/shared/PageHeader";
 import VolunteerForm from "@/components/forms/VolunteerForm";
+import PageHeader from "@/components/shared/PageHeader";
+import type { Metadata } from "next";
 import {
   RiBook2Line,
-  RiUserHeartLine,
   RiCalendarEventLine,
   RiCameraLine,
-  RiComputerLine,
   RiCarLine,
+  RiComputerLine,
+  RiUserHeartLine,
 } from "react-icons/ri";
 
-export const metadata: Metadata = { title: "Volunteer" };
+export const metadata: Metadata = {
+  title: "Volunteer",
+  description:
+    "Volunteer with CRA Foundation and give your time and skills to support children in underserved communities.",
+};
 
 const roles = [
   {

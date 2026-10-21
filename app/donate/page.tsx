@@ -1,14 +1,18 @@
-import type { Metadata } from "next";
+import DonationForm from "@/components/forms/DonationForm";
 import PageHeader from "@/components/shared/PageHeader";
 import { donationTiers } from "@/data";
+import type { Metadata } from "next";
 import {
-  RiShieldCheckLine,
-  RiRefreshLine,
   RiBankCardLine,
+  RiRefreshLine,
+  RiShieldCheckLine,
 } from "react-icons/ri";
-import DonationForm from "@/components/forms/DonationForm";
 
-export const metadata: Metadata = { title: "Donate" };
+export const metadata: Metadata = {
+  title: "Donate",
+  description:
+    "Donate to the Children's Right Advocate Foundation and help provide education, meals and care to children in need.",
+};
 
 export default function DonatePage() {
   return (

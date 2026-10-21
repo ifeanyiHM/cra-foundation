@@ -1,17 +1,21 @@
-import type { Metadata } from "next";
-import PageHeader from "@/components/shared/PageHeader";
-import { boardMembers, awards, lgas } from "@/data";
-import {
-  RiMapPin2Line,
-  RiShieldCheckLine,
-  RiArrowRightLine,
-} from "react-icons/ri";
-import Link from "next/link";
-import { slugify } from "@/lib/utils";
 import AwardsSection from "@/components/programs/AwardSection";
 import BoardImage from "@/components/shared/BoardImage";
+import PageHeader from "@/components/shared/PageHeader";
+import { awards, boardMembers, lgas } from "@/data";
+import { slugify } from "@/lib/utils";
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  RiArrowRightLine,
+  RiMapPin2Line,
+  RiShieldCheckLine,
+} from "react-icons/ri";
 
-export const metadata: Metadata = { title: "About Us" };
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about the Children's Right Advocate Foundation: our story, mission, board members and the Lagos communities we serve.",
+};
 
 export default function AboutPage() {
   return (

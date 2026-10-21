@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
-import PageHeader from "@/components/shared/PageHeader";
-import { impactStats, testimonials, awards, lgas } from "@/data";
-import Link from "next/link";
-import { RiMapPin2Line, RiDoubleQuotesL } from "react-icons/ri";
 import AwardsSection from "@/components/programs/AwardSection";
+import PageHeader from "@/components/shared/PageHeader";
+import { awards, impactStats, lgas, testimonials } from "@/data";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { RiDoubleQuotesL, RiMapPin2Line } from "react-icons/ri";
 
-export const metadata: Metadata = { title: "Our Impact" };
+export const metadata: Metadata = {
+  title: "Our Impact",
+  description:
+    "See the difference CRA Foundation has made for children and families in Lagos since 2010.",
+};
 
 const timeline = [
   {

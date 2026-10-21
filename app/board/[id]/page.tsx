@@ -5,12 +5,31 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RiArrowLeftLine } from "react-icons/ri";
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const member = boardMembers.find((m) => slugify(m.name) === params.id);
+export function generateStaticParams() {
+  return boardMembers.map((m) => ({ id: slugify(m.name) }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const member = boardMembers.find((m) => slugify(m.name) === id);
   if (!member) return {};
+
+  const title = `${member.name} | Board Member`;
   return {
-    title: `${member.name} | Board Member`,
+    title,
     description: member.role,
+    alternates: { canonical: `/board/${id}` },
+    openGraph: {
+      type: "profile",
+      title,
+      description: member.role,
+      url: `/board/${id}`,
+      ...(member.image && { images: [{ url: member.image }] }),
+    },
   };
 }
 
