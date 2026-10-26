@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   // "./" resolves to each page's own URL, so every page gets its own canonical
   alternates: { canonical: "./" },
   title: {
-    default: "Children's Right Advocate Foundation — To Nurture a Dream",
+    default: "Children's Right Advocate Foundation",
     template: "%s · CRA Foundation",
   },
   description:
-    "The Children's Right Advocate Foundation nurtures underprivileged children in Lagos through education, nutrition, health care, and sponsorships since 2010.",
+    "CRA Foundation supports underprivileged children in Lagos through education, nutrition, healthcare, and sponsorships.",
   keywords: [
     "children charity Lagos",
     "NGO Nigeria",
